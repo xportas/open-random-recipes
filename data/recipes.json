@@ -1197,333 +1197,305 @@
   },
   {
     "id": 23,
-    "nombre": "BATIDO DE PROTEÍNA CON CREMA DE CACAHUETE",
-    "instrucciones": "",
-    "restricciones": "Libre",
-    "raciones": 1,
-    "desayuno": false,
-    "comida": false,
-    "merienda": true,
-    "cena": false,
-    "ingredientes": [
+    "name": "Batido de proteína con crema de cacahuete",
+    "steps": "",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": false,
+    "snack": true,
+    "dinner": false,
+    "gym": true,
+    "ingredients": [
       {
-        "nombre": "Proteína en polvo",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Proteína en polvo",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Mantequilla de maní",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Crema de cacahuete",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Leche o agua",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio",
-        "opciones": [
+        "name": "Leche o agua",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
           "Leche",
           "agua"
         ]
       },
       {
-        "nombre": "Plátano",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Plátano",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       }
-    ]
+    ],
+    "img": "/recipes/batido-proteina.jpg"
   },
   {
     "id": 24,
-    "nombre": "PUDIN DE CHÍA Y PROTEÍNA",
-    "instrucciones": "Mezclar y refrigerar por 2 horas.",
-    "restricciones": "Libre",
-    "raciones": 1,
-    "desayuno": false,
-    "comida": false,
-    "merienda": true,
-    "cena": false,
-    "ingredientes": [
+    "name": "Pudin de chía y proteína",
+    "steps": "Mezclar y refrigerar por 2 horas.",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": false,
+    "snack": true,
+    "dinner": false,
+    "ingredients": [
       {
-        "nombre": "Leche",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Leche",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Chía",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Chía",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Proteína en polvo",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Proteína en polvo",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       }
-    ]
+    ],
+    "img": "/recipes/pudin-chia-proteina.jpg"
   },
   {
     "id": 25,
-    "nombre": "TOSTADAS DE ARROZ CON AGUACATE Y HUEVO",
-    "instrucciones": "",
-    "restricciones": "Libre",
-    "raciones": 1,
-    "desayuno": false,
-    "comida": false,
-    "merienda": true,
-    "cena": false,
-    "ingredientes": [
+    "name": "Batido de proteína con plátano y cacao",
+    "steps": "",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": false,
+    "snack": true,
+    "dinner": false,
+    "gym": true,
+    "ingredients": [
       {
-        "nombre": "Tostadas de arroz inflado",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Plátano",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Aguacate",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Proteína en polvo",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Huevo duro",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Cacao en polvo sin azúcar",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Sal y pimienta",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Leche",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Hielo",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       }
-    ]
+    ],
+    "img": "/recipes/batido-proteina-platano-cacao.jpg"
   },
   {
     "id": 26,
-    "nombre": "BATIDO DE PROTEÍNA CON PLÁTANO Y CACAO",
-    "instrucciones": "",
-    "restricciones": "Libre",
-    "raciones": 1,
-    "desayuno": false,
-    "comida": false,
-    "merienda": true,
-    "cena": false,
-    "ingredientes": [
+    "name": "Crackers integrales con jamón serrano",
+    "steps": "",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": false,
+    "snack": true,
+    "dinner": false,
+    "ingredients": [
       {
-        "nombre": "Plátano",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Crackers integrales",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Proteína en polvo",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
-      },
-      {
-        "nombre": "Cacao en polvo sin azúcar",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
-      },
-      {
-        "nombre": "Leche",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
-      },
-      {
-        "nombre": "Hielo",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Jamón serrano",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       }
-    ]
+    ],
+    "img": "/recipes/crackers-integrales-jamon-serrano.jpg"
   },
   {
     "id": 27,
-    "nombre": "CRACKERS INTEGRALES CON JAMÓN SERRANO",
-    "instrucciones": "",
-    "restricciones": "Libre",
-    "raciones": 1,
-    "desayuno": false,
-    "comida": false,
-    "merienda": true,
-    "cena": false,
-    "ingredientes": [
+    "name": "Pastel de verduras",
+    "steps": "1. Horno 180C. Mezclar verduras, huevos batidos, leche, queso y especias. 2. Hornear 35-40 min. Sirve con ensalada y arroz/boniato.",
+    "restrictions": null,
+    "servings": 4,
+    "breakfast": false,
+    "lunch": false,
+    "snack": false,
+    "dinner": true,
+    "ingredients": [
       {
-        "nombre": "Crackers integrales",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Calabacín",
+        "quantity": 1,
+        "unit_of_measure": "ud",
+        "required": true
       },
       {
-        "nombre": "Jamón serrano",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Zanahoria",
+        "quantity": 1,
+        "unit_of_measure": "ud",
+        "required": true
+      },
+      {
+        "name": "Pimiento rojo",
+        "quantity": 1,
+        "unit_of_measure": "ud",
+        "required": true
+      },
+      {
+        "name": "Espinacas",
+        "quantity": 100,
+        "unit_of_measure": "g",
+        "required": true
+      },
+      {
+        "name": "Huevos",
+        "quantity": 5,
+        "unit_of_measure": "ud",
+        "required": true
+      },
+      {
+        "name": "Leche",
+        "quantity": 100,
+        "unit_of_measure": "ml",
+        "required": true
+      },
+      {
+        "name": "Queso feta",
+        "quantity": 100,
+        "unit_of_measure": "g",
+        "required": true
+      },
+      {
+        "name": "Cúrcuma",
+        "quantity": 1,
+        "unit_of_measure": "cucharada",
+        "required": true
       }
-    ]
+    ],
+    "img": "/recipes/pastel-de-verduras.jpg"
   },
   {
     "id": 28,
-    "nombre": "PASTEL DE VERDURAS",
-    "instrucciones": "1. Horno 180C. Mezclar verduras, huevos batidos, leche, queso y especias. 2. Hornear 35-40 min. Sirve con ensalada y arroz/boniato.",
-    "restricciones": "Libre",
-    "raciones": 4,
-    "desayuno": false,
-    "comida": false,
-    "merienda": false,
-    "cena": true,
-    "ingredientes": [
+    "name": "Bowl de quinoa con verduras y huevo",
+    "steps": "",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": false,
+    "snack": false,
+    "dinner": true,
+    "ingredients": [
       {
-        "nombre": "Calabacín grande rallado",
-        "cantidad": 1,
-        "unidad_medida": "unidad",
-        "tipo": "Obligatorio"
+        "name": "Quinoa",
+        "quantity": 0.5,
+        "unit_of_measure": "taza",
+        "required": true
       },
       {
-        "nombre": "Zanahoria grande rallada",
-        "cantidad": 1,
-        "unidad_medida": "unidad",
-        "tipo": "Obligatorio"
+        "name": "Huevo cocido",
+        "quantity": 1,
+        "unit_of_measure": "ud",
+        "required": true
       },
       {
-        "nombre": "Pimiento rojo en cubitos",
-        "cantidad": 1,
-        "unidad_medida": "unidad",
-        "tipo": "Obligatorio"
+        "name": "Zanahoria",
+        "quantity": 0.5,
+        "unit_of_measure": "taza",
+        "required": true
       },
       {
-        "nombre": "Espinacas frescas",
-        "cantidad": 100,
-        "unidad_medida": "g",
-        "tipo": "Obligatorio"
-      },
-      {
-        "nombre": "Huevos",
-        "cantidad": 5,
-        "unidad_medida": "unidades",
-        "tipo": "Obligatorio"
-      },
-      {
-        "nombre": "Leche vegetal",
-        "cantidad": 100,
-        "unidad_medida": "ml",
-        "tipo": "Obligatorio"
-      },
-      {
-        "nombre": "Queso feta desmenuzado",
-        "cantidad": 100,
-        "unidad_medida": "g",
-        "tipo": "Opcional"
-      },
-      {
-        "nombre": "Cúrcuma",
-        "cantidad": 1,
-        "unidad_medida": "cucharadita",
-        "tipo": "Obligatorio"
+        "name": "Pimiento rojo",
+        "quantity": 0.25,
+        "unit_of_measure": "taza",
+        "required": true
       }
-    ]
+    ],
+    "img": "/recipes/bowl-quinoa-verduras-huevo.jpg"
   },
   {
     "id": 29,
-    "nombre": "BOWL DE QUINOA CON VERDURAS Y HUEVO",
-    "instrucciones": "",
-    "restricciones": "Libre",
-    "raciones": 1,
-    "desayuno": false,
-    "comida": false,
-    "merienda": false,
-    "cena": true,
-    "ingredientes": [
+    "name": "Frittata de verduras al horno",
+    "steps": "1. Horno 180C. 2. Bate huevos y mezcla con verduras. 3. Sella en sartén y hornea 10-15 min.",
+    "restrictions": null,
+    "servings": 2,
+    "breakfast": false,
+    "lunch": false,
+    "snack": false,
+    "dinner": true,
+    "ingredients": [
       {
-        "nombre": "Quinoa cocida",
-        "cantidad": 0.5,
-        "unidad_medida": "taza",
-        "tipo": "Obligatorio"
+        "name": "Huevos",
+        "quantity": 4,
+        "unit_of_measure": "ud",
+        "required": true
       },
       {
-        "nombre": "Huevo cocido",
-        "cantidad": 1,
-        "unidad_medida": "unidad",
-        "tipo": "Obligatorio"
+        "name": "Espinacas",
+        "quantity": 0.5,
+        "unit_of_measure": "taza",
+        "required": true
       },
       {
-        "nombre": "Zanahorias ralladas",
-        "cantidad": 0.5,
-        "unidad_medida": "taza",
-        "tipo": "Obligatorio"
+        "name": "Champiñones",
+        "quantity": 0.25,
+        "unit_of_measure": "taza",
+        "required": true
       },
       {
-        "nombre": "Pimiento rojo",
-        "cantidad": 0.25,
-        "unidad_medida": "taza",
-        "tipo": "Obligatorio"
+        "name": "Pimiento rojo",
+        "quantity": 0.5,
+        "unit_of_measure": "ud",
+        "required": true
       }
-    ]
+    ],
+    "img": "/recipes/frittata-de-verduras.jpg"
   },
   {
     "id": 30,
-    "nombre": "FRITTATA DE VERDURAS AL HORNO",
-    "instrucciones": "1. Horno 180C. 2. Bate huevos y mezcla con verduras. 3. Sella en sartén y hornea 10-15 min.",
-    "restricciones": "Libre",
-    "raciones": 2,
-    "desayuno": false,
-    "comida": false,
-    "merienda": false,
-    "cena": true,
-    "ingredientes": [
+    "name": "Pescado con ensalada de aguacate",
+    "steps": "",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": false,
+    "snack": false,
+    "dinner": true,
+    "ingredients": [
       {
-        "nombre": "Huevos",
-        "cantidad": 4,
-        "unidad_medida": "unidades",
-        "tipo": "Obligatorio"
-      },
-      {
-        "nombre": "Espinacas frescas",
-        "cantidad": 0.5,
-        "unidad_medida": "taza",
-        "tipo": "Obligatorio"
-      },
-      {
-        "nombre": "Champiñones en rodajas",
-        "cantidad": 0.25,
-        "unidad_medida": "taza",
-        "tipo": "Obligatorio"
-      },
-      {
-        "nombre": "Pimiento rojo",
-        "cantidad": 0.5,
-        "unidad_medida": "unidad",
-        "tipo": "Obligatorio"
-      }
-    ]
-  },
-  {
-    "id": 31,
-    "nombre": "PESCADO CON ENSALADA DE AGUACATE",
-    "instrucciones": "",
-    "restricciones": "Libre",
-    "raciones": 1,
-    "desayuno": false,
-    "comida": false,
-    "merienda": false,
-    "cena": true,
-    "ingredientes": [
-      {
-        "nombre": "Atún / Sardinas / Melva / Lubina / Trucha / Dorada",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Elegir uno",
-        "opciones": [
+        "name": "Pescado",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
           "Atún",
           "Sardinas",
           "Melva",
@@ -1533,181 +1505,179 @@
         ]
       },
       {
-        "nombre": "Ensalada",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Ensalada",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Aguacate",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Aguacate",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Calabacín en rodajas",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Calabacín",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Frutos secos",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Frutos secos",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Queso cottage",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Queso cottage",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Fruta de temporada",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Fruta de temporada",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Huevo cocido",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Opcional"
+        "name": "Huevo cocido",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Macarrones / Arroz / Quinoa",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Opcional",
-        "opciones": [
+        "name": "Carbohidrato",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
           "Macarrones",
           "Arroz",
           "Quinoa"
         ]
       }
-    ]
+    ],
+    "img": "/recipes/pescado-con-ensalada-de-aguacate.jpg"
+  },
+  {
+    "id": 31,
+    "name": "Ensalada de pollo con quinoa y aguacate",
+    "steps": "",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": false,
+    "snack": false,
+    "dinner": true,
+    "ingredients": [
+      {
+        "name": "Pechuga de pollo",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Quinoa",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Aguacate",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Espinacas frescas",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      }
+    ],
+    "img": "/recipes/ensalada-de-pollo-con-quinoa-y-aguacate.jpg"
   },
   {
     "id": 32,
-    "nombre": "ENSALADA DE POLLO CON QUINOA Y AGUACATE",
-    "instrucciones": "",
-    "restricciones": "Libre",
-    "raciones": 1,
-    "desayuno": false,
-    "comida": false,
-    "merienda": false,
-    "cena": true,
-    "ingredientes": [
+    "name": "Fajitas de pollo con pimientos",
+    "steps": "",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": false,
+    "snack": false,
+    "dinner": true,
+    "ingredients": [
       {
-        "nombre": "Pechuga de pollo cocida",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Pechuga de pollo",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Quinoa cocida",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Pimiento rojo",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Aguacate",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Pimiento verde",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Espinacas frescas",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Nueces",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       },
       {
-        "nombre": "Aceite de oliva",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Queso en lonchas",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Tortillas de maíz",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       }
-    ]
+    ],
+    "img": "/recipes/fajitas-de-pollo-con-pimientos.jpg"
   },
   {
     "id": 33,
-    "nombre": "FAJITAS DE POLLO CON PIMIENTOS",
-    "instrucciones": "",
-    "restricciones": "Libre",
-    "raciones": 1,
-    "desayuno": false,
-    "comida": false,
-    "merienda": false,
-    "cena": true,
-    "ingredientes": [
+    "name": "Pizza de masa de huevo",
+    "steps": "",
+    "restrictions": ["weekend"],
+    "servings": 1,
+    "breakfast": false,
+    "lunch": false,
+    "snack": false,
+    "dinner": true,
+    "ingredients": [
       {
-        "nombre": "Pechuga de pollo",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Huevos",
+        "quantity": 3,
+        "unit_of_measure": "ud",
+        "required": true
       },
       {
-        "nombre": "Pimiento rojo",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Queso cottage",
+        "quantity": 2,
+        "unit_of_measure": "tarrina",
+        "required": true
       },
       {
-        "nombre": "Pimiento verde",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
-      },
-      {
-        "nombre": "Nueces",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Opcional"
-      },
-      {
-        "nombre": "Queso en lonchas",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Opcional"
-      },
-      {
-        "nombre": "Tortillas de maíz",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Obligatorio"
+        "name": "Ingredientes extra a elegir",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
       }
-    ]
-  },
-  {
-    "id": 34,
-    "nombre": "PIZZA DE MASA DE HUEVO",
-    "instrucciones": "",
-    "restricciones": "Fin de Semana",
-    "raciones": 1,
-    "desayuno": false,
-    "comida": false,
-    "merienda": false,
-    "cena": true,
-    "ingredientes": [
-      {
-        "nombre": "Huevos",
-        "cantidad": 3,
-        "unidad_medida": "unidades",
-        "tipo": "Obligatorio"
-      },
-      {
-        "nombre": "Queso cottage",
-        "cantidad": 2,
-        "unidad_medida": "tarrinas",
-        "tipo": "Obligatorio"
-      },
-      {
-        "nombre": "Ingredientes extra a elegir",
-        "cantidad": null,
-        "unidad_medida": null,
-        "tipo": "Opcional"
-      }
-    ]
+    ],
+    "img": "/recipes/pizza-masa-de-huevo.jpg"
   }
 ]
