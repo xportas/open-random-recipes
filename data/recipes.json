@@ -414,7 +414,7 @@
     "img": "/recipes/receta-carne-roja.jpg"
   },
   {
-    "id": 11,
+    "id": 10,
     "name": "Receta Carne Blanca Aleatoria",
     "steps": "Cocinar al gusto según los ingredientes elegidos.",
     "restrictions": null,
@@ -513,7 +513,7 @@
     "img": "/recipes/receta-carne-blanca.jpg"
   },
   {
-    "id": 12,
+    "id": 11,
     "name": "Receta Pescado Azul Aleatoria",
     "steps": "Cocinar al gusto según los ingredientes elegidos.",
     "restrictions": null,
@@ -608,7 +608,7 @@
     "img": "/recipes/receta-pescado-azul.jpg"
   },
   {
-    "id": 13,
+    "id": 12,
     "name": "Receta Pescado Blanco Aleatoria",
     "steps": "Cocinar al gusto según los ingredientes elegidos.",
     "restrictions": [
@@ -710,7 +710,7 @@
     "img": "/recipes/receta-pescado-blanco.jpg"
   },
   {
-    "id": 14,
+    "id": 13,
     "name": "Bowl de Pescado con Aguacate y Huevo",
     "steps": "",
     "restrictions": null,
@@ -781,7 +781,7 @@
     "img": "/recipes/bowl-pescado-aguacate-huevo.jpg"
   },
   {
-    "id": 15,
+    "id": 14,
     "name": "Pollo con garbanzos",
     "steps": "Cocinar el pollo y verduras. Añadir garbanzos y tomate. Nota: Legumbres solo un día a la semana.",
     "restrictions": null,
@@ -837,7 +837,7 @@
     "img": "/recipes/pollo-con-garbanzos.jpg"
   },
   {
-    "id": 16,
+    "id": 15,
     "name": "Lentejas con arroz",
     "steps": "Cocinar lentejas con arroz y verduras. Nota: Legumbres solo un día a la semana.",
     "restrictions": null,
@@ -887,7 +887,7 @@
     "img": "/recipes/lentejas-con-arroz.jpg"
   },
   {
-    "id": 17,
+    "id": 16,
     "name": "Salteado de tofu con verduras",
     "steps": "1. Corta tofu en cubos y sofríelo. 2. Añade ajo y verduras (5-7 min). 3. Agrega salsa soja. Sirve con arroz opcional.",
     "restrictions": null,
@@ -906,13 +906,13 @@
       {
         "name": "Zanahoria",
         "quantity": 0.5,
-        "unit_of_measure": "cup",
+        "unit_of_measure": "taza",
         "required": true
       },
       {
         "name": "Brócoli",
         "quantity": 0.5,
-        "unit_of_measure": "cup",
+        "unit_of_measure": "taza",
         "required": true
       },
       {
@@ -943,7 +943,7 @@
     "img": "/recipes/salteado-tofu-verduras.jpg"
   },
   {
-    "id": 18,
+    "id": 17,
     "name": "Brócoli Vigués + 2º Plato",
     "steps": "No description available",
     "restrictions": null,
@@ -1011,7 +1011,7 @@
     "img": "/recipes/brocoli-vigues.jpg"
   },
   {
-    "id": 19,
+    "id": 18,
     "name": "Puré de calabaza + 2º Plato",
     "steps": "",
     "restrictions": null,
@@ -1171,7 +1171,7 @@
     ]
   },
   {
-    "id": 22,
+    "id": 21,
     "name": "Kéfir con frutos secos",
     "steps": "",
     "restrictions": null,
@@ -1196,7 +1196,7 @@
     ]
   },
   {
-    "id": 23,
+    "id": 22,
     "name": "Batido de proteína con crema de cacahuete",
     "steps": "",
     "restrictions": null,
@@ -1239,7 +1239,7 @@
     "img": "/recipes/batido-proteina.jpg"
   },
   {
-    "id": 24,
+    "id": 23,
     "name": "Pudin de chía y proteína",
     "steps": "Mezclar y refrigerar por 2 horas.",
     "restrictions": null,
@@ -1271,7 +1271,7 @@
     "img": "/recipes/pudin-chia-proteina.jpg"
   },
   {
-    "id": 25,
+    "id": 24,
     "name": "Batido de proteína con plátano y cacao",
     "steps": "",
     "restrictions": null,
@@ -1316,7 +1316,7 @@
     "img": "/recipes/batido-proteina-platano-cacao.jpg"
   },
   {
-    "id": 26,
+    "id": 25,
     "name": "Crackers integrales con jamón serrano",
     "steps": "",
     "restrictions": null,
@@ -1342,7 +1342,7 @@
     "img": "/recipes/crackers-integrales-jamon-serrano.jpg"
   },
   {
-    "id": 27,
+    "id": 26,
     "name": "Pastel de verduras",
     "steps": "1. Horno 180C. Mezclar verduras, huevos batidos, leche, queso y especias. 2. Hornear 35-40 min. Sirve con ensalada y arroz/boniato.",
     "restrictions": null,
@@ -1404,7 +1404,7 @@
     "img": "/recipes/pastel-de-verduras.jpg"
   },
   {
-    "id": 28,
+    "id": 27,
     "name": "Bowl de quinoa con verduras y huevo",
     "steps": "",
     "restrictions": null,
@@ -1442,7 +1442,7 @@
     "img": "/recipes/bowl-quinoa-verduras-huevo.jpg"
   },
   {
-    "id": 29,
+    "id": 28,
     "name": "Frittata de verduras al horno",
     "steps": "1. Horno 180C. 2. Bate huevos y mezcla con verduras. 3. Sella en sartén y hornea 10-15 min.",
     "restrictions": null,
@@ -1480,7 +1480,7 @@
     "img": "/recipes/frittata-de-verduras.jpg"
   },
   {
-    "id": 30,
+    "id": 29,
     "name": "Pescado con ensalada de aguacate",
     "steps": "",
     "restrictions": null,
@@ -1561,7 +1561,7 @@
     "img": "/recipes/pescado-con-ensalada-de-aguacate.jpg"
   },
   {
-    "id": 31,
+    "id": 30,
     "name": "Ensalada de pollo con quinoa y aguacate",
     "steps": "",
     "restrictions": null,
@@ -1599,7 +1599,7 @@
     "img": "/recipes/ensalada-de-pollo-con-quinoa-y-aguacate.jpg"
   },
   {
-    "id": 32,
+    "id": 31,
     "name": "Fajitas de pollo con pimientos",
     "steps": "",
     "restrictions": null,
@@ -1649,7 +1649,7 @@
     "img": "/recipes/fajitas-de-pollo-con-pimientos.jpg"
   },
   {
-    "id": 33,
+    "id": 32,
     "name": "Pizza de masa de huevo",
     "steps": "",
     "restrictions": ["weekend"],
