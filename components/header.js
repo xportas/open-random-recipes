@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Header({ activeTab, previousTab }) {
+export default function Header({ activeTab, previousTabRef }) {
   return (
     <>
       <header className="flex justify-between items-center w-11/12 px-margin-mobile py-sm sticky top-2 z-40 border border-[#4A4A48] rounded-full mt-2 mx-auto backdrop-blur-xs">
@@ -12,7 +12,7 @@ export default function Header({ activeTab, previousTab }) {
         />
         <button
           onClick={() => activeTab.activeTab !== 'settings' ?
-            activeTab.setActiveTab("settings") : activeTab.setActiveTab(previousTab.previousTab)
+            activeTab.setActiveTab("settings") : activeTab.setActiveTab(previousTabRef)
           }
           className="w-10 h-10 flex items-center justify-center text-[#4A4A48] active:scale-95 transition-transform duration-200 rounded-full">
           {activeTab.activeTab !== 'settings' ?
