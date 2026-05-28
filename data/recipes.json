@@ -1,0 +1,1713 @@
+[
+  {
+    "id": 1,
+    "name": "Tortilla",
+    "steps": "Batir huevos y mezclar con el ingrediente elegido. Cocinar en sartén.",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": true,
+    "lunch": false,
+    "snack": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "Huevos",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Acompañante",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Jamón Serrano",
+          "Jamón cocido",
+          "Queso",
+          "Atún"
+        ]
+      }
+    ],
+    "img": "/recipes/tortilla.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Yogurt natural con frutos secos",
+    "steps": "Mezcla el yogurt natural casero con los frutos secos elegidos. Posibilidad de añadir miel. ",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": true,
+    "lunch": false,
+    "snack": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "Yogurt natural",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Frutos secos",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      }
+    ],
+    "img": "/recipes/yogurt-con-frutos-secos.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Bowl Energy",
+    "steps": "Añadir los ingredientes en un bowl, empezando por el yogurt, luego los copos de avena, la crema de cacahuete, las semillas y por último la fruta de temporada (ej: plátano, fresas, kiwi, mango, manzana, arándanos, etc). Opcional: añadir un poco de miel.",
+    "restrictions": [
+      "weekend"
+    ],
+    "servings": 1,
+    "breakfast": true,
+    "lunch": false,
+    "snack": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "Yogurt natural",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Copos de avena",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Crema de cacahuete",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Semillas / Frutos secos",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Miel",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Fruta de temporada",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      }
+    ],
+    "img": "/recipes/bowl-energy.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Bowl Choco Crunch",
+    "steps": "Añadir los ingredientes en un bowl, empezando por el yogurt, luego la granola de chocolate, los frutos secos, las semillas y por último la fruta de temporada (ej: plátano, fresas, kiwi, arándanos, etc). Opcional: añadir un poco de miel.",
+    "restrictions": [
+      "weekend"
+    ],
+    "servings": 1,
+    "breakfast": true,
+    "lunch": false,
+    "snack": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "Yogurt natural",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Granola de chocolate",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Frutos secos",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Mezcla de semillas",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Miel",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Frutas frescas de temporada",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      }
+    ],
+    "img": "/recipes/bowl-choco-crunch.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Bowl Miel & Cacahuete",
+    "steps": "Añadir los ingredientes en un bowl, empezando por el yogurt, luego la crema de cacahuete, la fruta de temporada (ej: plátano, fresas, kiwi, arándanos, etc). Opcional: añadir un poco de miel.",
+    "restrictions": [
+      "weekend"
+    ],
+    "servings": 1,
+    "breakfast": true,
+    "lunch": false,
+    "snack": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "Yogurt natural",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Crema de cacahuete",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Plátano",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Miel",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      }
+    ],
+    "img": "/recipes/bowl-miel-cacahuete.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Tostada Verde Cremoso",
+    "steps": "Tostamos el pan integral, untamos con Philadelphia y cubrimos con aguacate machacado o en rodajas, sal y pimienta. Opcional: añadir huevo frito o cocido encima.",
+    "restrictions": [
+      "weekend"
+    ],
+    "servings": 1,
+    "breakfast": true,
+    "lunch": false,
+    "snack": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "Pan integral",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Philadelphia",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Aguacate",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      }
+    ],
+    "img": "/recipes/tostada-verde-cremoso.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Tostada Amanecer",
+    "steps": "Tostamos el pan integral, lo rociamos con un chorrito de aceite de oliva y cubrimos con aguacate machacado o en rodajas, y añadimos un huevo frito encima. Finalmente, salpimentamos al gusto.",
+    "restrictions": [
+      "weekend"
+    ],
+    "servings": 1,
+    "breakfast": true,
+    "lunch": false,
+    "snack": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "Pan integral",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Aceite",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Aguacate",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Huevo frito",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      }
+    ],
+    "img": "/recipes/tostada-amanecer.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Tortitas de Avena y Plátano",
+    "steps": "Pasamos los ingredientes por la batidora hasta obtener una mezcla homogénea. Untamos una sartén antiadherente con un poco de aceite de oliva y vertemos la mezcla. Cocinamos por ambos lados hasta que estén doradas. Acompañamos al gusto.",
+    "restrictions": [
+      "weekend"
+    ],
+    "servings": 1,
+    "breakfast": true,
+    "lunch": false,
+    "snack": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "Plátano",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Avena",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Huevos",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Leche",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      }
+    ],
+    "img": "/recipes/tortitas-avena.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Receta Carne Roja Aleatoria",
+    "steps": "Cocinar al gusto según los ingredientes elegidos.",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": true,
+    "snack": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "Carne roja",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Potro",
+          "Cordero",
+          "Cerdo"
+        ]
+      },
+      {
+        "name": "Carbohidrato",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Patata",
+          "Batata",
+          "Quinoa"
+        ]
+      },
+      {
+        "name": "Vegetal 1",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Brócoli",
+          "Pimiento rojo",
+          "Espinacas"
+        ]
+      },
+      {
+        "name": "Vegetal 1 (bis)",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false,
+        "options": [
+          "Espárragos",
+          "Guisantes"
+        ]
+      },
+      {
+        "name": "Vegetal 2",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Calabaza",
+          "Zanahoria",
+          "Aguacate",
+          "Pimiento verde"
+        ]
+      },
+      {
+        "name": "Vegetal 2 (bis)",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false,
+        "options": [
+          "Tomate"
+        ]
+      },
+      {
+        "name": "Vegetal 3",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Puerro",
+          "Calabacín",
+          "Berenjena"
+        ]
+      },
+      {
+        "name": "Vegetal 3 (bis)",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false,
+        "options": [
+          "Setas"
+        ]
+      }
+    ],
+    "img": "/recipes/receta-carne-roja.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Receta Carne Blanca Aleatoria",
+    "steps": "Cocinar al gusto según los ingredientes elegidos.",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": true,
+    "snack": false,
+    "dinner": true,
+    "ingredientes": [
+      {
+        "name": "Carne blanca",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Pechuga de pollo",
+          "Muslos de pollo",
+          "Pavo",
+          "Ternuras de conejo"
+        ]
+      },
+      {
+        "name": "Carbohidrato",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Arroz",
+          "Batata",
+          "Pasta integral"
+        ]
+      },
+      {
+        "name": "Vegetal 1",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Brócoli",
+          "Pimiento rojo",
+          "Espinacas"
+        ]
+      },
+      {
+        "name": "Vegetal 1 (bis)",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false,
+        "options": [
+          "Espárragos",
+          "Guisantes"
+        ]
+      },
+      {
+        "name": "Vegetal 2",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Calabaza",
+          "Zanahoria",
+          "Aguacate",
+          "Pimiento verde"
+        ]
+      },
+      {
+        "name": "Vegetal 2 (bis)",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false,
+        "options": [
+          "Tomate"
+        ]
+      },
+      {
+        "name": "Vegetal 3",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Puerro",
+          "Calabacín",
+          "Berenjena"
+        ]
+      },
+      {
+        "name": "Vegetal 3 (bis)",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false,
+        "options": [
+          "Setas"
+        ]
+      }
+    ],
+    "img": "/recipes/receta-carne-blanca.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Receta Pescado Azul Aleatoria",
+    "steps": "Cocinar al gusto según los ingredientes elegidos.",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": true,
+    "snack": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "Salmón",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Salmón"
+        ]
+      },
+      {
+        "name": "Carbohidrato",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Arroz",
+          "Patata cocida"
+        ]
+      },
+      {
+        "name": "Vegetal 1",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Brócoli",
+          "Pimiento rojo",
+          "Espinacas"
+        ]
+      },
+      {
+        "name": "Vegetal 1 (bis)",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false,
+        "options": [
+          "Espárragos",
+          "Guisantes"
+        ]
+      },
+      {
+        "name": "Vegetal 2",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Calabaza",
+          "Zanahoria",
+          "Aguacate",
+          "Pimiento verde"
+        ]
+      },
+      {
+        "name": "Vegetal 2 (bis)",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false,
+        "options": [
+          "Tomate"
+        ]
+      },
+      {
+        "name": "Vegetal 3",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Puerro",
+          "Calabacín",
+          "Berenjena"
+        ]
+      },
+      {
+        "name": "Vegetal 3 (bis)",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false,
+        "options": [
+          "Setas"
+        ]
+      }
+    ],
+    "img": "/recipes/receta-pescado-azul.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Receta Pescado Blanco Aleatoria",
+    "steps": "Cocinar al gusto según los ingredientes elegidos.",
+    "restrictions": [
+      "dinner",
+      "weekend"
+    ],
+    "servings": 1,
+    "breakfast": false,
+    "lunch": true,
+    "snack": false,
+    "dinner": true,
+    "ingredients": [
+      {
+        "name": "Pescado blanco",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Lubina",
+          "Trucha",
+          "Dorada",
+          "Gambas"
+        ]
+      },
+      {
+        "name": "Carbohidrato",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Arroz",
+          "Patata cocida",
+          "Quinoa"
+        ]
+      },
+      {
+        "name": "Vegetal 1",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Brócoli",
+          "Pimiento rojo",
+          "Espinacas"
+        ]
+      },
+      {
+        "name": "Vegetal 1 (bis)",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false,
+        "options": [
+          "Espárragos",
+          "Guisantes"
+        ]
+      },
+      {
+        "name": "Vegetal 2",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Calabaza",
+          "Zanahoria",
+          "Aguacate",
+          "Pimiento verde"
+        ]
+      },
+      {
+        "name": "Vegetal 2 (bis)",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false,
+        "options": [
+          "Tomate"
+        ]
+      },
+      {
+        "name": "Vegetal 3",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Puerro",
+          "Calabacín",
+          "Berenjena"
+        ]
+      },
+      {
+        "name": "Vegetal 3 (bis)",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false,
+        "options": [
+          "Setas"
+        ]
+      }
+    ],
+    "img": "/recipes/receta-pescado-blanco.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Bowl de Pescado con Aguacate y Huevo",
+    "steps": "",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": true,
+    "snack": false,
+    "dinner": true,
+    "ingredients": [
+      {
+        "name": "Pescado azul",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Atún",
+          "Sardinas",
+          "Melva"
+        ]
+      },
+      {
+        "name": "Ensalada",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Aguacate",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Huevo cocido",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Carbohidrato",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Arroz",
+          "Quinoa"
+        ]
+      },
+      {
+        "name": "Frutos secos",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Queso cottage",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Fruta de temporada",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      }
+    ],
+    "img": "/recipes/bowl-pescado-aguacate-huevo.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Pollo con garbanzos",
+    "steps": "Cocinar el pollo y verduras. Añadir garbanzos y tomate. Nota: Legumbres solo un día a la semana.",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": true,
+    "snack": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "Pimiento amarillo",
+        "quantity": 1,
+        "unit_of_measure": "ud",
+        "required": true
+      },
+      {
+        "name": "Zanahoria",
+        "quantity": 2,
+        "unit_of_measure": "ud",
+        "required": true
+      },
+      {
+        "name": "Espárragos trigueros",
+        "quantity": 6,
+        "unit_of_measure": "ud",
+        "required": true
+      },
+      {
+        "name": "Tomate natural triturado",
+        "quantity": 2,
+        "unit_of_measure": "cucharada",
+        "required": true
+      },
+      {
+        "name": "Garbanzos",
+        "quantity": 200,
+        "unit_of_measure": "g",
+        "required": true
+      },
+      {
+        "name": "Pechuga de pollo",
+        "quantity": 200,
+        "unit_of_measure": "g",
+        "required": true
+      },
+      {
+        "name": "Curry, perejil, ajo, sal y pimienta",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      }
+    ],
+    "img": "/recipes/pollo-con-garbanzos.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Lentejas con arroz",
+    "steps": "Cocinar lentejas con arroz y verduras. Nota: Legumbres solo un día a la semana.",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": true,
+    "snack": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "Lentejas",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Arroz",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Zanahoria",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Espinacas",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Carne",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false
+      },
+      {
+        "name": "Pimientos",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false
+      }
+    ],
+    "img": "/recipes/lentejas-con-arroz.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Salteado de tofu con verduras",
+    "steps": "1. Corta tofu en cubos y sofríelo. 2. Añade ajo y verduras (5-7 min). 3. Agrega salsa soja. Sirve con arroz opcional.",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": true,
+    "snack": false,
+    "dinner": true,
+    "ingredients": [
+      {
+        "name": "Tofu",
+        "quantity": 100,
+        "unit_of_measure": "g",
+        "required": true
+      },
+      {
+        "name": "Zanahoria",
+        "quantity": 0.5,
+        "unit_of_measure": "cup",
+        "required": true
+      },
+      {
+        "name": "Brócoli",
+        "quantity": 0.5,
+        "unit_of_measure": "cup",
+        "required": true
+      },
+      {
+        "name": "Pimiento rojo",
+        "quantity": 0.5,
+        "unit_of_measure": "ud",
+        "required": true
+      },
+      {
+        "name": "Salsa de soja",
+        "quantity": 1,
+        "unit_of_measure": "cucharada",
+        "required": true
+      },
+      {
+        "name": "Ajo",
+        "quantity": 1,
+        "unit_of_measure": "ud",
+        "required": true
+      },
+      {
+        "name": "Arroz integral",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false
+      }
+    ],
+    "img": "/recipes/salteado-tofu-verduras.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Brócoli Vigués + 2º Plato",
+    "steps": "No description available",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": true,
+    "snack": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "Brócoli",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Calabaza",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Carne picada",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Queso",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Puerro",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Carne",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Potro",
+          "Cerdo",
+          "Conejo",
+          "Pollo"
+        ]
+      },
+      {
+        "name": "Carbohidrato",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Arroz",
+          "Patata",
+          "Pasta",
+          "Batata"
+        ]
+      }
+    ],
+    "img": "/recipes/brocoli-vigues.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Puré de calabaza + 2º Plato",
+    "steps": "",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": true,
+    "snack": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "Calabaza",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Zanahoria",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Calabacín",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Puerro",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Carne",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Potro",
+          "Cerdo",
+          "Conejo",
+          "Pollo"
+        ]
+      },
+      {
+        "name": "Carbohidrato",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Arroz",
+          "Patata",
+          "Pasta",
+          "Batata"
+        ]
+      }
+    ],
+    "img": "/recipes/pure-calabaza.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Puré de brócoli + 2º Plato",
+    "steps": "",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": true,
+    "snack": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "Brócoli",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Calabacín",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Carne",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Potro",
+          "Cerdo",
+          "Conejo",
+          "Pollo"
+        ]
+      },
+      {
+        "name": "Carbohidrato",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Arroz",
+          "Patata",
+          "Pasta",
+          "Batata"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Guisantes con jamón + 2º Plato",
+    "steps": "",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": true,
+    "snack": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "Guisantes",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Jamón en tacos",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Carne",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Potro",
+          "Cerdo",
+          "Conejo",
+          "Pollo"
+        ]
+      },
+      {
+        "name": "Carbohidrato",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Arroz",
+          "Patata",
+          "Pasta",
+          "Batata"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Kéfir con frutos secos",
+    "steps": "",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": false,
+    "snack": true,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "Kéfir",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      },
+      {
+        "name": "Frutos secos",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "nombre": "BATIDO DE PROTEÍNA CON CREMA DE CACAHUETE",
+    "instrucciones": "",
+    "restricciones": "Libre",
+    "raciones": 1,
+    "desayuno": false,
+    "comida": false,
+    "merienda": true,
+    "cena": false,
+    "ingredientes": [
+      {
+        "nombre": "Proteína en polvo",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Mantequilla de maní",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Leche o agua",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio",
+        "opciones": [
+          "Leche",
+          "agua"
+        ]
+      },
+      {
+        "nombre": "Plátano",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "nombre": "PUDIN DE CHÍA Y PROTEÍNA",
+    "instrucciones": "Mezclar y refrigerar por 2 horas.",
+    "restricciones": "Libre",
+    "raciones": 1,
+    "desayuno": false,
+    "comida": false,
+    "merienda": true,
+    "cena": false,
+    "ingredientes": [
+      {
+        "nombre": "Leche",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Chía",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Proteína en polvo",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "nombre": "TOSTADAS DE ARROZ CON AGUACATE Y HUEVO",
+    "instrucciones": "",
+    "restricciones": "Libre",
+    "raciones": 1,
+    "desayuno": false,
+    "comida": false,
+    "merienda": true,
+    "cena": false,
+    "ingredientes": [
+      {
+        "nombre": "Tostadas de arroz inflado",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Aguacate",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Huevo duro",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Sal y pimienta",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "nombre": "BATIDO DE PROTEÍNA CON PLÁTANO Y CACAO",
+    "instrucciones": "",
+    "restricciones": "Libre",
+    "raciones": 1,
+    "desayuno": false,
+    "comida": false,
+    "merienda": true,
+    "cena": false,
+    "ingredientes": [
+      {
+        "nombre": "Plátano",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Proteína en polvo",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Cacao en polvo sin azúcar",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Leche",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Hielo",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "nombre": "CRACKERS INTEGRALES CON JAMÓN SERRANO",
+    "instrucciones": "",
+    "restricciones": "Libre",
+    "raciones": 1,
+    "desayuno": false,
+    "comida": false,
+    "merienda": true,
+    "cena": false,
+    "ingredientes": [
+      {
+        "nombre": "Crackers integrales",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Jamón serrano",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "nombre": "PASTEL DE VERDURAS",
+    "instrucciones": "1. Horno 180C. Mezclar verduras, huevos batidos, leche, queso y especias. 2. Hornear 35-40 min. Sirve con ensalada y arroz/boniato.",
+    "restricciones": "Libre",
+    "raciones": 4,
+    "desayuno": false,
+    "comida": false,
+    "merienda": false,
+    "cena": true,
+    "ingredientes": [
+      {
+        "nombre": "Calabacín grande rallado",
+        "cantidad": 1,
+        "unidad_medida": "unidad",
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Zanahoria grande rallada",
+        "cantidad": 1,
+        "unidad_medida": "unidad",
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Pimiento rojo en cubitos",
+        "cantidad": 1,
+        "unidad_medida": "unidad",
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Espinacas frescas",
+        "cantidad": 100,
+        "unidad_medida": "g",
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Huevos",
+        "cantidad": 5,
+        "unidad_medida": "unidades",
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Leche vegetal",
+        "cantidad": 100,
+        "unidad_medida": "ml",
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Queso feta desmenuzado",
+        "cantidad": 100,
+        "unidad_medida": "g",
+        "tipo": "Opcional"
+      },
+      {
+        "nombre": "Cúrcuma",
+        "cantidad": 1,
+        "unidad_medida": "cucharadita",
+        "tipo": "Obligatorio"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "nombre": "BOWL DE QUINOA CON VERDURAS Y HUEVO",
+    "instrucciones": "",
+    "restricciones": "Libre",
+    "raciones": 1,
+    "desayuno": false,
+    "comida": false,
+    "merienda": false,
+    "cena": true,
+    "ingredientes": [
+      {
+        "nombre": "Quinoa cocida",
+        "cantidad": 0.5,
+        "unidad_medida": "taza",
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Huevo cocido",
+        "cantidad": 1,
+        "unidad_medida": "unidad",
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Zanahorias ralladas",
+        "cantidad": 0.5,
+        "unidad_medida": "taza",
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Pimiento rojo",
+        "cantidad": 0.25,
+        "unidad_medida": "taza",
+        "tipo": "Obligatorio"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "nombre": "FRITTATA DE VERDURAS AL HORNO",
+    "instrucciones": "1. Horno 180C. 2. Bate huevos y mezcla con verduras. 3. Sella en sartén y hornea 10-15 min.",
+    "restricciones": "Libre",
+    "raciones": 2,
+    "desayuno": false,
+    "comida": false,
+    "merienda": false,
+    "cena": true,
+    "ingredientes": [
+      {
+        "nombre": "Huevos",
+        "cantidad": 4,
+        "unidad_medida": "unidades",
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Espinacas frescas",
+        "cantidad": 0.5,
+        "unidad_medida": "taza",
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Champiñones en rodajas",
+        "cantidad": 0.25,
+        "unidad_medida": "taza",
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Pimiento rojo",
+        "cantidad": 0.5,
+        "unidad_medida": "unidad",
+        "tipo": "Obligatorio"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "nombre": "PESCADO CON ENSALADA DE AGUACATE",
+    "instrucciones": "",
+    "restricciones": "Libre",
+    "raciones": 1,
+    "desayuno": false,
+    "comida": false,
+    "merienda": false,
+    "cena": true,
+    "ingredientes": [
+      {
+        "nombre": "Atún / Sardinas / Melva / Lubina / Trucha / Dorada",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Elegir uno",
+        "opciones": [
+          "Atún",
+          "Sardinas",
+          "Melva",
+          "Lubina",
+          "Trucha",
+          "Dorada"
+        ]
+      },
+      {
+        "nombre": "Ensalada",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Aguacate",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Calabacín en rodajas",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Frutos secos",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Queso cottage",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Fruta de temporada",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Huevo cocido",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Opcional"
+      },
+      {
+        "nombre": "Macarrones / Arroz / Quinoa",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Opcional",
+        "opciones": [
+          "Macarrones",
+          "Arroz",
+          "Quinoa"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "nombre": "ENSALADA DE POLLO CON QUINOA Y AGUACATE",
+    "instrucciones": "",
+    "restricciones": "Libre",
+    "raciones": 1,
+    "desayuno": false,
+    "comida": false,
+    "merienda": false,
+    "cena": true,
+    "ingredientes": [
+      {
+        "nombre": "Pechuga de pollo cocida",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Quinoa cocida",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Aguacate",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Espinacas frescas",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Aceite de oliva",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "nombre": "FAJITAS DE POLLO CON PIMIENTOS",
+    "instrucciones": "",
+    "restricciones": "Libre",
+    "raciones": 1,
+    "desayuno": false,
+    "comida": false,
+    "merienda": false,
+    "cena": true,
+    "ingredientes": [
+      {
+        "nombre": "Pechuga de pollo",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Pimiento rojo",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Pimiento verde",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Nueces",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Opcional"
+      },
+      {
+        "nombre": "Queso en lonchas",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Opcional"
+      },
+      {
+        "nombre": "Tortillas de maíz",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Obligatorio"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "nombre": "PIZZA DE MASA DE HUEVO",
+    "instrucciones": "",
+    "restricciones": "Fin de Semana",
+    "raciones": 1,
+    "desayuno": false,
+    "comida": false,
+    "merienda": false,
+    "cena": true,
+    "ingredientes": [
+      {
+        "nombre": "Huevos",
+        "cantidad": 3,
+        "unidad_medida": "unidades",
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Queso cottage",
+        "cantidad": 2,
+        "unidad_medida": "tarrinas",
+        "tipo": "Obligatorio"
+      },
+      {
+        "nombre": "Ingredientes extra a elegir",
+        "cantidad": null,
+        "unidad_medida": null,
+        "tipo": "Opcional"
+      }
+    ]
+  }
+]
