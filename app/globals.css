@@ -123,7 +123,6 @@
 
 body {
   -webkit-tap-highlight-color: transparent;
-  min-height: max(884px, 100dvh);
 }
 
 /* Utility: hide scrollbar */

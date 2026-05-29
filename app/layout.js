@@ -18,7 +18,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className="light">
+    <html lang="es" className="light h-full">
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
       </head>
       <body
         suppressHydrationWarning
-        className={`${inter.variable} ${playfair.variable} bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container`}
+        className={`${inter.variable} ${playfair.variable} bg-background text-on-background h-full flex flex-col font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container`}
       >
         {children}
       </body>
