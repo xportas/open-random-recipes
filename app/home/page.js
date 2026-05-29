@@ -22,7 +22,7 @@ export default function HomePage() {
             src="/home-generate-menu.png"
           />
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/40 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-secondary/90 via-secondary/40 to-transparent" />
           {/* Content */}
           <div className="absolute bottom-0 left-0 w-full p-md flex flex-col justify-end">
             <div className="flex justify-between items-end">
@@ -52,7 +52,7 @@ export default function HomePage() {
             src="/home-list-recipes.png"
           />
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/30 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-inverse-surface/90 via-inverse-surface/30 to-transparent" />
           {/* Content */}
           <div className="absolute bottom-0 left-0 w-full p-md flex flex-col justify-end">
             <div className="flex justify-between items-end">

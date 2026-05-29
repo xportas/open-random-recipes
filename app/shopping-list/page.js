@@ -1,6 +1,6 @@
 export default function ShoppingListPage() {
   return (
-    <main className="flex-grow px-margin-mobile md:px-margin-desktop py-md md:py-lg pb-32 md:pb-lg max-w-3xl mx-auto w-full flex flex-col gap-lg">
+    <main className="grow px-margin-mobile md:px-margin-desktop py-md md:py-lg pb-32 md:pb-lg max-w-3xl mx-auto w-full flex flex-col gap-lg">
       <div className="flex flex-col gap-base">
         <h1 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Lista de la Compra</h1>
         <p className="text-on-surface-variant">Revisa los ingredientes para tus próximas recetas.</p>
@@ -29,7 +29,7 @@ export default function ShoppingListPage() {
               <svg className="w-3.5 h-3.5 text-on-primary opacity-0 transition-opacity" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round"></path></svg>
             </div>
           </div>
-          <span className="font-body-lg text-body-lg text-on-surface flex-grow">Tomates Cherry (500g)</span>
+          <span className="font-body-lg text-body-lg text-on-surface grow">Tomates Cherry (500g)</span>
         </label>
         <label className="ingredient-item checked flex items-center gap-md p-sm rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer group">
           <div className="custom-checkbox relative">
@@ -38,7 +38,7 @@ export default function ShoppingListPage() {
               <svg className="w-3.5 h-3.5 text-on-primary opacity-100 transition-opacity" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round"></path></svg>
             </div>
           </div>
-          <span className="font-body-lg text-body-lg text-on-surface flex-grow">Cebolla Morada (2 uds)</span>
+          <span className="font-body-lg text-body-lg text-on-surface grow">Cebolla Morada (2 uds)</span>
         </label>
         <label className="ingredient-item flex items-center gap-md p-sm rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer group">
           <div className="custom-checkbox relative">
@@ -47,7 +47,7 @@ export default function ShoppingListPage() {
               <svg className="w-3.5 h-3.5 text-on-primary opacity-0 transition-opacity" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round"></path></svg>
             </div>
           </div>
-          <span className="font-body-lg text-body-lg text-on-surface flex-grow">Espinacas Frescas (1 bolsa)</span>
+          <span className="font-body-lg text-body-lg text-on-surface grow">Espinacas Frescas (1 bolsa)</span>
         </label>
         {/*  */}
         <h2 className="font-headline-sm text-headline-sm text-primary mt-md">Proteínas</h2>
@@ -58,7 +58,7 @@ export default function ShoppingListPage() {
               <svg className="w-3.5 h-3.5 text-on-primary opacity-0 transition-opacity" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round"></path></svg>
             </div>
           </div>
-          <span className="font-body-lg text-body-lg text-on-surface flex-grow">Pechuga de Pollo (800g)</span>
+          <span className="font-body-lg text-body-lg text-on-surface grow">Pechuga de Pollo (800g)</span>
         </label>
         <label className="ingredient-item flex items-center gap-md p-sm rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer group">
           <div className="custom-checkbox relative">
@@ -67,7 +67,7 @@ export default function ShoppingListPage() {
               <svg className="w-3.5 h-3.5 text-on-primary opacity-0 transition-opacity" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round"></path></svg>
             </div>
           </div>
-          <span className="font-body-lg text-body-lg text-on-surface flex-grow">Huevos Camperos (1 docena)</span>
+          <span className="font-body-lg text-body-lg text-on-surface grow">Huevos Camperos (1 docena)</span>
         </label>
         {/*  */}
         <h2 className="font-headline-sm text-headline-sm text-primary mt-md">Despensa</h2>
@@ -78,7 +78,7 @@ export default function ShoppingListPage() {
               <svg className="w-3.5 h-3.5 text-on-primary opacity-100 transition-opacity" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round"></path></svg>
             </div>
           </div>
-          <span className="font-body-lg text-body-lg text-on-surface flex-grow">Aceite de Oliva Virgen Extra (1L)</span>
+          <span className="font-body-lg text-body-lg text-on-surface grow">Aceite de Oliva Virgen Extra (1L)</span>
         </label>
       </div>
       {/*  */}

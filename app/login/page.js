@@ -18,7 +18,7 @@ export default function LoginPage() {
 
   return (
     <main className="w-full flex-1 bg-surface text-on-surface flex flex-col justify-center items-center relative">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-surface-container-low via-surface to-surface opacity-70 pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--tw-gradient-stops))] from-surface-container-low via-surface to-surface opacity-70 pointer-events-none z-0" />
 
       <div className="w-full max-w-md px-margin-mobile z-10 flex flex-col items-center">
         <div className="w-full mb-lg flex justify-center">

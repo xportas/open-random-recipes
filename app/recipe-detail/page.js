@@ -5,7 +5,7 @@ export default function RecipeDetailPage() {
       <section className="relative w-full h-[442px] md:h-[530px] md:rounded-3xl overflow-hidden shadow-lg mb-lg">
         <img alt="Ensalada Fresca de Quinoa y Aguacate" className="w-full h-full object-cover" data-alt="A vibrant, top-down view of a fresh quinoa and avocado salad in a ceramic bowl. The lighting is bright and natural, casting soft shadows on a clean marble countertop. The color palette features rich organic greens of avocado and spinach, contrasting with a warm terracotta bowl, perfectly aligning with a modern, fresh farm-to-table culinary aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIYpn2IexbnQ_4E2E62MbWVpD5DvtmtNspOn-V-XEWImlbseIQ-aMhnot4K3z09gr_suo5vTxfki86Q85tafA58XGryoVorhMtt_Yt3NCpPCit9uhg5Tma8dTNfV3qXObtFFjwXHrjSF8dUnpAMM5mrd2vs-RoxvGFBCoImVVCCFgHUk6JW8F9wVoEN7IPcFozNdenJMi2VBaBXCUT7TIUU067vxv2xHBysIaFU_ihdSepuhl9gSHh9QBsnhbG_xvF4MvFakk5Mj4" />
         {/*  */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent"></div>
         <div className="absolute bottom-0 left-0 w-full p-margin-mobile md:p-lg">
           <div className="flex gap-sm mb-sm flex-wrap">
             <span className="bg-primary/90 text-on-primary font-label-sm text-label-sm px-3 py-1 rounded-full backdrop-blur-sm shadow-sm border border-primary/20">Saludable</span>
