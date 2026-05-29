@@ -1,7 +1,7 @@
 import { MEAL_TYPES } from "@/lib/menuGenerator";
 import MealItem from "./MealItem";
 
-export default function DayCard({ dayName, date, meals, onRegenerateMeal }) {
+export default function DayCard({ dayName, date, meals, onRegenerateMeal, onRecipeClick, onImageClick }) {
   const activeMeals = MEAL_TYPES.filter((type) => meals[type]);
 
   return (
@@ -19,6 +19,8 @@ export default function DayCard({ dayName, date, meals, onRegenerateMeal }) {
               mealType={mealType}
               meal={meals[mealType]}
               onRegenerate={onRegenerateMeal}
+              onRecipeClick={onRecipeClick}
+              onImageClick={onImageClick}
             />
             {index < activeMeals.length - 1 && (
               <hr className="border-surface-variant mt-md" />

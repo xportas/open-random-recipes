@@ -1,11 +1,14 @@
 import { MEAL_LABELS } from "@/lib/menuGenerator";
 
-export default function MealItem({ mealType, meal, onRegenerate }) {
+export default function MealItem({ mealType, meal, onRegenerate, onRecipeClick, onImageClick }) {
   const label = MEAL_LABELS[mealType];
 
   return (
     <div className="flex gap-sm group relative">
-      <div className="w-16 h-16 rounded-lg overflow-hidden shrink-0">
+      <div
+        className="w-16 h-16 rounded-lg overflow-hidden shrink-0 cursor-zoom-in"
+        onClick={() => onImageClick?.(meal.img, meal.name)}
+      >
         {meal.img ? (
           <img
             alt={meal.name}
@@ -22,7 +25,10 @@ export default function MealItem({ mealType, meal, onRegenerate }) {
         <span className="font-label-sm text-label-sm text-primary uppercase tracking-wider mb-xs">
           {label}
         </span>
-        <h4 className="font-label-md text-label-md text-on-surface leading-tight">
+        <h4
+          className="font-label-md text-label-md text-on-surface leading-tight cursor-pointer hover:text-primary hover:underline transition-colors"
+          onClick={() => onRecipeClick?.(meal.recipeId)}
+        >
           {meal.name}
         </h4>
       </div>

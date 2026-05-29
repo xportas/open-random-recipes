@@ -2,6 +2,8 @@
 
 import { useState, useMemo } from "react";
 import recipesData from "@/data/recipes.json";
+import ImageModal from "@/components/ImageModal";
+import RecipeDetailPage from "@/app/recipe-detail/page";
 import MealTypeFilter from "./components/MealTypeFilter";
 import SearchBar from "./components/SearchBar";
 import RecipeGroup from "./components/RecipeGroup";
@@ -10,6 +12,8 @@ export default function RecipesListPage() {
   const [recipes, setRecipes] = useState(recipesData);
   const [selectedMealType, setSelectedMealType] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
+  const [imageModal, setImageModal] = useState(null);
 
   const handleToggleFavorite = (id) => {
     setRecipes((prevRecipes) =>
@@ -48,29 +52,49 @@ export default function RecipesListPage() {
     return Object.entries(groups).sort(([a], [b]) => a.localeCompare(b));
   }, [filteredRecipes]);
 
-  return (
-    <main className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pt-md">
-      <MealTypeFilter
-        selectedType={selectedMealType}
-        onTypeChange={setSelectedMealType}
+  if (selectedRecipe) {
+    return (
+      <RecipeDetailPage
+        recipe={selectedRecipe}
+        onBack={() => setSelectedRecipe(null)}
       />
-      <SearchBar value={searchQuery} onChange={setSearchQuery} />
-      <section className="space-y-md pb-lg">
-        {groupedRecipes.length === 0 ? (
-          <p className="text-center text-on-surface-variant py-lg">
-            No se encontraron recetas
-          </p>
-        ) : (
-          groupedRecipes.map(([letter, recipesInGroup]) => (
-            <RecipeGroup
-              key={letter}
-              letter={letter}
-              recipes={recipesInGroup}
-              onToggleFavorite={handleToggleFavorite}
-            />
-          ))
-        )}
-      </section>
-    </main>
+    );
+  }
+
+  return (
+    <>
+      <main className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pt-md">
+        <MealTypeFilter
+          selectedType={selectedMealType}
+          onTypeChange={setSelectedMealType}
+        />
+        <SearchBar value={searchQuery} onChange={setSearchQuery} />
+        <section className="space-y-md pb-lg">
+          {groupedRecipes.length === 0 ? (
+            <p className="text-center text-on-surface-variant py-lg">
+              No se encontraron recetas
+            </p>
+          ) : (
+            groupedRecipes.map(([letter, recipesInGroup]) => (
+              <RecipeGroup
+                key={letter}
+                letter={letter}
+                recipes={recipesInGroup}
+                onToggleFavorite={handleToggleFavorite}
+                onRecipeClick={setSelectedRecipe}
+                onImageClick={(src, alt) => setImageModal({ src, alt })}
+              />
+            ))
+          )}
+        </section>
+      </main>
+      {imageModal && (
+        <ImageModal
+          src={imageModal.src}
+          alt={imageModal.alt}
+          onClose={() => setImageModal(null)}
+        />
+      )}
+    </>
   );
 }

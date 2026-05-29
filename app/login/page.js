@@ -20,7 +20,7 @@ export default function LoginPage() {
     <main className="w-full flex-1 bg-surface text-on-surface flex flex-col justify-center items-center relative">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--tw-gradient-stops))] from-surface-container-low via-surface to-surface opacity-70 pointer-events-none z-0" />
 
-      <div className="w-full max-w-md px-margin-mobile z-10 flex flex-col items-center">
+      <div className="w-full max-w-[448px] px-margin-mobile z-10 flex flex-col items-center">
         <div className="w-full mb-lg flex justify-center">
           <Image
             src="/opr-banner.png"
@@ -32,7 +32,7 @@ export default function LoginPage() {
           />
         </div>
 
-        <div className="bg-surface-container-lowest rounded-xl shadow-[0_16px_32px_-12px_rgba(60,105,43,0.08)] p-md w-full max-w-sm flex flex-col items-center border border-surface-variant/50">
+        <div className="bg-surface-container-lowest rounded-xl shadow-[0_16px_32px_-12px_rgba(60,105,43,0.08)] p-md w-full max-w-[384px] flex flex-col items-center border border-surface-variant/50">
           <h1 className="font-headline-sm text-headline-sm text-center text-on-surface mb-2">
             Bienvenido de nuevo
           </h1>
