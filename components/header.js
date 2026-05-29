@@ -7,8 +7,8 @@ export default function Header({ activeTab, previousTabRef }) {
         <Image
           src="/opr-horizontal-logo.png"
           alt="opr-logo"
-          width={170}
-          height={170}
+          width={150}
+          height={150}
         />
         <button
           onClick={() => activeTab.activeTab !== 'settings' ?

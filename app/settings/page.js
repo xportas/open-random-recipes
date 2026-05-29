@@ -4,8 +4,7 @@ import { useState } from "react";
 
 const themes = [
   { id: "light", label: "Claro", icon: "light_mode" },
-  { id: "dark", label: "Oscuro", icon: "dark_mode" },
-  { id: "system", label: "Sistema", icon: "brightness_auto" },
+  { id: "dark", label: "Oscuro", icon: "dark_mode" }
 ];
 
 const languages = [
@@ -15,7 +14,7 @@ const languages = [
 ];
 
 export default function SettingsPage() {
-  const [selectedTheme, setSelectedTheme] = useState("system");
+  const [selectedTheme, setSelectedTheme] = useState("light");
   const [selectedLanguage, setSelectedLanguage] = useState("es");
 
   return (

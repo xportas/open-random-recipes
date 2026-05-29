@@ -9,7 +9,7 @@ export default function MenuPage() {
         </div>
         <button className="bg-primary text-on-primary font-label-md text-label-md px-md py-sm rounded-full flex items-center gap-xs shadow-[0_8px_16px_rgba(60,105,43,0.2)] hover:bg-surface-tint transition-colors active:scale-95 border border-primary-container/30">
           <span className="material-symbols-outlined text-[20px]" data-icon="list_alt">list_alt</span>
-          Generar Lista de Compra
+          Generar Menú Semanal
         </button>
       </div>
       {/*  */}
