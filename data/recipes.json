@@ -29,7 +29,8 @@
         ]
       }
     ],
-    "img": "/recipes/tortilla.jpg"
+    "img": "/recipes/tortilla.jpg",
+    "fav": false
   },
   {
     "id": 2,
@@ -55,7 +56,8 @@
         "required": true
       }
     ],
-    "img": "/recipes/yogurt-con-frutos-secos.jpg"
+    "img": "/recipes/yogurt-con-frutos-secos.jpg",
+    "fav": false
   },
   {
     "id": 3,
@@ -107,7 +109,8 @@
         "required": true
       }
     ],
-    "img": "/recipes/bowl-energy.jpg"
+    "img": "/recipes/bowl-energy.jpg",
+    "fav": false
   },
   {
     "id": 4,
@@ -159,7 +162,8 @@
         "required": true
       }
     ],
-    "img": "/recipes/bowl-choco-crunch.jpg"
+    "img": "/recipes/bowl-choco-crunch.jpg",
+    "fav": false
   },
   {
     "id": 5,
@@ -199,7 +203,8 @@
         "required": true
       }
     ],
-    "img": "/recipes/bowl-miel-cacahuete.jpg"
+    "img": "/recipes/bowl-miel-cacahuete.jpg",
+    "fav": false
   },
   {
     "id": 6,
@@ -233,7 +238,8 @@
         "required": true
       }
     ],
-    "img": "/recipes/tostada-verde-cremoso.jpg"
+    "img": "/recipes/tostada-verde-cremoso.jpg",
+    "fav": false
   },
   {
     "id": 7,
@@ -273,7 +279,8 @@
         "required": true
       }
     ],
-    "img": "/recipes/tostada-amanecer.jpg"
+    "img": "/recipes/tostada-amanecer.jpg",
+    "fav": false
   },
   {
     "id": 8,
@@ -313,7 +320,8 @@
         "required": true
       }
     ],
-    "img": "/recipes/tortitas-avena.jpg"
+    "img": "/recipes/tortitas-avena.jpg",
+    "fav": false
   },
   {
     "id": 9,
@@ -411,7 +419,8 @@
         ]
       }
     ],
-    "img": "/recipes/receta-carne-roja.jpg"
+    "img": "/recipes/receta-carne-roja.jpg",
+    "fav": false
   },
   {
     "id": 10,
@@ -510,7 +519,8 @@
         ]
       }
     ],
-    "img": "/recipes/receta-carne-blanca.jpg"
+    "img": "/recipes/receta-carne-blanca.jpg",
+    "fav": false
   },
   {
     "id": 11,
@@ -605,7 +615,8 @@
         ]
       }
     ],
-    "img": "/recipes/receta-pescado-azul.jpg"
+    "img": "/recipes/receta-pescado-azul.jpg",
+    "fav": false
   },
   {
     "id": 12,
@@ -707,7 +718,8 @@
         ]
       }
     ],
-    "img": "/recipes/receta-pescado-blanco.jpg"
+    "img": "/recipes/receta-pescado-blanco.jpg",
+    "fav": false
   },
   {
     "id": 13,
@@ -778,7 +790,8 @@
         "required": true
       }
     ],
-    "img": "/recipes/bowl-pescado-aguacate-huevo.jpg"
+    "img": "/recipes/bowl-pescado-aguacate-huevo.jpg",
+    "fav": false
   },
   {
     "id": 14,
@@ -834,7 +847,8 @@
         "required": true
       }
     ],
-    "img": "/recipes/pollo-con-garbanzos.jpg"
+    "img": "/recipes/pollo-con-garbanzos.jpg",
+    "fav": false
   },
   {
     "id": 15,
@@ -884,7 +898,8 @@
         "required": false
       }
     ],
-    "img": "/recipes/lentejas-con-arroz.jpg"
+    "img": "/recipes/lentejas-con-arroz.jpg",
+    "fav": false
   },
   {
     "id": 16,
@@ -940,7 +955,8 @@
         "required": false
       }
     ],
-    "img": "/recipes/salteado-tofu-verduras.jpg"
+    "img": "/recipes/salteado-tofu-verduras.jpg",
+    "fav": false
   },
   {
     "id": 17,
@@ -1008,7 +1024,8 @@
         ]
       }
     ],
-    "img": "/recipes/brocoli-vigues.jpg"
+    "img": "/recipes/brocoli-vigues.jpg",
+    "fav": false
   },
   {
     "id": 18,
@@ -1070,7 +1087,8 @@
         ]
       }
     ],
-    "img": "/recipes/pure-calabaza.jpg"
+    "img": "/recipes/pure-calabaza.jpg",
+    "fav": false
   },
   {
     "id": 19,
@@ -1119,7 +1137,9 @@
           "Batata"
         ]
       }
-    ]
+    ],
+    "img": "/recipes/pure-brocoli.jpg",
+    "fav": false
   },
   {
     "id": 20,
@@ -1168,7 +1188,9 @@
           "Batata"
         ]
       }
-    ]
+    ],
+    "img": "/recipes/guisantes-con-jamon.jpg",
+    "fav": false
   },
   {
     "id": 21,
@@ -1193,7 +1215,9 @@
         "unit_of_measure": null,
         "required": true
       }
-    ]
+    ],
+    "img": "/recipes/kefir-con-frutos-secos.jpg",
+    "fav": false
   },
   {
     "id": 22,
@@ -1236,7 +1260,8 @@
         "required": true
       }
     ],
-    "img": "/recipes/batido-proteina.jpg"
+    "img": "/recipes/batido-proteina.jpg",
+    "fav": false
   },
   {
     "id": 23,
@@ -1268,7 +1293,8 @@
         "required": true
       }
     ],
-    "img": "/recipes/pudin-chia-proteina.jpg"
+    "img": "/recipes/pudin-chia-proteina.jpg",
+    "fav": false
   },
   {
     "id": 24,
@@ -1313,7 +1339,8 @@
         "required": true
       }
     ],
-    "img": "/recipes/batido-proteina-platano-cacao.jpg"
+    "img": "/recipes/batido-proteina-platano-cacao.jpg",
+    "fav": false
   },
   {
     "id": 25,
@@ -1339,7 +1366,8 @@
         "required": true
       }
     ],
-    "img": "/recipes/crackers-integrales-jamon-serrano.jpg"
+    "img": "/recipes/crackers-integrales-jamon-serrano.jpg",
+    "fav": false
   },
   {
     "id": 26,
@@ -1401,7 +1429,8 @@
         "required": true
       }
     ],
-    "img": "/recipes/pastel-de-verduras.jpg"
+    "img": "/recipes/pastel-de-verduras.jpg",
+    "fav": false
   },
   {
     "id": 27,
@@ -1439,7 +1468,8 @@
         "required": true
       }
     ],
-    "img": "/recipes/bowl-quinoa-verduras-huevo.jpg"
+    "img": "/recipes/bowl-quinoa-verduras-huevo.jpg",
+    "fav": false
   },
   {
     "id": 28,
@@ -1477,7 +1507,8 @@
         "required": true
       }
     ],
-    "img": "/recipes/frittata-de-verduras.jpg"
+    "img": "/recipes/frittata-de-verduras.jpg",
+    "fav": false
   },
   {
     "id": 29,
@@ -1558,7 +1589,8 @@
         ]
       }
     ],
-    "img": "/recipes/pescado-con-ensalada-de-aguacate.jpg"
+    "img": "/recipes/pescado-con-ensalada-de-aguacate.jpg",
+    "fav": false
   },
   {
     "id": 30,
@@ -1596,7 +1628,8 @@
         "required": true
       }
     ],
-    "img": "/recipes/ensalada-de-pollo-con-quinoa-y-aguacate.jpg"
+    "img": "/recipes/ensalada-de-pollo-con-quinoa-y-aguacate.jpg",
+    "fav": false
   },
   {
     "id": 31,
@@ -1646,7 +1679,8 @@
         "required": true
       }
     ],
-    "img": "/recipes/fajitas-de-pollo-con-pimientos.jpg"
+    "img": "/recipes/fajitas-de-pollo-con-pimientos.jpg",
+    "fav": false
   },
   {
     "id": 32,
@@ -1678,6 +1712,7 @@
         "required": true
       }
     ],
-    "img": "/recipes/pizza-masa-de-huevo.jpg"
+    "img": "/recipes/pizza-masa-de-huevo.jpg",
+    "fav": false
   }
 ]
