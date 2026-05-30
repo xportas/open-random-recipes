@@ -931,6 +931,12 @@
         "required": true
       },
       {
+        "name": "Calabacín",
+        "quantity": 0.5,
+        "unit_of_measure": "ud",
+        "required": true
+      },
+      {
         "name": "Pimiento rojo",
         "quantity": 0.5,
         "unit_of_measure": "ud",
