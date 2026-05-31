@@ -1021,7 +1021,8 @@
         "name": "Calabacín",
         "quantity": 0.5,
         "unit_of_measure": "ud",
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Pimiento rojo",
