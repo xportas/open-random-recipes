@@ -1,0 +1,87 @@
+import { useSyncExternalStore, useCallback } from "react";
+import { generateWeeklyMenu, regenerateMeal } from "@/lib/menuGenerator";
+
+const STORAGE_KEY = "weekly-menu";
+
+let weeklyMenu = null;
+let listeners = [];
+
+function emitChange() {
+  for (const listener of listeners) listener();
+}
+
+function subscribe(listener) {
+  listeners.push(listener);
+  return () => {
+    listeners = listeners.filter((l) => l !== listener);
+  };
+}
+
+function getSnapshot() {
+  return weeklyMenu;
+}
+
+function getServerSnapshot() {
+  return null;
+}
+
+function saveToStorage(menu) {
+  if (menu) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(menu));
+  } else {
+    localStorage.removeItem(STORAGE_KEY);
+  }
+}
+
+function loadFromStorage() {
+  const data = localStorage.getItem(STORAGE_KEY);
+  return data ? JSON.parse(data) : null;
+}
+
+function initStore() {
+  if (weeklyMenu === null) {
+    const stored = loadFromStorage();
+    if (stored) {
+      weeklyMenu = stored;
+    }
+  }
+}
+
+if (typeof window !== "undefined") {
+  initStore();
+}
+
+function setMenu(newMenu) {
+  weeklyMenu = newMenu;
+  saveToStorage(weeklyMenu);
+  emitChange();
+}
+
+export default function useWeeklyMenu(recipesData) {
+  const store = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+
+  const generate = useCallback(() => {
+    const newMenu = generateWeeklyMenu(recipesData);
+    setMenu(newMenu);
+  }, [recipesData]);
+
+  const regenerateMealInMenu = useCallback((dayIndex, mealType) => {
+    if (!weeklyMenu) return;
+    const updated = regenerateMeal(recipesData, weeklyMenu, dayIndex, mealType);
+    setMenu(updated);
+  }, [recipesData]);
+
+  const clear = useCallback(() => {
+    weeklyMenu = null;
+    saveToStorage(null);
+    emitChange();
+  }, []);
+
+  return {
+    weeklyMenu: store,
+    generate,
+    regenerateMeal: regenerateMealInMenu,
+    clear,
+    isEmpty: store === null,
+  };
+}

@@ -30,13 +30,17 @@ export default function RecipeCard({ recipe, onToggleFavorite, onRecipeClick, on
             e.stopPropagation();
             onToggleFavorite(recipe.id);
           }}
-          className="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:text-secondary hover:bg-secondary-fixed transition-colors"
+          className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
+            recipe.fav
+              ? "text-error hover:bg-error-container/30"
+              : "text-outline hover:text-error hover:bg-error-container/20"
+          }`}
         >
           <span
             className="material-symbols-outlined text-[20px]"
             style={{ fontVariationSettings: `'FILL' ${recipe.fav ? 1 : 0}` }}
           >
-            {recipe.fav ? "favorite" : "favorite_border"}
+            favorite
           </span>
         </button>
       </div>

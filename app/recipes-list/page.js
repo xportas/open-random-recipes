@@ -8,25 +8,48 @@ import MealTypeFilter from "./components/MealTypeFilter";
 import SearchBar from "./components/SearchBar";
 import RecipeGroup from "./components/RecipeGroup";
 
+const FAVORITES_KEY = "favorite-recipes";
+
+function loadFavorites() {
+  const data = localStorage.getItem(FAVORITES_KEY);
+  return data ? JSON.parse(data) : [];
+}
+
+function saveFavorites(ids) {
+  localStorage.setItem(FAVORITES_KEY, JSON.stringify(ids));
+}
+
 export default function RecipesListPage() {
-  const [recipes, setRecipes] = useState(recipesData);
+  const [favoriteIds, setFavoriteIds] = useState(() => {
+    if (typeof window === "undefined") return [];
+    return loadFavorites();
+  });
   const [selectedMealType, setSelectedMealType] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [imageModal, setImageModal] = useState(null);
 
+  const recipes = useMemo(() => {
+    return recipesData.map((recipe) => ({
+      ...recipe,
+      fav: favoriteIds.includes(recipe.id),
+    }));
+  }, [favoriteIds]);
+
   const handleToggleFavorite = (id) => {
-    setRecipes((prevRecipes) =>
-      prevRecipes.map((recipe) =>
-        recipe.id === id ? { ...recipe, fav: !recipe.fav } : recipe
-      )
-    );
+    setFavoriteIds((prev) => {
+      const updated = prev.includes(id) ? prev.filter((fid) => fid !== id) : [...prev, id];
+      saveFavorites(updated);
+      return updated;
+    });
   };
 
   const filteredRecipes = useMemo(() => {
     let filtered = recipes;
 
-    if (selectedMealType) {
+    if (selectedMealType === "fav") {
+      filtered = filtered.filter((recipe) => recipe.fav);
+    } else if (selectedMealType) {
       filtered = filtered.filter((recipe) => recipe[selectedMealType] === true);
     }
 
@@ -63,7 +86,7 @@ export default function RecipesListPage() {
 
   return (
     <>
-      <main className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pt-md">
+      <main className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pt-md pb-32">
         <MealTypeFilter
           selectedType={selectedMealType}
           onTypeChange={setSelectedMealType}

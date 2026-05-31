@@ -14,7 +14,8 @@
         "name": "Huevos",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Huevos"
       },
       {
         "name": "Acompañante",
@@ -26,7 +27,8 @@
           "Jamón cocido",
           "Queso",
           "Atún"
-        ]
+        ],
+        "grocery_section": "Charcutería"
       }
     ],
     "img": "/recipes/tortilla.jpg",
@@ -47,13 +49,15 @@
         "name": "Yogurt natural",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Lácteos"
       },
       {
         "name": "Frutos secos",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutos Secos y Semillas"
       }
     ],
     "img": "/recipes/yogurt-con-frutos-secos.jpg",
@@ -76,37 +80,43 @@
         "name": "Yogurt natural",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Lácteos"
       },
       {
         "name": "Copos de avena",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Cereales y Granos"
       },
       {
         "name": "Crema de cacahuete",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutos Secos y Semillas"
       },
       {
         "name": "Semillas / Frutos secos",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutos Secos y Semillas"
       },
       {
         "name": "Miel",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Salsas y Condimentos"
       },
       {
         "name": "Fruta de temporada",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       }
     ],
     "img": "/recipes/bowl-energy.jpg",
@@ -129,37 +139,43 @@
         "name": "Yogurt natural",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Lácteos"
       },
       {
         "name": "Granola de chocolate",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Cereales y Granos"
       },
       {
         "name": "Frutos secos",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutos Secos y Semillas"
       },
       {
         "name": "Mezcla de semillas",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutos Secos y Semillas"
       },
       {
         "name": "Miel",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Salsas y Condimentos"
       },
       {
         "name": "Frutas frescas de temporada",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       }
     ],
     "img": "/recipes/bowl-choco-crunch.jpg",
@@ -182,25 +198,29 @@
         "name": "Yogurt natural",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Lácteos"
       },
       {
         "name": "Crema de cacahuete",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutos Secos y Semillas"
       },
       {
         "name": "Plátano",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Miel",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Salsas y Condimentos"
       }
     ],
     "img": "/recipes/bowl-miel-cacahuete.jpg",
@@ -223,19 +243,22 @@
         "name": "Pan integral",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Panadería"
       },
       {
         "name": "Philadelphia",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Lácteos"
       },
       {
         "name": "Aguacate",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       }
     ],
     "img": "/recipes/tostada-verde-cremoso.jpg",
@@ -258,25 +281,29 @@
         "name": "Pan integral",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Panadería"
       },
       {
         "name": "Aceite",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Salsas y Condimentos"
       },
       {
         "name": "Aguacate",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Huevo frito",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Huevos"
       }
     ],
     "img": "/recipes/tostada-amanecer.jpg",
@@ -299,25 +326,29 @@
         "name": "Plátano",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Avena",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Cereales y Granos"
       },
       {
         "name": "Huevos",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Huevos"
       },
       {
         "name": "Leche",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Lácteos"
       }
     ],
     "img": "/recipes/tortitas-avena.jpg",
@@ -343,7 +374,8 @@
           "Potro",
           "Cordero",
           "Cerdo"
-        ]
+        ],
+        "grocery_section": "Carnicería"
       },
       {
         "name": "Carbohidrato",
@@ -354,7 +386,8 @@
           "Patata",
           "Batata",
           "Quinoa"
-        ]
+        ],
+        "grocery_section": "Cereales y Granos"
       },
       {
         "name": "Vegetal 1",
@@ -365,7 +398,8 @@
           "Brócoli",
           "Pimiento rojo",
           "Espinacas"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 1 (bis)",
@@ -375,7 +409,8 @@
         "options": [
           "Espárragos",
           "Guisantes"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 2",
@@ -387,7 +422,8 @@
           "Zanahoria",
           "Aguacate",
           "Pimiento verde"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 2 (bis)",
@@ -396,7 +432,8 @@
         "required": false,
         "options": [
           "Tomate"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 3",
@@ -407,7 +444,8 @@
           "Puerro",
           "Calabacín",
           "Berenjena"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 3 (bis)",
@@ -416,7 +454,8 @@
         "required": false,
         "options": [
           "Setas"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       }
     ],
     "img": "/recipes/receta-carne-roja.jpg",
@@ -443,7 +482,8 @@
           "Muslos de pollo",
           "Pavo",
           "Ternuras de conejo"
-        ]
+        ],
+        "grocery_section": "Carnicería"
       },
       {
         "name": "Carbohidrato",
@@ -454,7 +494,8 @@
           "Arroz",
           "Batata",
           "Pasta integral"
-        ]
+        ],
+        "grocery_section": "Cereales y Granos"
       },
       {
         "name": "Vegetal 1",
@@ -465,7 +506,8 @@
           "Brócoli",
           "Pimiento rojo",
           "Espinacas"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 1 (bis)",
@@ -475,7 +517,8 @@
         "options": [
           "Espárragos",
           "Guisantes"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 2",
@@ -487,7 +530,8 @@
           "Zanahoria",
           "Aguacate",
           "Pimiento verde"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 2 (bis)",
@@ -496,7 +540,8 @@
         "required": false,
         "options": [
           "Tomate"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 3",
@@ -507,7 +552,8 @@
           "Puerro",
           "Calabacín",
           "Berenjena"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 3 (bis)",
@@ -516,7 +562,8 @@
         "required": false,
         "options": [
           "Setas"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       }
     ],
     "img": "/recipes/receta-carne-blanca.jpg",
@@ -540,7 +587,8 @@
         "required": true,
         "options": [
           "Salmón"
-        ]
+        ],
+        "grocery_section": "Pescadería"
       },
       {
         "name": "Carbohidrato",
@@ -550,7 +598,8 @@
         "options": [
           "Arroz",
           "Patata cocida"
-        ]
+        ],
+        "grocery_section": "Cereales y Granos"
       },
       {
         "name": "Vegetal 1",
@@ -561,7 +610,8 @@
           "Brócoli",
           "Pimiento rojo",
           "Espinacas"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 1 (bis)",
@@ -571,7 +621,8 @@
         "options": [
           "Espárragos",
           "Guisantes"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 2",
@@ -583,7 +634,8 @@
           "Zanahoria",
           "Aguacate",
           "Pimiento verde"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 2 (bis)",
@@ -592,7 +644,8 @@
         "required": false,
         "options": [
           "Tomate"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 3",
@@ -603,7 +656,8 @@
           "Puerro",
           "Calabacín",
           "Berenjena"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 3 (bis)",
@@ -612,7 +666,8 @@
         "required": false,
         "options": [
           "Setas"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       }
     ],
     "img": "/recipes/receta-pescado-azul.jpg",
@@ -642,7 +697,8 @@
           "Trucha",
           "Dorada",
           "Gambas"
-        ]
+        ],
+        "grocery_section": "Pescadería"
       },
       {
         "name": "Carbohidrato",
@@ -653,7 +709,8 @@
           "Arroz",
           "Patata cocida",
           "Quinoa"
-        ]
+        ],
+        "grocery_section": "Cereales y Granos"
       },
       {
         "name": "Vegetal 1",
@@ -664,7 +721,8 @@
           "Brócoli",
           "Pimiento rojo",
           "Espinacas"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 1 (bis)",
@@ -674,7 +732,8 @@
         "options": [
           "Espárragos",
           "Guisantes"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 2",
@@ -686,7 +745,8 @@
           "Zanahoria",
           "Aguacate",
           "Pimiento verde"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 2 (bis)",
@@ -695,7 +755,8 @@
         "required": false,
         "options": [
           "Tomate"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 3",
@@ -706,7 +767,8 @@
           "Puerro",
           "Calabacín",
           "Berenjena"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Vegetal 3 (bis)",
@@ -715,7 +777,8 @@
         "required": false,
         "options": [
           "Setas"
-        ]
+        ],
+        "grocery_section": "Frutas y Verduras"
       }
     ],
     "img": "/recipes/receta-pescado-blanco.jpg",
@@ -741,25 +804,29 @@
           "Atún",
           "Sardinas",
           "Melva"
-        ]
+        ],
+        "grocery_section": "Pescadería"
       },
       {
         "name": "Ensalada",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Aguacate",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Huevo cocido",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Huevos"
       },
       {
         "name": "Carbohidrato",
@@ -769,25 +836,29 @@
         "options": [
           "Arroz",
           "Quinoa"
-        ]
+        ],
+        "grocery_section": "Cereales y Granos"
       },
       {
         "name": "Frutos secos",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutos Secos y Semillas"
       },
       {
         "name": "Queso cottage",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Lácteos"
       },
       {
         "name": "Fruta de temporada",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       }
     ],
     "img": "/recipes/bowl-pescado-aguacate-huevo.jpg",
@@ -808,43 +879,50 @@
         "name": "Pimiento amarillo",
         "quantity": 1,
         "unit_of_measure": "ud",
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Zanahoria",
         "quantity": 2,
         "unit_of_measure": "ud",
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Espárragos trigueros",
         "quantity": 6,
         "unit_of_measure": "ud",
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Tomate natural triturado",
         "quantity": 2,
         "unit_of_measure": "cucharada",
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Garbanzos",
         "quantity": 200,
         "unit_of_measure": "g",
-        "required": true
+        "required": true,
+        "grocery_section": "Legumbres"
       },
       {
         "name": "Pechuga de pollo",
         "quantity": 200,
         "unit_of_measure": "g",
-        "required": true
+        "required": true,
+        "grocery_section": "Carnicería"
       },
       {
         "name": "Curry, perejil, ajo, sal y pimienta",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Especias"
       }
     ],
     "img": "/recipes/pollo-con-garbanzos.jpg",
@@ -865,37 +943,43 @@
         "name": "Lentejas",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Legumbres"
       },
       {
         "name": "Arroz",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Cereales y Granos"
       },
       {
         "name": "Zanahoria",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Espinacas",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Carne",
         "quantity": null,
         "unit_of_measure": null,
-        "required": false
+        "required": false,
+        "grocery_section": "Carnicería"
       },
       {
         "name": "Pimientos",
         "quantity": null,
         "unit_of_measure": null,
-        "required": false
+        "required": false,
+        "grocery_section": "Frutas y Verduras"
       }
     ],
     "img": "/recipes/lentejas-con-arroz.jpg",
@@ -916,43 +1000,50 @@
         "name": "Tofu",
         "quantity": 100,
         "unit_of_measure": "g",
-        "required": true
+        "required": true,
+        "grocery_section": "Lácteos y Vegetales"
       },
       {
         "name": "Zanahoria",
         "quantity": 0.5,
         "unit_of_measure": "taza",
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Brócoli",
         "quantity": 0.5,
         "unit_of_measure": "taza",
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Pimiento rojo",
         "quantity": 0.5,
         "unit_of_measure": "ud",
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Salsa de soja",
         "quantity": 1,
         "unit_of_measure": "cucharada",
-        "required": true
+        "required": true,
+        "grocery_section": "Salsas y Condimentos"
       },
       {
         "name": "Ajo",
         "quantity": 1,
         "unit_of_measure": "ud",
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Arroz integral",
         "quantity": null,
         "unit_of_measure": null,
-        "required": false
+        "required": false,
+        "grocery_section": "Cereales y Granos"
       }
     ],
     "img": "/recipes/salteado-tofu-verduras.jpg",
@@ -973,31 +1064,36 @@
         "name": "Brócoli",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Calabaza",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Carne picada",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Carnicería"
       },
       {
         "name": "Queso",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Lácteos"
       },
       {
         "name": "Puerro",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Carne",
@@ -1009,7 +1105,8 @@
           "Cerdo",
           "Conejo",
           "Pollo"
-        ]
+        ],
+        "grocery_section": "Carnicería"
       },
       {
         "name": "Carbohidrato",
@@ -1021,7 +1118,8 @@
           "Patata",
           "Pasta",
           "Batata"
-        ]
+        ],
+        "grocery_section": "Cereales y Granos"
       }
     ],
     "img": "/recipes/brocoli-vigues.jpg",
@@ -1042,25 +1140,29 @@
         "name": "Calabaza",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Zanahoria",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Calabacín",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Puerro",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Carne",
@@ -1072,7 +1174,8 @@
           "Cerdo",
           "Conejo",
           "Pollo"
-        ]
+        ],
+        "grocery_section": "Carnicería"
       },
       {
         "name": "Carbohidrato",
@@ -1084,7 +1187,8 @@
           "Patata",
           "Pasta",
           "Batata"
-        ]
+        ],
+        "grocery_section": "Cereales y Granos"
       }
     ],
     "img": "/recipes/pure-calabaza.jpg",
@@ -1105,13 +1209,15 @@
         "name": "Brócoli",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Calabacín",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Carne",
@@ -1123,7 +1229,8 @@
           "Cerdo",
           "Conejo",
           "Pollo"
-        ]
+        ],
+        "grocery_section": "Carnicería"
       },
       {
         "name": "Carbohidrato",
@@ -1135,7 +1242,8 @@
           "Patata",
           "Pasta",
           "Batata"
-        ]
+        ],
+        "grocery_section": "Cereales y Granos"
       }
     ],
     "img": "/recipes/pure-brocoli.jpg",
@@ -1156,13 +1264,15 @@
         "name": "Guisantes",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Jamón en tacos",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Charcutería"
       },
       {
         "name": "Carne",
@@ -1174,7 +1284,8 @@
           "Cerdo",
           "Conejo",
           "Pollo"
-        ]
+        ],
+        "grocery_section": "Carnicería"
       },
       {
         "name": "Carbohidrato",
@@ -1186,7 +1297,8 @@
           "Patata",
           "Pasta",
           "Batata"
-        ]
+        ],
+        "grocery_section": "Cereales y Granos"
       }
     ],
     "img": "/recipes/guisantes-con-jamon.jpg",
@@ -1207,13 +1319,15 @@
         "name": "Kéfir",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Lácteos"
       },
       {
         "name": "Frutos secos",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutos Secos y Semillas"
       }
     ],
     "img": "/recipes/kefir-con-frutos-secos.png",
@@ -1235,13 +1349,15 @@
         "name": "Proteína en polvo",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Suplementos"
       },
       {
         "name": "Crema de cacahuete",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutos Secos y Semillas"
       },
       {
         "name": "Leche o agua",
@@ -1251,13 +1367,15 @@
         "options": [
           "Leche",
           "agua"
-        ]
+        ],
+        "grocery_section": "Lácteos"
       },
       {
         "name": "Plátano",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       }
     ],
     "img": "/recipes/batido-proteina.jpg",
@@ -1278,19 +1396,22 @@
         "name": "Leche",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Lácteos"
       },
       {
         "name": "Chía",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutos Secos y Semillas"
       },
       {
         "name": "Proteína en polvo",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Suplementos"
       }
     ],
     "img": "/recipes/pudin-chia-proteina.jpg",
@@ -1312,31 +1433,36 @@
         "name": "Plátano",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Proteína en polvo",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Suplementos"
       },
       {
         "name": "Cacao en polvo sin azúcar",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Especias"
       },
       {
         "name": "Leche",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Lácteos"
       },
       {
         "name": "Hielo",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Congelados"
       }
     ],
     "img": "/recipes/batido-proteina-platano-cacao.jpg",
@@ -1357,13 +1483,15 @@
         "name": "Crackers integrales",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Panadería"
       },
       {
         "name": "Jamón serrano",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Charcutería"
       }
     ],
     "img": "/recipes/crackers-integrales-jamon-serrano.jpg",
@@ -1384,49 +1512,57 @@
         "name": "Calabacín",
         "quantity": 1,
         "unit_of_measure": "ud",
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Zanahoria",
         "quantity": 1,
         "unit_of_measure": "ud",
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Pimiento rojo",
         "quantity": 1,
         "unit_of_measure": "ud",
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Espinacas",
         "quantity": 100,
         "unit_of_measure": "g",
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Huevos",
         "quantity": 5,
         "unit_of_measure": "ud",
-        "required": true
+        "required": true,
+        "grocery_section": "Huevos"
       },
       {
         "name": "Leche",
         "quantity": 100,
         "unit_of_measure": "ml",
-        "required": true
+        "required": true,
+        "grocery_section": "Lácteos"
       },
       {
         "name": "Queso feta",
         "quantity": 100,
         "unit_of_measure": "g",
-        "required": true
+        "required": true,
+        "grocery_section": "Lácteos"
       },
       {
         "name": "Cúrcuma",
         "quantity": 1,
         "unit_of_measure": "cucharada",
-        "required": true
+        "required": true,
+        "grocery_section": "Especias"
       }
     ],
     "img": "/recipes/pastel-de-verduras.jpg",
@@ -1447,25 +1583,29 @@
         "name": "Quinoa",
         "quantity": 0.5,
         "unit_of_measure": "taza",
-        "required": true
+        "required": true,
+        "grocery_section": "Cereales y Granos"
       },
       {
         "name": "Huevo cocido",
         "quantity": 1,
         "unit_of_measure": "ud",
-        "required": true
+        "required": true,
+        "grocery_section": "Huevos"
       },
       {
         "name": "Zanahoria",
         "quantity": 0.5,
         "unit_of_measure": "taza",
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Pimiento rojo",
         "quantity": 0.25,
         "unit_of_measure": "taza",
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       }
     ],
     "img": "/recipes/bowl-quinoa-verduras-huevo.jpg",
@@ -1486,25 +1626,29 @@
         "name": "Huevos",
         "quantity": 4,
         "unit_of_measure": "ud",
-        "required": true
+        "required": true,
+        "grocery_section": "Huevos"
       },
       {
         "name": "Espinacas",
         "quantity": 0.5,
         "unit_of_measure": "taza",
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Champiñones",
         "quantity": 0.25,
         "unit_of_measure": "taza",
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Pimiento rojo",
         "quantity": 0.5,
         "unit_of_measure": "ud",
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       }
     ],
     "img": "/recipes/frittata-de-verduras.jpg",
@@ -1533,49 +1677,57 @@
           "Lubina",
           "Trucha",
           "Dorada"
-        ]
+        ],
+        "grocery_section": "Pescadería"
       },
       {
         "name": "Ensalada",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Aguacate",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Calabacín",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Frutos secos",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutos Secos y Semillas"
       },
       {
         "name": "Queso cottage",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Lácteos"
       },
       {
         "name": "Fruta de temporada",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Huevo cocido",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Huevos"
       },
       {
         "name": "Carbohidrato",
@@ -1586,7 +1738,8 @@
           "Macarrones",
           "Arroz",
           "Quinoa"
-        ]
+        ],
+        "grocery_section": "Cereales y Granos"
       }
     ],
     "img": "/recipes/pescado-con-ensalada-de-aguacate.jpg",
@@ -1607,25 +1760,29 @@
         "name": "Pechuga de pollo",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Carnicería"
       },
       {
         "name": "Quinoa",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Cereales y Granos"
       },
       {
         "name": "Aguacate",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Espinacas frescas",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       }
     ],
     "img": "/recipes/ensalada-de-pollo-con-quinoa-y-aguacate.png",
@@ -1646,37 +1803,43 @@
         "name": "Pechuga de pollo",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Carnicería"
       },
       {
         "name": "Pimiento rojo",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Pimiento verde",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Nueces",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Frutos Secos y Semillas"
       },
       {
         "name": "Queso en lonchas",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Lácteos"
       },
       {
         "name": "Tortillas de maíz",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Panadería"
       }
     ],
     "img": "/recipes/fajitas-de-pollo-con-pimientos.jpg",
@@ -1686,7 +1849,9 @@
     "id": 32,
     "name": "Pizza de masa de huevo",
     "steps": "",
-    "restrictions": ["weekend"],
+    "restrictions": [
+      "weekend"
+    ],
     "servings": 1,
     "breakfast": false,
     "lunch": false,
@@ -1697,19 +1862,22 @@
         "name": "Huevos",
         "quantity": 3,
         "unit_of_measure": "ud",
-        "required": true
+        "required": true,
+        "grocery_section": "Huevos"
       },
       {
         "name": "Queso cottage",
         "quantity": 2,
         "unit_of_measure": "tarrina",
-        "required": true
+        "required": true,
+        "grocery_section": "Lácteos"
       },
       {
         "name": "Ingredientes extra a elegir",
         "quantity": null,
         "unit_of_measure": null,
-        "required": true
+        "required": true,
+        "grocery_section": "Varios"
       }
     ],
     "img": "/recipes/pizza-masa-de-huevo.jpg",
