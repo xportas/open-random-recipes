@@ -59,7 +59,7 @@
         "grocery_section": "Frutos Secos y Semillas"
       }
     ],
-    "img": "/recipes/yogurt-con-frutos-secos.jpg"
+    "img": "/recipes/yogurt-con-frutos-secos.png"
   },
   {
     "id": 3,
@@ -660,7 +660,7 @@
         "grocery_section": "Frutas y Verduras"
       }
     ],
-    "img": "/recipes/receta-pescado-azul.jpg"
+    "img": "/recipes/receta-pescado-azul.png"
   },
   {
     "id": 12,
@@ -849,7 +849,7 @@
         "grocery_section": "Frutas y Verduras"
       }
     ],
-    "img": "/recipes/bowl-pescado-aguacate-huevo.jpg"
+    "img": "/recipes/bowl-pescado-aguacate-huevo.png"
   },
   {
     "id": 14,
@@ -1589,7 +1589,7 @@
         "grocery_section": "Frutas y Verduras"
       }
     ],
-    "img": "/recipes/bowl-quinoa-verduras-huevo.jpg"
+    "img": "/recipes/bowl-quinoa-verduras-huevo.png"
   },
   {
     "id": 28,
@@ -1721,7 +1721,7 @@
         "grocery_section": "Cereales y Granos"
       }
     ],
-    "img": "/recipes/pescado-con-ensalada-de-aguacate.jpg"
+    "img": "/recipes/pescado-con-ensalada-de-aguacate.png"
   },
   {
     "id": 30,
