@@ -12,7 +12,7 @@ import GenerateShoppingListButton from "./components/GenerateShoppingListButton"
 import { useState } from "react";
 
 export default function MenuPage() {
-  const { weeklyMenu, generate, regenerateMeal, clear, isEmpty } = useWeeklyMenu(recipesData);
+  const { weeklyMenu, generate, regenerateMeal, removeMeal, clear, isEmpty } = useWeeklyMenu(recipesData);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [imageModal, setImageModal] = useState(null);
   const weekDates = getWeekDates();
@@ -48,6 +48,7 @@ export default function MenuPage() {
                   date={date}
                   meals={dayData.meals}
                   onRegenerateMeal={(mealType) => regenerateMeal(dayIndex, mealType)}
+                  onRemoveMeal={(mealType) => removeMeal(dayIndex, mealType)}
                   onRecipeClick={handleRecipeClick}
                   onImageClick={(src, alt) => setImageModal({ src, alt })}
                 />

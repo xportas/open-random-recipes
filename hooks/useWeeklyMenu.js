@@ -1,5 +1,5 @@
 import { useSyncExternalStore, useCallback } from "react";
-import { generateWeeklyMenu, regenerateMeal } from "@/lib/menuGenerator";
+import { generateWeeklyMenu, regenerateMeal, removeMeal } from "@/lib/menuGenerator";
 
 const STORAGE_KEY = "weekly-menu";
 
@@ -71,6 +71,12 @@ export default function useWeeklyMenu(recipesData) {
     setMenu(updated);
   }, [recipesData]);
 
+  const removeMealFromMenu = useCallback((dayIndex, mealType) => {
+    if (!weeklyMenu) return;
+    const updated = removeMeal(weeklyMenu, dayIndex, mealType);
+    setMenu(updated);
+  }, []);
+
   const clear = useCallback(() => {
     weeklyMenu = null;
     saveToStorage(null);
@@ -81,6 +87,7 @@ export default function useWeeklyMenu(recipesData) {
     weeklyMenu: store,
     generate,
     regenerateMeal: regenerateMealInMenu,
+    removeMeal: removeMealFromMenu,
     clear,
     isEmpty: store === null,
   };

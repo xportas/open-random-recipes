@@ -86,7 +86,7 @@ export default function RecipesListPage() {
 
   return (
     <>
-      <main className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pt-md pb-32">
+      <main className="max-w-7xl w-full min-w-0 mx-auto px-margin-mobile md:px-margin-desktop pt-md pb-32">
         <MealTypeFilter
           selectedType={selectedMealType}
           onTypeChange={setSelectedMealType}

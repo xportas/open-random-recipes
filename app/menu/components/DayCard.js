@@ -1,8 +1,9 @@
 import { MEAL_TYPES } from "@/lib/menuGenerator";
-import MealItem from "./MealItem";
+import SwipeableMealItem from "./SwipeableMealItem";
+import EmptyMealSlot from "./EmptyMealSlot";
 
-export default function DayCard({ dayName, date, meals, onRegenerateMeal, onRecipeClick, onImageClick }) {
-  const activeMeals = MEAL_TYPES.filter((type) => meals[type]);
+export default function DayCard({ dayName, date, meals, onRegenerateMeal, onRemoveMeal, onRecipeClick, onImageClick }) {
+  const activeMeals = MEAL_TYPES.filter((type) => meals[type] !== undefined);
 
   return (
     <div className="bg-surface-container-lowest rounded-xl shadow-[0_16px_32px_-12px_rgba(211,97,53,0.08)] overflow-hidden border border-surface-variant">
@@ -15,13 +16,21 @@ export default function DayCard({ dayName, date, meals, onRegenerateMeal, onReci
       <div className="p-md space-y-md">
         {activeMeals.map((mealType, index) => (
           <div key={mealType}>
-            <MealItem
-              mealType={mealType}
-              meal={meals[mealType]}
-              onRegenerate={onRegenerateMeal}
-              onRecipeClick={onRecipeClick}
-              onImageClick={onImageClick}
-            />
+            {meals[mealType] === null ? (
+              <EmptyMealSlot
+                mealType={mealType}
+                onRegenerate={onRegenerateMeal}
+              />
+            ) : (
+              <SwipeableMealItem
+                mealType={mealType}
+                meal={meals[mealType]}
+                onRegenerate={onRegenerateMeal}
+                onRemove={onRemoveMeal}
+                onRecipeClick={onRecipeClick}
+                onImageClick={onImageClick}
+              />
+            )}
             {index < activeMeals.length - 1 && (
               <hr className="border-surface-variant mt-md" />
             )}
