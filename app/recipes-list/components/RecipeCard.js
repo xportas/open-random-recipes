@@ -1,4 +1,4 @@
-import IngredientList from "./IngredientList";
+import IngredientList from "@/components/IngredientList";
 
 export default function RecipeCard({ recipe, onToggleFavorite, onRecipeClick, onImageClick }) {
   const ingredients = recipe.ingredients || recipe.ingredientes || [];

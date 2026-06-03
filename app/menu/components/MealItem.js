@@ -1,4 +1,5 @@
 import { MEAL_LABELS } from "@/lib/menuGenerator";
+import IngredientList from "@/components/IngredientList";
 
 export default function MealItem({ mealType, meal, onRegenerate, onRecipeClick, onImageClick }) {
   const label = MEAL_LABELS[mealType];
@@ -21,7 +22,7 @@ export default function MealItem({ mealType, meal, onRegenerate, onRecipeClick, 
           </div>
         )}
       </div>
-      <div className="flex-1 flex flex-col justify-center">
+      <div className="flex-1 flex flex-col justify-center min-w-0">
         <span className="font-label-sm text-label-sm text-primary uppercase tracking-wider mb-xs">
           {label}
         </span>
@@ -31,6 +32,7 @@ export default function MealItem({ mealType, meal, onRegenerate, onRecipeClick, 
         >
           {meal.name}
         </h4>
+        <IngredientList ingredients={meal.ingredients} />
       </div>
       {onRegenerate && (
         <button
