@@ -9,7 +9,6 @@ import MenuHeader from "./components/MenuHeader";
 import DayCard from "./components/DayCard";
 import EmptyDayCard from "./components/EmptyDayCard";
 import GenerateShoppingListButton from "./components/GenerateShoppingListButton";
-import ClearMenuButton from "./components/ClearMenuButton";
 import { useState } from "react";
 
 export default function MenuPage() {
@@ -61,7 +60,6 @@ export default function MenuPage() {
         {weeklyMenu && (
           <div className="flex flex-col sm:flex-row justify-center gap-sm pt-md">
             <GenerateShoppingListButton weeklyMenu={weeklyMenu} />
-            <ClearMenuButton onClear={clear} />
           </div>
         )}
       </main>
