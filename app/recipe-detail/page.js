@@ -32,7 +32,7 @@ export default function RecipeDetailPage({ recipe, onBack }) {
         {onBack && (
           <button
             onClick={onBack}
-            className="flex items-center gap-xs text-primary font-label-md text-label-md mb-md px-margin-mobile md:px-0 hover:text-on-surface transition-colors"
+            className="flex items-center gap-xs text-primary font-label-md text-label-md mb-md px-margin-mobile md:px-0"
           >
             <span className="material-symbols-outlined text-[20px]">arrow_back</span>
             Volver

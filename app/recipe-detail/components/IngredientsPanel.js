@@ -17,7 +17,7 @@ export default function IngredientsPanel({ ingredients, servings }) {
           <IngredientItem key={index} ingredient={ingredient} />
         ))}
       </div>
-      <button className="w-full mt-md py-3 px-4 bg-surface border border-outline-variant text-primary font-label-md text-label-md rounded-xl hover:bg-surface-container-low transition-colors flex items-center justify-center gap-xs">
+      <button className="w-full mt-md py-3 px-4 bg-surface border border-outline-variant text-primary font-label-md text-label-md rounded-xl flex items-center justify-center gap-xs">
         <span className="material-symbols-outlined">add_shopping_cart</span>
         Añadir a la lista
       </button>

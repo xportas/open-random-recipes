@@ -18,7 +18,7 @@ export default function MealTypeFilter({ selectedType, onTypeChange }) {
             className={`px-md py-2 rounded-full font-label-md text-label-md transition-all active:scale-95 border shrink-0 whitespace-nowrap ${
               selectedType === type.field
                 ? "bg-primary-container text-on-primary-container border-transparent"
-                : "bg-surface-container-low text-on-surface-variant hover:bg-surface-container border-outline-variant"
+                : "bg-surface-container-low text-on-surface-variant border-outline-variant"
             }`}
           >
             {type.label}

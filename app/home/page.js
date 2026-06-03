@@ -18,11 +18,11 @@ export default function HomePage({ onNavigate }) {
 
         {/* Planificar Menú Semanal */}
         <article
-          className="relative w-full h-[320px] rounded-xl overflow-hidden shadow-[0_16px_32px_rgba(211,97,53,0.05)] group cursor-pointer active:scale-105 transition-transform duration-200"
+          className="relative w-full h-[320px] rounded-xl overflow-hidden shadow-[0_16px_32px_rgba(211,97,53,0.05)] active:scale-105 transition-transform duration-200"
           onClick={() => onNavigate("menu")}
         >
           <img
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            className="absolute inset-0 w-full h-full object-cover"
             data-alt="A beautifully arranged weekly meal planner notebook resting on a clean kitchen counter next to a bowl of fresh citrus fruits. A sleek pen is placed on the open pages, suggesting active organization. The scene is bathed in warm, soft morning light, evoking a sense of calm productivity and healthy lifestyle planning."
             src="/home-generate-menu.png"
           />
@@ -51,11 +51,11 @@ export default function HomePage({ onNavigate }) {
 
         {/* Explorar Recetas */}
         <article
-          className="relative w-full h-[320px] rounded-xl overflow-hidden shadow-[0_16px_32px_rgba(211,97,53,0.05)] group cursor-pointer active:scale-105 transition-transform duration-200"
+          className="relative w-full h-[320px] rounded-xl overflow-hidden shadow-[0_16px_32px_rgba(211,97,53,0.05)] active:scale-105 transition-transform duration-200"
           onClick={() => onNavigate("recipes")}
         >
           <img
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            className="absolute inset-0 w-full h-full object-cover"
             data-alt="A top-down view of a rustic wooden table scattered with fresh, vibrant ingredients for a healthy meal. Bright red tomatoes, crisp green basil, and golden olive oil are prominently featured. The lighting is bright and natural, casting soft shadows, creating a fresh, farm-to-table aesthetic perfect for a modern culinary app."
             src="/home-list-recipes.png"
           />

@@ -3,7 +3,7 @@ export default function RecipeHero({ recipe, onImageClick }) {
     <section className="relative w-full h-[442px] md:h-[530px] md:rounded-3xl overflow-hidden shadow-lg mb-lg">
       <img
         alt={recipe.name}
-        className="w-full h-full object-cover cursor-zoom-in"
+        className="w-full h-full object-cover"
         src={recipe.img}
         onClick={() => onImageClick(recipe.img, recipe.name)}
       />

@@ -2,10 +2,10 @@
 
 export default function IngredientItem({ item, onToggle }) {
   return (
-    <label className="ingredient-item flex items-center gap-md p-sm rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer group">
+    <label className="ingredient-item flex items-center gap-md p-sm rounded-lg">
       <div className="custom-checkbox relative">
         <input
-          className="opacity-0 absolute w-full h-full cursor-pointer z-10"
+          className="opacity-0 absolute w-full h-full z-10"
           type="checkbox"
           checked={item.checked}
           onChange={() => onToggle(item.id)}
@@ -14,7 +14,7 @@ export default function IngredientItem({ item, onToggle }) {
           className={`w-full h-full rounded-full border-2 transition-colors flex items-center justify-center ${
             item.checked
               ? "border-primary bg-primary"
-              : "border-outline-variant group-hover:border-primary bg-surface"
+              : "border-outline-variant bg-surface"
           }`}
         >
           <svg
