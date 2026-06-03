@@ -23,7 +23,7 @@ export default function Home() {
     <>
       <Header activeTab={{ activeTab, setActiveTab }} previousTabRef={previousTabRef.current} />
 
-      {activeTab === "home" && <HomePage />}
+      {activeTab === "home" && <HomePage onNavigate={setActiveTab} />}
       {activeTab === "recipes" && <RecipesListPage />}
       {activeTab === "menu" && <MenuPage />}
       {activeTab === "shopping-list" && <ShoppingListPage />}

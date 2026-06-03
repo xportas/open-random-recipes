@@ -1,4 +1,6 @@
-export default function HomePage() {
+"use client";
+
+export default function HomePage({ onNavigate }) {
   return (
     <main className="flex-1 px-margin-mobile pb-[100px] md:px-margin-desktop md:max-w-5xl md:mx-auto md:w-full">
       {/* Greeting Section */}
@@ -15,7 +17,10 @@ export default function HomePage() {
       <section className="flex flex-col gap-md md:grid md:grid-cols-2 md:gap-lg">
 
         {/* Planificar Menú Semanal */}
-        <article className="relative w-full h-[320px] rounded-xl overflow-hidden shadow-[0_16px_32px_rgba(211,97,53,0.05)] group cursor-pointer">
+        <article
+          className="relative w-full h-[320px] rounded-xl overflow-hidden shadow-[0_16px_32px_rgba(211,97,53,0.05)] group cursor-pointer active:scale-105 transition-transform duration-200"
+          onClick={() => onNavigate("menu")}
+        >
           <img
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             data-alt="A beautifully arranged weekly meal planner notebook resting on a clean kitchen counter next to a bowl of fresh citrus fruits. A sleek pen is placed on the open pages, suggesting active organization. The scene is bathed in warm, soft morning light, evoking a sense of calm productivity and healthy lifestyle planning."
@@ -37,7 +42,7 @@ export default function HomePage() {
                   Organiza tu semana, come mejor.
                 </p>
               </div>
-              <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-lg transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+              <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-lg">
                 <span className="material-symbols-outlined">calendar_add_on</span>
               </div>
             </div>
@@ -45,7 +50,10 @@ export default function HomePage() {
         </article>
 
         {/* Explorar Recetas */}
-        <article className="relative w-full h-[320px] rounded-xl overflow-hidden shadow-[0_16px_32px_rgba(211,97,53,0.05)] group cursor-pointer">
+        <article
+          className="relative w-full h-[320px] rounded-xl overflow-hidden shadow-[0_16px_32px_rgba(211,97,53,0.05)] group cursor-pointer active:scale-105 transition-transform duration-200"
+          onClick={() => onNavigate("recipes")}
+        >
           <img
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             data-alt="A top-down view of a rustic wooden table scattered with fresh, vibrant ingredients for a healthy meal. Bright red tomatoes, crisp green basil, and golden olive oil are prominently featured. The lighting is bright and natural, casting soft shadows, creating a fresh, farm-to-table aesthetic perfect for a modern culinary app."
@@ -67,8 +75,8 @@ export default function HomePage() {
                   Descubre nuevos sabores de temporada.
                 </p>
               </div>
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-lg transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                <span className="material-symbols-outlined">arrow_forward</span>
+              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-lg">
+                <span className="material-symbols-outlined">search</span>
               </div>
             </div>
           </div>
