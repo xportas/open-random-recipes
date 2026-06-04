@@ -67,7 +67,54 @@ export default function SettingsPage() {
         </div>
       </div>
 
-      <div className="px-margin-mobile py-6 flex flex-col gap-8">
+      <div className="px-margin-mobile py-6 flex flex-col gap-8 pb-20">
+        {/* Sección: Entrenamiento */}
+        <section className="flex flex-col gap-3">
+          <div className="flex items-center gap-2 px-1">
+            <span
+              className="material-symbols-outlined text-primary"
+              style={{ fontVariationSettings: "'FILL' 1" }}
+            >
+              fitness_center
+            </span>
+            <h2 className="font-title-md text-title-md text-on-surface">
+              Entrenamiento
+            </h2>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2 px-1">
+              <span className="font-body-md text-body-md text-on-surface-variant">
+                Xabier (X)
+              </span>
+              <DaySelector
+                label="Gimnasio"
+                icon="🏋️"
+                selectedDays={schedule?.manGym || []}
+                onToggle={(day) => toggleDay("manGym", day)}
+              />
+              <DaySelector
+                label="Baloncesto"
+                icon="🏀"
+                selectedDays={schedule?.manBasketball || []}
+                onToggle={(day) => toggleDay("manBasketball", day)}
+              />
+            </div>
+
+            <div className="flex flex-col gap-2 px-1">
+              <span className="font-body-md text-body-md text-on-surface-variant">
+                Maider (M)
+              </span>
+              <DaySelector
+                label="Gimnasio"
+                icon="🏋️"
+                selectedDays={schedule?.womanGym || []}
+                onToggle={(day) => toggleDay("womanGym", day)}
+              />
+            </div>
+          </div>
+        </section>
+
         {/* Sección: Apariencia */}
         <section className="flex flex-col gap-3">
           <div className="flex items-center gap-2 px-1">
@@ -180,53 +227,6 @@ export default function SettingsPage() {
                 </button>
               );
             })}
-          </div>
-        </section>
-
-        {/* Sección: Entrenamiento */}
-        <section className="flex flex-col gap-3">
-          <div className="flex items-center gap-2 px-1">
-            <span
-              className="material-symbols-outlined text-primary"
-              style={{ fontVariationSettings: "'FILL' 1" }}
-            >
-              fitness_center
-            </span>
-            <h2 className="font-title-md text-title-md text-on-surface">
-              Entrenamiento
-            </h2>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <div className="flex flex-col gap-2 px-1">
-              <span className="font-body-md text-body-md text-on-surface-variant">
-                Hombre (X)
-              </span>
-              <DaySelector
-                label="Gimnasio"
-                icon="🏋️"
-                selectedDays={schedule?.manGym || []}
-                onToggle={(day) => toggleDay("manGym", day)}
-              />
-              <DaySelector
-                label="Baloncesto"
-                icon="🏀"
-                selectedDays={schedule?.manBasketball || []}
-                onToggle={(day) => toggleDay("manBasketball", day)}
-              />
-            </div>
-
-            <div className="flex flex-col gap-2 px-1">
-              <span className="font-body-md text-body-md text-on-surface-variant">
-                Mujer (M)
-              </span>
-              <DaySelector
-                label="Gimnasio"
-                icon="🏋️"
-                selectedDays={schedule?.womanGym || []}
-                onToggle={(day) => toggleDay("womanGym", day)}
-              />
-            </div>
           </div>
         </section>
       </div>
