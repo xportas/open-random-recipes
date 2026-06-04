@@ -71,10 +71,7 @@ export default function SettingsPage() {
         {/* Sección: Entrenamiento */}
         <section className="flex flex-col gap-3">
           <div className="flex items-center gap-2 px-1">
-            <span
-              className="material-symbols-outlined text-primary"
-              style={{ fontVariationSettings: "'FILL' 1" }}
-            >
+            <span className="material-symbols-outlined text-primary" >
               fitness_center
             </span>
             <h2 className="font-title-md text-title-md text-on-surface">
@@ -89,13 +86,23 @@ export default function SettingsPage() {
               </span>
               <DaySelector
                 label="Gimnasio"
-                icon="🏋️"
+                icon={
+                  <span className="material-symbols-outlined text-primary" >
+                    exercise
+                  </span>
+                }
                 selectedDays={schedule?.manGym || []}
                 onToggle={(day) => toggleDay("manGym", day)}
               />
               <DaySelector
                 label="Baloncesto"
-                icon="🏀"
+                icon={
+                  <span
+                    className="material-symbols-outlined text-primary"
+                  >
+                    sports_basketball
+                  </span>
+                }
                 selectedDays={schedule?.manBasketball || []}
                 onToggle={(day) => toggleDay("manBasketball", day)}
               />
@@ -107,7 +114,11 @@ export default function SettingsPage() {
               </span>
               <DaySelector
                 label="Gimnasio"
-                icon="🏋️"
+                icon={
+                  <span className="material-symbols-outlined text-primary">
+                    exercise
+                  </span>
+                }
                 selectedDays={schedule?.womanGym || []}
                 onToggle={(day) => toggleDay("womanGym", day)}
               />
