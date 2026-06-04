@@ -12,7 +12,7 @@ export default function RecipeDetailPage({ recipe, onBack }) {
 
   if (!recipe) {
     return (
-      <main className="w-full max-w-5xl mx-auto md:px-margin-desktop md:py-lg">
+      <main className="w-full max-w-5xl mx-auto md:px-margin-desktop pt-lg pb-xl md:py-lg">
         <p className="text-center text-on-surface-variant py-lg">
           Selecciona una receta para ver los detalles.
         </p>
@@ -28,11 +28,11 @@ export default function RecipeDetailPage({ recipe, onBack }) {
 
   return (
     <>
-      <main className="w-full max-w-5xl mx-auto md:px-margin-desktop md:py-lg">
+      <main className="w-full max-w-5xl mx-auto md:px-margin-desktop pt-lg pb-xl md:py-lg">
         {onBack && (
           <button
             onClick={onBack}
-            className="flex items-center gap-xs text-primary font-label-md text-label-md mb-md px-margin-mobile md:px-0 hover:text-on-surface transition-colors"
+            className="flex items-center gap-xs text-primary font-label-md text-label-md mb-md px-margin-mobile md:px-0"
           >
             <span className="material-symbols-outlined text-[20px]">arrow_back</span>
             Volver

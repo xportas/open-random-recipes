@@ -20,7 +20,7 @@ export default function RecipeMeta({ recipe }) {
 
   return (
     <div className="grid grid-cols-2 gap-sm md:gap-md">
-      <div className="bg-surface-container-low/50 backdrop-blur-sm p-md rounded-2xl border border-surface-container flex flex-col justify-center items-center text-center hover:bg-surface-container-low transition-colors">
+      <div className="bg-surface-container-low/50 backdrop-blur-sm p-md rounded-2xl border border-surface-container flex flex-col justify-center items-center text-center">
         <span className="material-symbols-outlined text-secondary mb-2">restaurant</span>
         <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">
           Momento
@@ -30,7 +30,7 @@ export default function RecipeMeta({ recipe }) {
         </span>
       </div>
       {restrictions.length > 0 ? (
-        <div className="bg-secondary-container/20 backdrop-blur-sm p-md rounded-2xl border border-secondary-container/30 flex flex-col justify-center items-center text-center hover:bg-secondary-container/30 transition-colors">
+        <div className="bg-secondary-container/20 backdrop-blur-sm p-md rounded-2xl border border-secondary-container/30 flex flex-col justify-center items-center text-center">
           <span className="material-symbols-outlined text-secondary mb-2">event_busy</span>
           <span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-1">
             Restricción
@@ -40,7 +40,7 @@ export default function RecipeMeta({ recipe }) {
           </span>
         </div>
       ) : (
-        <div className="bg-primary-container/20 backdrop-blur-sm p-md rounded-2xl border border-primary-container/30 flex flex-col justify-center items-center text-center hover:bg-primary-container/30 transition-colors">
+        <div className="bg-primary-container/20 backdrop-blur-sm p-md rounded-2xl border border-primary-container/30 flex flex-col justify-center items-center text-center">
           <span className="material-symbols-outlined text-primary mb-2">check_circle</span>
           <span className="font-label-sm text-label-sm text-primary uppercase tracking-wider mb-1">
             Disponible

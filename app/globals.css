@@ -140,16 +140,6 @@ body {
   font-variation-settings: 'FILL' 1;
 }
 
-/* Recipe detail ingredient interactions */
-.ingredient-checkbox:checked+div {
-  opacity: 0.5;
-  text-decoration: line-through;
-}
-
-.ingredient-checkbox:checked+div .check-icon {
-  opacity: 1;
-}
-
 /* Shopping list checked state */
 .ingredient-item.checked {
   opacity: 0.3;

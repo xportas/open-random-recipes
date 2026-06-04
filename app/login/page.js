@@ -66,7 +66,7 @@ export default function LoginPage() {
                 tabIndex={-1}
               >
                 <span
-                  className="material-symbols-outlined text-outline-variant text-[20px] hover:text-on-surface-variant transition-colors"
+                  className="material-symbols-outlined text-outline-variant text-[20px]"
                   style={{ fontVariationSettings: "'FILL' 1" }}
                 >
                   {showPassword ? "visibility_off" : "visibility"}
@@ -83,7 +83,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={pending}
-              className="mt-sm w-full bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-label-md text-label-md py-sm px-md rounded-full shadow-[0_4px_12px_rgba(60,105,43,0.2)] hover:shadow-[0_6px_16px_rgba(60,105,43,0.3)] transition-all active:scale-[0.98] flex items-center justify-center gap-xs disabled:opacity-50 disabled:active:scale-100"
+              className="mt-sm w-full bg-primary text-on-primary font-label-md text-label-md py-sm px-md rounded-full shadow-[0_4px_12px_rgba(60,105,43,0.2)] transition-all active:scale-[0.98] flex items-center justify-center gap-xs disabled:opacity-50 disabled:active:scale-100"
             >
               <span>{pending ? "Verificando..." : "Entrar"}</span>
               {!pending && (
@@ -97,7 +97,7 @@ export default function LoginPage() {
             </button>
           </form>
 
-          <button className="mt-md text-primary font-label-sm text-label-sm hover:text-on-primary-fixed-variant underline underline-offset-2 transition-colors">
+          <button className="mt-md text-primary font-label-sm text-label-sm underline underline-offset-2">
             ¿Olvidaste tu contraseña?
           </button>
         </div>

@@ -4,7 +4,7 @@ export default function Navbar({ activeTab }) {
       {/* flex justify-between items-center w-11/12 px-margin-mobile py-sm sticky top-2 z-40 border border-[#4A4A48] rounded-full mt-2 mx-auto backdrop-blur-xs */}
 
       {/* Inicio */}
-      <button className={`flex flex-col items-center justify-center px-4 py-1 hover:text-primary active:scale-90 transition-all duration-300 ease-out ${activeTab.activeTab == "home" ? "bg-primary-container text-on-primary-container rounded-full" : "text-on-surface-variant"}`} onClick={() => activeTab.setActiveTab("home")}>
+      <button className={`flex flex-col items-center justify-center px-4 py-1 active:scale-90 transition-all duration-300 ease-out ${activeTab.activeTab == "home" ? "bg-primary-container text-on-primary-container rounded-full" : "text-on-surface-variant"}`} onClick={() => activeTab.setActiveTab("home")}>
         <span
           className="material-symbols-outlined"
           style={{ fontVariationSettings: `'FILL' ${activeTab.activeTab == "home" ? 1 : 0}` }}
@@ -15,7 +15,7 @@ export default function Navbar({ activeTab }) {
       </button>
 
       {/* Recetas */}
-      <button className={`flex flex-col items-center justify-center px-4 py-1 hover:text-primary active:scale-90 transition-all duration-300 ease-out ${activeTab.activeTab == "recipes" ? "bg-primary-container text-on-primary-container rounded-full" : "text-on-surface-variant"}`} onClick={() => activeTab.setActiveTab("recipes")}>
+      <button className={`flex flex-col items-center justify-center px-4 py-1 active:scale-90 transition-all duration-300 ease-out ${activeTab.activeTab == "recipes" ? "bg-primary-container text-on-primary-container rounded-full" : "text-on-surface-variant"}`} onClick={() => activeTab.setActiveTab("recipes")}>
         <span
           className="material-symbols-outlined"
           style={{ fontVariationSettings: `'FILL' ${activeTab.activeTab == "recipes" ? 1 : 0}` }}
@@ -26,7 +26,7 @@ export default function Navbar({ activeTab }) {
       </button>
 
       {/* Menú */}
-      <button className={`flex flex-col items-center justify-center px-4 py-1 hover:text-primary active:scale-90 transition-all duration-300 ease-out ${activeTab.activeTab == "menu" ? "bg-primary-container text-on-primary-container rounded-full" : "text-on-surface-variant"}`} onClick={() => activeTab.setActiveTab("menu")}>
+      <button className={`flex flex-col items-center justify-center px-4 py-1 active:scale-90 transition-all duration-300 ease-out ${activeTab.activeTab == "menu" ? "bg-primary-container text-on-primary-container rounded-full" : "text-on-surface-variant"}`} onClick={() => activeTab.setActiveTab("menu")}>
         <span
           className="material-symbols-outlined"
           style={{ fontVariationSettings: `'FILL' ${activeTab.activeTab == "menu" ? 1 : 0}` }}
@@ -37,7 +37,7 @@ export default function Navbar({ activeTab }) {
       </button>
 
       {/* Lista de la compra */}
-      <button className={`flex flex-col items-center justify-center px-4 py-1 hover:text-primary active:scale-90 transition-all duration-300 ease-out ${activeTab.activeTab == "shopping-list" ? "bg-primary-container text-on-primary-container rounded-full" : "text-on-surface-variant"}`} onClick={() => activeTab.setActiveTab("shopping-list")}>
+      <button className={`flex flex-col items-center justify-center px-4 py-1 active:scale-90 transition-all duration-300 ease-out ${activeTab.activeTab == "shopping-list" ? "bg-primary-container text-on-primary-container rounded-full" : "text-on-surface-variant"}`} onClick={() => activeTab.setActiveTab("shopping-list")}>
         <span
           className="material-symbols-outlined"
           style={{ fontVariationSettings: `'FILL' ${activeTab.activeTab == "shopping-list" ? 1 : 0}` }}

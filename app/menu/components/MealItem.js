@@ -7,7 +7,7 @@ export default function MealItem({ mealType, meal, onRegenerate, onRecipeClick, 
   return (
     <div className="flex gap-sm group relative">
       <div
-        className="w-16 h-16 rounded-lg overflow-hidden shrink-0 cursor-zoom-in"
+        className="w-16 h-16 rounded-lg overflow-hidden shrink-0"
         onClick={() => onImageClick?.(meal.img, meal.name)}
       >
         {meal.img ? (
@@ -27,7 +27,7 @@ export default function MealItem({ mealType, meal, onRegenerate, onRecipeClick, 
           {label}
         </span>
         <h4
-          className="font-label-md text-label-md text-on-surface leading-tight cursor-pointer hover:text-primary hover:underline transition-colors"
+          className="font-label-md text-label-md text-on-surface leading-tight"
           onClick={() => onRecipeClick?.(meal.recipeId)}
         >
           {meal.name}
@@ -37,7 +37,7 @@ export default function MealItem({ mealType, meal, onRegenerate, onRecipeClick, 
       {onRegenerate && (
         <button
           onClick={() => onRegenerate(mealType)}
-          className="absolute top-0 right-0 p-1 text-secondary opacity-0 group-hover:opacity-100 transition-opacity hover:bg-secondary-container/20 rounded-full"
+          className="absolute top-0 right-0 p-1 text-secondary rounded-full"
           title="Regenerar"
         >
           <span className="material-symbols-outlined text-[20px]">refresh</span>

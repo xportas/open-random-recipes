@@ -22,7 +22,7 @@ export default function ImageModal({ src, alt, onClose }) {
     >
       <button
         onClick={onClose}
-        className="absolute top-md right-md w-10 h-10 rounded-full bg-surface/20 text-white flex items-center justify-center hover:bg-surface/40 transition-colors z-10"
+        className="absolute top-md right-md w-10 h-10 rounded-full bg-surface/20 text-white flex items-center justify-center z-10"
       >
         <span className="material-symbols-outlined text-[24px]">close</span>
       </button>

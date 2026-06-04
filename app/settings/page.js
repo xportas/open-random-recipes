@@ -91,10 +91,9 @@ export default function SettingsPage() {
                   onClick={() => setSelectedTheme(theme.id)}
                   className={`
                     flex items-center gap-4 w-full px-4 py-3.5 rounded-xl
-                    transition-all duration-200
                     ${isSelected
                       ? "bg-primary-container text-on-primary-container"
-                      : "text-on-surface hover:bg-surface-container-highest"
+                      : "text-on-surface"
                     }
                   `}
                 >
@@ -152,10 +151,9 @@ export default function SettingsPage() {
                   onClick={() => setSelectedLanguage(lang.id)}
                   className={`
                     flex items-center gap-4 w-full px-4 py-3.5 rounded-xl
-                    transition-all duration-200
                     ${isSelected
                       ? "bg-primary-container text-on-primary-container"
-                      : "text-on-surface hover:bg-surface-container-highest"
+                      : "text-on-surface"
                     }
                   `}
                 >

@@ -65,6 +65,13 @@ export default function useShoppingList() {
     setItems(updated);
   }, []);
 
+  const addItems = useCallback((newItems) => {
+    const existingKeys = new Set(items.map((i) => `${i.grocery_section}::${i.name}`));
+    const toAdd = newItems.filter((ni) => !existingKeys.has(`${ni.grocery_section}::${ni.name}`));
+    if (toAdd.length === 0) return;
+    setItems([...items, ...toAdd.map((i) => ({ ...i, id: crypto.randomUUID(), checked: false }))]);
+  }, []);
+
   const clear = useCallback(() => {
     items = [];
     clearShoppingList();
@@ -85,6 +92,7 @@ export default function useShoppingList() {
     hydrated: true,
     isEmpty: store.length === 0,
     generateFromMenu,
+    addItems,
     toggleItem,
     clear,
     copyToClipboard,
