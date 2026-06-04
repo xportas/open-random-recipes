@@ -1,6 +1,7 @@
 export default function Navbar({ activeTab }) {
   return (
-    <nav className="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-surface-container shadow-[0_-4px_16px_rgba(211,97,53,0.08)] rounded-xl">
+    <nav className="fixed bottom-0 left-margin-mobile w-11/12 z-50 flex justify-around items-center px-4 py-0.5 mb-1.5 border border-[#4A4A48] rounded-full backdrop-blur-xs">
+      {/* flex justify-between items-center w-11/12 px-margin-mobile py-sm sticky top-2 z-40 border border-[#4A4A48] rounded-full mt-2 mx-auto backdrop-blur-xs */}
 
       {/* Inicio */}
       <button className={`flex flex-col items-center justify-center px-4 py-1 hover:text-primary active:scale-90 transition-all duration-300 ease-out ${activeTab.activeTab == "home" ? "bg-primary-container text-on-primary-container rounded-full" : "text-on-surface-variant"}`} onClick={() => activeTab.setActiveTab("home")}>
