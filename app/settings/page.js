@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import useTrainingSchedule from "@/hooks/useTrainingSchedule";
 
 const themes = [
   { id: "light", label: "Claro", icon: "light_mode" },
@@ -13,9 +14,47 @@ const languages = [
   { id: "eu", label: "Euskara", flag: "EU" },
 ];
 
+const DAYS = ["L", "M", "X", "J", "V", "S", "D"];
+const DAY_FULL_NAMES = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+
+function DaySelector({ label, icon, selectedDays, onToggle }) {
+  return (
+    <div className="bg-surface-container-low rounded-2xl p-4 flex flex-col gap-3">
+      <div className="flex items-center gap-2 px-1">
+        <span className="text-xl">{icon}</span>
+        <span className="font-body-lg text-body-lg text-on-surface">{label}</span>
+      </div>
+      <div className="flex gap-2 justify-between">
+        {DAYS.map((day, index) => {
+          const isSelected = selectedDays.includes(index);
+          return (
+            <button
+              key={index}
+              onClick={() => onToggle(index)}
+              title={DAY_FULL_NAMES[index]}
+              className={`
+                w-10 h-10 rounded-full flex items-center justify-center
+                font-label-md text-label-md
+                transition-all duration-200
+                ${isSelected
+                  ? "bg-primary text-on-primary"
+                  : "bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest"
+                }
+              `}
+            >
+              {day}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 export default function SettingsPage() {
   const [selectedTheme, setSelectedTheme] = useState("light");
   const [selectedLanguage, setSelectedLanguage] = useState("es");
+  const { schedule, toggleDay } = useTrainingSchedule();
 
   return (
     <main className="min-h-screen bg-background text-on-background pb-24">
@@ -143,6 +182,53 @@ export default function SettingsPage() {
                 </button>
               );
             })}
+          </div>
+        </section>
+
+        {/* Sección: Entrenamiento */}
+        <section className="flex flex-col gap-3">
+          <div className="flex items-center gap-2 px-1">
+            <span
+              className="material-symbols-outlined text-primary"
+              style={{ fontVariationSettings: "'FILL' 1" }}
+            >
+              fitness_center
+            </span>
+            <h2 className="font-title-md text-title-md text-on-surface">
+              Entrenamiento
+            </h2>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2 px-1">
+              <span className="font-body-md text-body-md text-on-surface-variant">
+                Hombre (X)
+              </span>
+              <DaySelector
+                label="Gimnasio"
+                icon="🏋️"
+                selectedDays={schedule?.manGym || []}
+                onToggle={(day) => toggleDay("manGym", day)}
+              />
+              <DaySelector
+                label="Baloncesto"
+                icon="🏀"
+                selectedDays={schedule?.manBasketball || []}
+                onToggle={(day) => toggleDay("manBasketball", day)}
+              />
+            </div>
+
+            <div className="flex flex-col gap-2 px-1">
+              <span className="font-body-md text-body-md text-on-surface-variant">
+                Mujer (M)
+              </span>
+              <DaySelector
+                label="Gimnasio"
+                icon="🏋️"
+                selectedDays={schedule?.womanGym || []}
+                onToggle={(day) => toggleDay("womanGym", day)}
+              />
+            </div>
           </div>
         </section>
       </div>

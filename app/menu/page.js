@@ -5,6 +5,7 @@ import { getWeekDates } from "@/lib/menuGenerator";
 import ImageModal from "@/components/ImageModal";
 import RecipeDetailPage from "@/app/recipe-detail/page";
 import useWeeklyMenu from "@/hooks/useWeeklyMenu";
+import useTrainingSchedule from "@/hooks/useTrainingSchedule";
 import MenuHeader from "./components/MenuHeader";
 import DayCard from "./components/DayCard";
 import EmptyDayCard from "./components/EmptyDayCard";
@@ -13,6 +14,7 @@ import { useState } from "react";
 
 export default function MenuPage() {
   const { weeklyMenu, generate, regenerateMeal, removeMeal, clear, isEmpty } = useWeeklyMenu(recipesData);
+  const { getTrainingForDay } = useTrainingSchedule();
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [imageModal, setImageModal] = useState(null);
   const weekDates = getWeekDates();
@@ -39,6 +41,7 @@ export default function MenuPage() {
           {weekDates.map(({ dayName, date }, dayIndex) => {
             const dayData = weeklyMenu?.[dayIndex];
             const hasMeals = dayData && Object.keys(dayData.meals).length > 0;
+            const trainingActivities = getTrainingForDay(dayIndex);
 
             if (hasMeals) {
               return (
@@ -47,6 +50,7 @@ export default function MenuPage() {
                   dayName={dayName}
                   date={date}
                   meals={dayData.meals}
+                  training={trainingActivities}
                   onRegenerateMeal={(mealType) => regenerateMeal(dayIndex, mealType)}
                   onRemoveMeal={(mealType) => removeMeal(dayIndex, mealType)}
                   onRecipeClick={handleRecipeClick}
@@ -55,7 +59,14 @@ export default function MenuPage() {
               );
             }
 
-            return <EmptyDayCard key={dayName} dayName={dayName} date={date} />;
+            return (
+              <EmptyDayCard
+                key={dayName}
+                dayName={dayName}
+                date={date}
+                training={trainingActivities}
+              />
+            );
           })}
         </div>
         {weeklyMenu && (
