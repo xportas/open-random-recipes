@@ -1,6 +1,6 @@
 import IngredientList from "@/components/IngredientList";
 
-export default function RecipeCard({ recipe, onToggleFavorite, onRecipeClick, onImageClick }) {
+export default function RecipeCard({ recipe, onToggleFavorite, onRecipeClick, onImageClick, onImageLoad }) {
   const ingredients = recipe.ingredients || recipe.ingredientes || [];
 
   return (
@@ -14,6 +14,7 @@ export default function RecipeCard({ recipe, onToggleFavorite, onRecipeClick, on
             alt={recipe.name}
             className="w-full h-full object-cover"
             src={recipe.img}
+            onLoad={onImageLoad}
           />
         </div>
         <div className="flex-1 min-w-0">

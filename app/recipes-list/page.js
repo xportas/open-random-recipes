@@ -3,7 +3,9 @@
 import { useState, useMemo } from "react";
 import recipesData from "@/data/recipes.json";
 import ImageModal from "@/components/ImageModal";
+import Loader from "@/components/Loader";
 import RecipeDetailPage from "@/app/recipe-detail/page";
+import useImagesLoading from "@/hooks/useImagesLoading";
 import MealTypeFilter from "./components/MealTypeFilter";
 import SearchBar from "./components/SearchBar";
 import RecipeGroup from "./components/RecipeGroup";
@@ -35,6 +37,11 @@ export default function RecipesListPage() {
       fav: favoriteIds.includes(recipe.id),
     }));
   }, [favoriteIds]);
+
+  const [isLoadingImages, markImageLoaded] = useImagesLoading(
+    recipes,
+    (recipe) => recipe.img
+  );
 
   const handleToggleFavorite = (id) => {
     setFavoriteIds((prev) => {
@@ -86,6 +93,7 @@ export default function RecipesListPage() {
 
   return (
     <>
+      {isLoadingImages && <Loader isLoading />}
       <main className="max-w-7xl w-full min-w-0 mx-auto px-margin-mobile md:px-margin-desktop pt-md pb-32">
         <MealTypeFilter
           selectedType={selectedMealType}
@@ -106,6 +114,7 @@ export default function RecipesListPage() {
                 onToggleFavorite={handleToggleFavorite}
                 onRecipeClick={setSelectedRecipe}
                 onImageClick={(src, alt) => setImageModal({ src, alt })}
+                onImageLoad={markImageLoaded}
               />
             ))
           )}

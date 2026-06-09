@@ -1,6 +1,6 @@
 import RecipeCard from "./RecipeCard";
 
-export default function RecipeGroup({ letter, recipes, onToggleFavorite, onRecipeClick, onImageClick }) {
+export default function RecipeGroup({ letter, recipes, onToggleFavorite, onRecipeClick, onImageClick, onImageLoad }) {
   if (recipes.length === 0) return null;
 
   return (
@@ -16,6 +16,7 @@ export default function RecipeGroup({ letter, recipes, onToggleFavorite, onRecip
             onToggleFavorite={onToggleFavorite}
             onRecipeClick={onRecipeClick}
             onImageClick={onImageClick}
+            onImageLoad={onImageLoad}
           />
         ))}
       </div>
