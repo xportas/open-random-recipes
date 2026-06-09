@@ -1,4 +1,4 @@
-export default function MenuHeader({ onGenerate, onClear, hasMenu }) {
+export default function MenuHeader({ onGenerate, onClear, hasMenu, onShowRules }) {
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-md">
       <div>
@@ -8,6 +8,15 @@ export default function MenuHeader({ onGenerate, onClear, hasMenu }) {
         <p className="font-body-lg text-body-lg text-on-surface-variant">
           Planes frescos y organizados para toda la semana.
         </p>
+        {onShowRules && (
+          <button
+            onClick={onShowRules}
+            className="inline-flex items-center gap-xs mt-sm font-label-md text-label-md text-primary hover:text-primary-container transition-colors"
+          >
+            <span className="material-symbols-outlined text-[18px]">info</span>
+            Ver normas de generación
+          </button>
+        )}
       </div>
       <div className="flex gap-sm">
         <button

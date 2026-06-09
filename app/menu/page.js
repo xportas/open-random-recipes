@@ -10,6 +10,7 @@ import MenuHeader from "./components/MenuHeader";
 import DayCard from "./components/DayCard";
 import EmptyDayCard from "./components/EmptyDayCard";
 import GenerateShoppingListButton from "./components/GenerateShoppingListButton";
+import NutritionRulesModal from "./components/NutritionRulesModal";
 import { useState } from "react";
 
 export default function MenuPage() {
@@ -17,6 +18,7 @@ export default function MenuPage() {
   const { getTrainingForDay } = useTrainingSchedule();
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [imageModal, setImageModal] = useState(null);
+  const [isRulesOpen, setIsRulesOpen] = useState(false);
   const weekDates = getWeekDates();
 
   const handleRecipeClick = (recipeId) => {
@@ -36,7 +38,7 @@ export default function MenuPage() {
   return (
     <>
       <main className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-lg pb-32 space-y-xl">
-        <MenuHeader onGenerate={generate} onClear={clear} hasMenu={!isEmpty} />
+        <MenuHeader onGenerate={generate} onClear={clear} hasMenu={!isEmpty} onShowRules={() => setIsRulesOpen(true)} />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-md md:gap-lg">
           {weekDates.map(({ dayName, date }, dayIndex) => {
             const dayData = weeklyMenu?.[dayIndex];
@@ -82,6 +84,10 @@ export default function MenuPage() {
           onClose={() => setImageModal(null)}
         />
       )}
+      <NutritionRulesModal
+        isOpen={isRulesOpen}
+        onClose={() => setIsRulesOpen(false)}
+      />
     </>
   );
 }
