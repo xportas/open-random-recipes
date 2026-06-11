@@ -1,6 +1,18 @@
+<div align="center">
+
+<img src="/opr-banner.png" width="120" height="120" alt="OPR logo" />
+
 # Random Recipes 🍽️
 
-Web application for recipe management and random weekly menu generation, along with the shopping list.
+**Web application for recipe management and random weekly menu generation and the shopping list.**
+_Simple. Private. Open Source. Not-for-profit._
+
+[![License: GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+[![Built with Next.js](https://img.shields.io/badge/Built%20with-Flutter-02569B?logo=flutter)](https://flutter.dev/)
+
+</div>
+
+---
 
 *Read this document in other languages: [Español](README.es.md), [Português](README.pt.md)*
 
