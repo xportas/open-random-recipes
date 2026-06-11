@@ -1,6 +1,21 @@
-# Random Recipes 🍽️
+<div align="center">
 
-Aplicación web para la gestión de recetas y generación aleatoria de menús semanales, junto con la lista de la compra. 
+<img src="public/opr-banner.png" width="170" height="170" alt="OPR logo" />
+
+# Open Random Recipes 🍽️
+
+**Aplicación web para la gestión de recetas, la generación aleatoria de menús semanales y la lista de la compra.**
+
+_Sencillo. Privado. De código abierto. Sin ánimo de lucro._
+
+![React](https://readmebadge.vercel.app/badges/react.svg)
+![Next.js](https://readmebadge.vercel.app/badges/nextjs.svg)
+![Tailwind CSS](https://readmebadge.vercel.app/badges/tailwind.svg)
+![Javascript](https://readmebadge.vercel.app/badges/javascript.svg)
+
+</div>
+
+---
 
 *Leer este documento en otros idiomas: [English](README.md), [Português](README.pt.md)*
 

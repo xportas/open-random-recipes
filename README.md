@@ -1,14 +1,17 @@
 <div align="center">
 
-<img src="public/opr-banner.png" width="120" height="120" alt="OPR logo" />
+<img src="public/opr-banner.png" width="170" height="170" alt="OPR logo" />
 
 # Open Random Recipes 🍽️
 
 **Web application for recipe management and random weekly menu generation and the shopping list.**
+
 _Simple. Private. Open Source. Not-for-profit._
 
-[![License: AGPLv3](https://img.shields.io/badge/License-AGPLv3-blue.svg)](LICENSE)
+![React](https://readmebadge.vercel.app/badges/react.svg)
 ![Next.js](https://readmebadge.vercel.app/badges/nextjs.svg)
+![Tailwind CSS](https://readmebadge.vercel.app/badges/tailwind.svg)
+![Javascript](https://readmebadge.vercel.app/badges/javascript.svg)
 
 </div>
 
@@ -18,8 +21,8 @@ _Simple. Private. Open Source. Not-for-profit._
 
 ## Table of Contents 📚
 
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
+- [Prerequisites](#Prerequisites)
+- [Installation](#Installation)
 - [Usage Guide](#usage-guide)
   - [Application Screens](#application-screens)
   - [Recipe Customization (`data/recipes.json`)](#recipe-customization-datarecipesjson)
