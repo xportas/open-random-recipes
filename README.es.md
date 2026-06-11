@@ -29,7 +29,7 @@ _Sencillo. Privado. De código abierto. Sin ánimo de lucro._
 - [Contribución](#contribución)
 - [Licencia](#licencia)
 
-## Pre-requisitos 🛠️
+<h2 id="pre-requisitos">Pre-requisitos 🛠️</h2>
 
 Para poder instalar y ejecutar este proyecto en tu entorno local, necesitarás tener instaladas las siguientes herramientas:
 
@@ -37,7 +37,7 @@ Para poder instalar y ejecutar este proyecto en tu entorno local, necesitarás t
 - **npm**: Gestor de paquetes de Node (se instala junto con Node.js).
 - **Git**: Sistema de control de versiones.
 
-## Instalación 📦
+<h2 id="instalación">Instalación 📦</h2>
 
 Sigue los siguientes pasos para poner el proyecto en marcha en tu máquina local:
 
@@ -78,13 +78,13 @@ Sigue los siguientes pasos para poner el proyecto en marcha en tu máquina local
    ```
    La aplicación estará disponible en `http://localhost:3000`.
 
-## Guía de Uso 📖
+<h2 id="guía-de-uso">Guía de Uso 📖</h2>
 
 A continuación se explican las principales funcionalidades de la aplicación. 
 
 > **TO-DO**: insertar capturas de pantalla de la aplicación en funcionamiento para ilustrar la guía. Guardar las imágenes en `public/docs/`
 
-### Pantallas de la Aplicación 📱
+<h3 id="pantallas-de-la-aplicación">Pantallas de la Aplicación 📱</h3>
 
 #### 1. Pantalla de Inicio (Home) 🏠
 Aquí se muestra la vista principal al entrar en la aplicación. Permite navegar a las diferentes secciones.
@@ -109,7 +109,7 @@ En esta pantalla puedes configurar el comportamiento de la aplicación:
 - **Días de entrenamiento**: Configura qué días de la semana entrenas para que el generador tenga en cuenta tus días activos al proponer ciertas comidas.
 *![Captura de pantalla de Ajustes](public/docs/)*
 
-### Personalización de Recetas (`data/recipes.json`) 📂
+<h3 id="personalización-de-recetas-datarecipesjson">Personalización de Recetas (`data/recipes.json`) 📂</h3>
 
 Toda la base de datos de recetas se gestiona a través del archivo estático `data/recipes.json`. Está estructurado como un array (lista) de objetos JSON, donde cada objeto representa una receta.
 
@@ -162,7 +162,7 @@ Para añadir tus propias recetas y que la app las utilice al generar los menús,
 }
 ```
 
-## Contribución 🤝
+<h2 id="contribución">Contribución 🤝</h2>
 
 ¡Las contribuciones son bienvenidas! Si deseas colaborar con el proyecto:
 
@@ -173,7 +173,7 @@ Para añadir tus propias recetas y que la app las utilice al generar los menús,
 5. Sube tu rama (`git push origin feature/nueva-funcionalidad`).
 6. Abre un **Pull Request** explicando detalladamente tus cambios.
 
-## Licencia 📄
+<h2 id="licencia">Licencia 📄</h2>
 
 Este proyecto está licenciado bajo la **GNU Affero General Public License v3.0 (AGPL-3.0)**.
 

@@ -21,15 +21,15 @@ _Simple. Private. Open Source. Not-for-profit._
 
 ## Table of Contents 📚
 
-- [Prerequisites](#Prerequisites)
-- [Installation](#Installation)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
 - [Usage Guide](#usage-guide)
   - [Application Screens](#application-screens)
   - [Recipe Customization (`data/recipes.json`)](#recipe-customization-datarecipesjson)
 - [Contributing](#contributing)
 - [License](#license)
 
-## Prerequisites 🛠️
+<h2 id="prerequisites">Prerequisites 🛠️</h2>
 
 To install and run this project in your local environment, you will need the following tools:
 
@@ -37,7 +37,7 @@ To install and run this project in your local environment, you will need the fol
 - **npm**: Node package manager (installed alongside Node.js).
 - **Git**: Version control system.
 
-## Installation 📦
+<h2 id="installation">Installation 📦</h2>
 
 Follow these steps to get the project running on your local machine:
 
@@ -78,13 +78,13 @@ Follow these steps to get the project running on your local machine:
    ```
    The application will be available at `http://localhost:3000`.
 
-## Usage Guide 📖
+<h2 id="usage-guide">Usage Guide 📖</h2>
 
 Below are the main features of the application.
 
 > **TO-DO**: insert screenshots of the running application here to illustrate the guide. Save the images in `public/docs/`
 
-### Application Screens 📱
+<h3 id="application-screens">Application Screens 📱</h3>
 
 #### 1. Home Screen 🏠
 This is the main view when entering the application. It allows you to navigate to different sections.
@@ -109,7 +109,7 @@ In this screen, you can customize the application behavior:
 - **Training Days**: Set which days of the week you train to generate specific meals according to your active days.
 *![Settings screen screenshot](public/docs/)*
 
-### Recipe Customization (`data/recipes.json`) 📂
+<h3 id="recipe-customization-datarecipesjson">Recipe Customization (`data/recipes.json`) 📂</h3>
 
 The entire recipe database is managed through the static `data/recipes.json` file. It is structured as a JSON array of objects, where each object represents a recipe.
 
@@ -162,7 +162,7 @@ To add your own recipes so the app uses them when generating menus, simply edit 
 }
 ```
 
-## Contributing 🤝
+<h2 id="contributing">Contributing 🤝</h2>
 
 Contributions are welcome! If you want to collaborate with the project:
 
@@ -173,7 +173,7 @@ Contributions are welcome! If you want to collaborate with the project:
 5. Push to the branch (`git push origin feature/new-feature`).
 6. Open a **Pull Request** detailing your changes.
 
-## License 📄
+<h2 id="license">License 📄</h2>
 
 This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**.
 

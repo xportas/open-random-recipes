@@ -29,7 +29,7 @@ _Simples. Privado. Código aberto. Sem fins lucrativos._
 - [Contribuição](#contribuição)
 - [Licença](#licença)
 
-## Pré-requisitos 🛠️
+<h2 id="pré-requisitos">Pré-requisitos 🛠️</h2>
 
 Para poder instalar e executar este projeto em seu ambiente local, você precisará das seguintes ferramentas:
 
@@ -37,7 +37,7 @@ Para poder instalar e executar este projeto em seu ambiente local, você precisa
 - **npm**: Gerenciador de pacotes do Node (instalado junto com o Node.js).
 - **Git**: Sistema de controle de versão.
 
-## Instalação 📦
+<h2 id="instalação">Instalação 📦</h2>
 
 Siga as etapas abaixo para executar o projeto em sua máquina local:
 
@@ -78,12 +78,12 @@ Siga as etapas abaixo para executar o projeto em sua máquina local:
    ```
    O aplicativo estará disponível em `http://localhost:3000`.
 
-## Guia de Uso 📖
+<h2 id="guia-de-uso">Guia de Uso 📖</h2>
 
 Abaixo estão explicadas as principais funcionalidades do aplicativo. 
 
 
-### Telas do Aplicativo 📱
+<h3 id="telas-do-aplicativo">Telas do Aplicativo 📱</h3>
 
 #### 1. Tela Inicial (Home) 🏠
 Aqui é mostrada a visualização principal ao entrar no aplicativo. Permite navegar para diferentes seções.
@@ -108,7 +108,7 @@ Nesta tela, você pode personalizar o comportamento do aplicativo:
 - **Dias de Treino**: Configure quais dias da semana você treina para que o gerador considere seus dias ativos ao sugerir refeições.
 *![Captura de tela de Configurações](public/docs/)*
 
-### Personalização de Receitas (`data/recipes.json`) 📂
+<h3 id="personalização-de-receitas-datarecipesjson">Personalização de Receitas (`data/recipes.json`) 📂</h3>
 
 Toda a base de dados de receitas é gerenciada através do arquivo estático `data/recipes.json`. É estruturado como um array (lista) de objetos JSON, onde cada objeto representa uma receita.
 
@@ -161,7 +161,7 @@ Para adicionar suas próprias receitas e fazer com que o aplicativo as use ao ge
 }
 ```
 
-## Contribuição 🤝
+<h2 id="contribuição">Contribuição 🤝</h2>
 
 Contribuições são bem-vindas! Se você deseja colaborar com o projeto:
 
@@ -172,7 +172,7 @@ Contribuições são bem-vindas! Se você deseja colaborar com o projeto:
 5. Faça o push da sua branch (`git push origin feature/novo-recurso`).
 6. Abra um **Pull Request** explicando detalhadamente suas alterações.
 
-## Licença 📄
+<h2 id="licença">Licença 📄</h2>
 
 Este projeto está licenciado sob a **GNU Affero General Public License v3.0 (AGPL-3.0)**.
 
