@@ -1,10 +1,10 @@
-# Random Recipes
+# Random Recipes 🍽️
 
 Aplicativo web para gestão de receitas e geração aleatória de menus semanais, juntamente com a lista de compras.
 
 *Leia este documento em outros idiomas: [English](README.md), [Español](README.es.md)*
 
-## Índice
+## Índice 📚
 
 - [Pré-requisitos](#pré-requisitos)
 - [Instalação](#instalação)
@@ -14,7 +14,7 @@ Aplicativo web para gestão de receitas e geração aleatória de menus semanais
 - [Contribuição](#contribuição)
 - [Licença](#licença)
 
-## Pré-requisitos
+## Pré-requisitos 🛠️
 
 Para poder instalar e executar este projeto em seu ambiente local, você precisará das seguintes ferramentas:
 
@@ -22,7 +22,7 @@ Para poder instalar e executar este projeto em seu ambiente local, você precisa
 - **npm**: Gerenciador de pacotes do Node (instalado junto com o Node.js).
 - **Git**: Sistema de controle de versão.
 
-## Instalação
+## Instalação 📦
 
 Siga as etapas abaixo para executar o projeto em sua máquina local:
 
@@ -63,37 +63,37 @@ Siga as etapas abaixo para executar o projeto em sua máquina local:
    ```
    O aplicativo estará disponível em `http://localhost:3000`.
 
-## Guia de Uso
+## Guia de Uso 📖
 
 Abaixo estão explicadas as principais funcionalidades do aplicativo. 
 
 
-### Telas do Aplicativo
+### Telas do Aplicativo 📱
 
-#### 1. Tela Inicial (Home)
+#### 1. Tela Inicial (Home) 🏠
 Aqui é mostrada a visualização principal ao entrar no aplicativo. Permite navegar para diferentes seções.
 *![Captura de tela da Home](public/docs/)* 
 
-#### 2. Lista de Receitas
+#### 2. Lista de Receitas 📋
 Nesta tela você pode visualizar todas as receitas disponíveis no sistema, com suas imagens, nomes e informações gerais.
 *![Captura de tela da Lista de Receitas](public/docs/)*
 
-#### 3. Gerador de Menu
+#### 3. Gerador de Menu 🍲
 Esta é a funcionalidade principal. Permite gerar um menu semanal aleatoriamente, levando em consideração as restrições e tipos de refeição (café da manhã, almoço, jantar).
 *![Captura de tela do Gerador de Menu](public/docs/)*
 
-#### 4. Lista de Compras
+#### 4. Lista de Compras 🛒
 Com base no menu gerado, esta tela agrupa todos os ingredientes necessários classificados pela sua seção do supermercado (hortifrúti, açougue, laticínios, etc.).
 *![Captura de tela da Lista de Compras](public/docs/)*
 
-#### 5. Configurações
+#### 5. Configurações ⚙️
 Nesta tela, você pode personalizar o comportamento do aplicativo:
 - **Tema**: Alterne entre o modo claro e escuro.
 - **Idioma**: Mude o idioma da interface do aplicativo.
 - **Dias de Treino**: Configure quais dias da semana você treina para que o gerador considere seus dias ativos ao sugerir refeições.
 *![Captura de tela de Configurações](public/docs/)*
 
-### Personalização de Receitas (`data/recipes.json`)
+### Personalização de Receitas (`data/recipes.json`) 📂
 
 Toda a base de dados de receitas é gerenciada através do arquivo estático `data/recipes.json`. É estruturado como um array (lista) de objetos JSON, onde cada objeto representa uma receita.
 
@@ -146,7 +146,7 @@ Para adicionar suas próprias receitas e fazer com que o aplicativo as use ao ge
 }
 ```
 
-## Contribuição
+## Contribuição 🤝
 
 Contribuições são bem-vindas! Se você deseja colaborar com o projeto:
 
@@ -157,7 +157,7 @@ Contribuições são bem-vindas! Se você deseja colaborar com o projeto:
 5. Faça o push da sua branch (`git push origin feature/novo-recurso`).
 6. Abra um **Pull Request** explicando detalhadamente suas alterações.
 
-## Licença
+## Licença 📄
 
 Este projeto está licenciado sob a **GNU Affero General Public License v3.0 (AGPL-3.0)**.
 

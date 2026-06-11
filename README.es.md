@@ -1,10 +1,10 @@
-# Random Recipes
+# Random Recipes 🍽️
 
 Aplicación web para la gestión de recetas y generación aleatoria de menús semanales, junto con la lista de la compra. 
 
 *Leer este documento en otros idiomas: [English](README.md), [Português](README.pt.md)*
 
-## Índice
+## Índice 📚
 
 - [Pre-requisitos](#pre-requisitos)
 - [Instalación](#instalación)
@@ -14,7 +14,7 @@ Aplicación web para la gestión de recetas y generación aleatoria de menús se
 - [Contribución](#contribución)
 - [Licencia](#licencia)
 
-## Pre-requisitos
+## Pre-requisitos 🛠️
 
 Para poder instalar y ejecutar este proyecto en tu entorno local, necesitarás tener instaladas las siguientes herramientas:
 
@@ -22,7 +22,7 @@ Para poder instalar y ejecutar este proyecto en tu entorno local, necesitarás t
 - **npm**: Gestor de paquetes de Node (se instala junto con Node.js).
 - **Git**: Sistema de control de versiones.
 
-## Instalación
+## Instalación 📦
 
 Sigue los siguientes pasos para poner el proyecto en marcha en tu máquina local:
 
@@ -63,38 +63,38 @@ Sigue los siguientes pasos para poner el proyecto en marcha en tu máquina local
    ```
    La aplicación estará disponible en `http://localhost:3000`.
 
-## Guía de Uso
+## Guía de Uso 📖
 
 A continuación se explican las principales funcionalidades de la aplicación. 
 
 > **TO-DO**: insertar capturas de pantalla de la aplicación en funcionamiento para ilustrar la guía. Guardar las imágenes en `public/docs/`
 
-### Pantallas de la Aplicación
+### Pantallas de la Aplicación 📱
 
-#### 1. Pantalla de Inicio (Home)
+#### 1. Pantalla de Inicio (Home) 🏠
 Aquí se muestra la vista principal al entrar en la aplicación. Permite navegar a las diferentes secciones.
 *![Captura de pantalla del Home](public/docs/)* 
 
-#### 2. Lista de Recetas
+#### 2. Lista de Recetas 📋
 En esta pantalla se pueden visualizar todas las recetas disponibles en el sistema, con sus imágenes, nombres e información general.
 *![Captura de pantalla de la Lista de Recetas](public/docs/)*
 
-#### 3. Generador de Menú
+#### 3. Generador de Menú 🍲
 Esta es la funcionalidad core. Te permite generar un menú semanal de forma aleatoria, teniendo en cuenta las restricciones y tipos de comida (desayuno, comida, cena).
 *![Captura de pantalla del Generador de Menú](public/docs/)*
 
-#### 4. Lista de la Compra
+#### 4. Lista de la Compra 🛒
 A partir del menú generado, esta pantalla agrupa todos los ingredientes necesarios clasificados por su sección de supermercado (frutería, carnicería, lácteos, etc.).
 *![Captura de pantalla de la Lista de la Compra](public/docs/)*
 
-#### 5. Ajustes
+#### 5. Ajustes ⚙️
 En esta pantalla puedes configurar el comportamiento de la aplicación:
 - **Tema**: Cambia entre el modo claro y el modo oscuro.
 - **Idioma**: Selecciona el idioma en el que deseas visualizar la interfaz.
 - **Días de entrenamiento**: Configura qué días de la semana entrenas para que el generador tenga en cuenta tus días activos al proponer ciertas comidas.
 *![Captura de pantalla de Ajustes](public/docs/)*
 
-### Personalización de Recetas (`data/recipes.json`)
+### Personalización de Recetas (`data/recipes.json`) 📂
 
 Toda la base de datos de recetas se gestiona a través del archivo estático `data/recipes.json`. Está estructurado como un array (lista) de objetos JSON, donde cada objeto representa una receta.
 
@@ -147,7 +147,7 @@ Para añadir tus propias recetas y que la app las utilice al generar los menús,
 }
 ```
 
-## Contribución
+## Contribución 🤝
 
 ¡Las contribuciones son bienvenidas! Si deseas colaborar con el proyecto:
 
@@ -158,7 +158,7 @@ Para añadir tus propias recetas y que la app las utilice al generar los menús,
 5. Sube tu rama (`git push origin feature/nueva-funcionalidad`).
 6. Abre un **Pull Request** explicando detalladamente tus cambios.
 
-## Licencia
+## Licencia 📄
 
 Este proyecto está licenciado bajo la **GNU Affero General Public License v3.0 (AGPL-3.0)**.
 

@@ -1,10 +1,10 @@
-# Random Recipes
+# Random Recipes 🍽️
 
 Web application for recipe management and random weekly menu generation, along with the shopping list.
 
 *Read this document in other languages: [Español](README.es.md), [Português](README.pt.md)*
 
-## Table of Contents
+## Table of Contents 📚
 
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
@@ -14,7 +14,7 @@ Web application for recipe management and random weekly menu generation, along w
 - [Contributing](#contributing)
 - [License](#license)
 
-## Prerequisites
+## Prerequisites 🛠️
 
 To install and run this project in your local environment, you will need the following tools:
 
@@ -22,7 +22,7 @@ To install and run this project in your local environment, you will need the fol
 - **npm**: Node package manager (installed alongside Node.js).
 - **Git**: Version control system.
 
-## Installation
+## Installation 📦
 
 Follow these steps to get the project running on your local machine:
 
@@ -63,38 +63,38 @@ Follow these steps to get the project running on your local machine:
    ```
    The application will be available at `http://localhost:3000`.
 
-## Usage Guide
+## Usage Guide 📖
 
 Below are the main features of the application.
 
 > **TO-DO**: insert screenshots of the running application here to illustrate the guide. Save the images in `public/docs/`
 
-### Application Screens
+### Application Screens 📱
 
-#### 1. Home Screen
+#### 1. Home Screen 🏠
 This is the main view when entering the application. It allows you to navigate to different sections.
 *![Home screen screenshot](public/docs/)* 
 
-#### 2. Recipes List
+#### 2. Recipes List 📋
 In this screen, you can view all the available recipes in the system, along with their images, names, and general information.
 *![Recipes list screenshot](public/docs/)*
 
-#### 3. Menu Generator
+#### 3. Menu Generator 🍲
 This is the core functionality. It allows you to generate a weekly menu randomly, taking into account restrictions and meal types (breakfast, lunch, dinner).
 *![Menu generator screenshot](public/docs/)*
 
-#### 4. Shopping List
+#### 4. Shopping List 🛒
 Based on the generated menu, this screen groups all the necessary ingredients categorized by their grocery section (produce, meat, dairy, etc.).
 *![Shopping list screenshot](public/docs/)*
 
-#### 5. Settings
+#### 5. Settings ⚙️
 In this screen, you can customize the application behavior:
 - **Theme**: Toggle between light and dark mode.
 - **Language**: Change the application's interface language.
 - **Training Days**: Set which days of the week you train to generate specific meals according to your active days.
 *![Settings screen screenshot](public/docs/)*
 
-### Recipe Customization (`data/recipes.json`)
+### Recipe Customization (`data/recipes.json`) 📂
 
 The entire recipe database is managed through the static `data/recipes.json` file. It is structured as a JSON array of objects, where each object represents a recipe.
 
@@ -147,7 +147,7 @@ To add your own recipes so the app uses them when generating menus, simply edit 
 }
 ```
 
-## Contributing
+## Contributing 🤝
 
 Contributions are welcome! If you want to collaborate with the project:
 
@@ -158,7 +158,7 @@ Contributions are welcome! If you want to collaborate with the project:
 5. Push to the branch (`git push origin feature/new-feature`).
 6. Open a **Pull Request** detailing your changes.
 
-## License
+## License 📄
 
 This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**.
 
