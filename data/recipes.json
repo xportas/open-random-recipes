@@ -1823,6 +1823,63 @@
   },
   {
     "id": 32,
+    "name": "Taco de pollo con ensalada",
+    "steps": "1. Coger tortilla de pan (fajita) y hacer un corte equivalente al radio de la circunferencia. 2. En 1/4 de fajita colocar el pollo con nueces al gusto. 3. En 1/4 colocar la ensalada al gusto (ej. lechuga, tomates cherri, espinacas...). 4. Cortar las lonchas de queso en triángulos para encajarlas en otro 1/4. 5. Montar el taco doblando la tortilla aprovechando el corte inicial y sujetar son palillos para que no se abra y mantenga la forma. 6. Dorar al gusto en air fryer.",
+    "restrictions": null,
+    "servings": 1,
+    "breakfast": false,
+    "lunch": false,
+    "snack": false,
+    "dinner": true,
+    "ingredients": [
+      {
+        "name": "Pechuga de pollo",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "grocery_section": "Carnicería"
+      },
+      {
+        "name": "Lechuga",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
+      },
+      
+      {
+        "name": "Tomate",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
+      },
+      {
+        "name": "Nueces",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "grocery_section": "Frutos Secos y Semillas"
+      },
+      {
+        "name": "Queso en lonchas",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "grocery_section": "Lácteos"
+      },
+      {
+        "name": "Tortillas de maíz",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "grocery_section": "Panadería"
+      }
+    ],
+    "img": "/recipes/taco-pollo-ensalada.png"
+  },
+  {
+    "id": 33,
     "name": "Pizza de masa de huevo",
     "steps": "",
     "restrictions": [
