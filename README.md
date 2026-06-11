@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="/opr-banner.png" width="120" height="120" alt="OPR logo" />
+<img src="public/opr-banner.png" width="120" height="120" alt="OPR logo" />
 
 # Random Recipes 🍽️
 
