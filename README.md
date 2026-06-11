@@ -2,13 +2,13 @@
 
 <img src="public/opr-banner.png" width="120" height="120" alt="OPR logo" />
 
-# Random Recipes 🍽️
+# Open Random Recipes 🍽️
 
 **Web application for recipe management and random weekly menu generation and the shopping list.**
 _Simple. Private. Open Source. Not-for-profit._
 
-[![License: GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
-[![Built with Next.js](https://img.shields.io/badge/Built%20with-Flutter-02569B?logo=flutter)](https://flutter.dev/)
+[![License: AGPLv3](https://img.shields.io/badge/License-AGPLv3-blue.svg)](LICENSE)
+![Next.js](https://readmebadge.vercel.app/badges/nextjs.svg)
 
 </div>
 
