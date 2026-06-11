@@ -15,6 +15,7 @@ export default function RecipeCard({ recipe, onToggleFavorite, onRecipeClick, on
             className="w-full h-full object-cover"
             src={recipe.img}
             onLoad={onImageLoad}
+            onError={onImageLoad}
           />
         </div>
         <div className="flex-1 min-w-0">
