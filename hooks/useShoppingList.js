@@ -5,7 +5,7 @@ import {
   clearShoppingList,
   extractIngredientsFromMenu,
   groupBySection,
-  formatForClipboard,
+  buildClipboardText,
 } from "@/lib/shoppingList";
 
 let items = [];
@@ -79,8 +79,7 @@ export default function useShoppingList() {
   }, []);
 
   const copyToClipboard = useCallback(async () => {
-    const grouped = groupBySection(items);
-    const text = formatForClipboard(grouped);
+    const text = buildClipboardText(items);
     await navigator.clipboard.writeText(text);
   }, []);
 
