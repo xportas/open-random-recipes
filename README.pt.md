@@ -119,6 +119,10 @@ Para adicionar suas próprias receitas e fazer com que o aplicativo as use ao ge
 - **`steps`** *(string)*: Instruções de preparação.
 - **`restrictions`** *(array de strings | null)*: Tags para restringir quando esta receita pode ser sugerida. Valores possíveis: `["weekend"]`, `["dinner"]`, etc. Se não houver restrições, use `null`.
 - **`servings`** *(número)*: Número de porções.
+- **`type`** *(string)*: Categoria principal de proteína da receita. É usada para evitar que, no mesmo dia, coincidam duas refeições principais (`lunch` e `dinner`) da mesma categoria. Valores permitidos:
+  - `"meet"` → receitas cujo ingrediente principal é carne (vermelha, branca, jamón, etc.).
+  - `"fish"` → receitas cujo ingrediente principal é peixe ou marisco.
+  - `"other"` → qualquer outra receita (vegetais, ovos, leguminosas, cafés da manhã, lanches, etc.).
 - **`breakfast`, `lunch`, `snack`, `dinner`** *(boolean)*: Defina como `true` ou `false` para indicar em quais refeições do dia esta receita se encaixa.
 - **`ingredients`** *(array de objetos)*: Lista de ingredientes. Cada ingrediente possui:
   - `name` *(string)*: Nome do ingrediente ou categoria.
@@ -137,6 +141,7 @@ Para adicionar suas próprias receitas e fazer com que o aplicativo as use ao ge
   "steps": "Toste o pão, rale o tomate e adicione azeite e sal.",
   "restrictions": null,
   "servings": 1,
+  "type": "other",
   "breakfast": true,
   "lunch": false,
   "snack": true,

@@ -120,6 +120,10 @@ To add your own recipes so the app uses them when generating menus, simply edit 
 - **`steps`** *(string)*: Preparation instructions.
 - **`restrictions`** *(array of strings | null)*: Tags to restrict when this recipe can be suggested. Possible values: `["weekend"]`, `["dinner"]`, etc. If there are no restrictions, use `null`.
 - **`servings`** *(number)*: Number of servings.
+- **`type`** *(string)*: Main protein category of the recipe, used to prevent two main meals (`lunch` and `dinner`) of the same category within the same day. Allowed values:
+  - `"meet"` → recipes whose main ingredient is meat (red, white, jamón, etc.).
+  - `"fish"` → recipes whose main ingredient is fish or seafood.
+  - `"other"` → any other recipe (vegetables, eggs, legumes, breakfasts, snacks, etc.).
 - **`breakfast`, `lunch`, `snack`, `dinner`** *(boolean)*: Set to `true` or `false` to indicate which meals of the day this recipe fits into.
 - **`ingredients`** *(array of objects)*: List of ingredients. Each ingredient has:
   - `name` *(string)*: Name of the ingredient or category.
@@ -138,6 +142,7 @@ To add your own recipes so the app uses them when generating menus, simply edit 
   "steps": "Toast the bread, grate the tomato, and add oil and salt.",
   "restrictions": null,
   "servings": 1,
+  "type": "other",
   "breakfast": true,
   "lunch": false,
   "snack": true,

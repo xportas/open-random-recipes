@@ -120,6 +120,10 @@ Para añadir tus propias recetas y que la app las utilice al generar los menús,
 - **`steps`** *(string)*: Instrucciones de preparación.
 - **`restrictions`** *(array de strings | null)*: Etiquetas para restringir cuándo se puede sugerir esta receta. Posibles valores: `["weekend"]`, `["dinner"]`, etc. Si no tiene restricciones, usa `null`.
 - **`servings`** *(número)*: Número de raciones.
+- **`type`** *(string)*: Categoría principal de proteína de la receta. Se utiliza para evitar que en un mismo día coincidan dos comidas principales (`lunch` y `dinner`) de la misma categoría. Valores permitidos:
+  - `"meet"` → recetas cuyo ingrediente principal es carne (roja, blanca, jamón, etc.).
+  - `"fish"` → recetas cuyo ingrediente principal es pescado o marisco.
+  - `"other"` → cualquier otra receta (verduras, huevos, legumbres, desayunos, meriendas, etc.).
 - **`breakfast`, `lunch`, `snack`, `dinner`** *(boolean)*: Pon a `true` o `false` para indicar en qué comidas del día encaja esta receta.
 - **`ingredients`** *(array de objetos)*: Lista de ingredientes. Cada ingrediente tiene:
   - `name` *(string)*: Nombre del ingrediente o categoría.
@@ -138,6 +142,7 @@ Para añadir tus propias recetas y que la app las utilice al generar los menús,
   "steps": "Tostar el pan, rallar el tomate y añadir aceite y sal.",
   "restrictions": null,
   "servings": 1,
+  "type": "other",
   "breakfast": true,
   "lunch": false,
   "snack": true,

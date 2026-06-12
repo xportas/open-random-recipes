@@ -69,9 +69,6 @@ export default function ShoppingListInfoModal({ isOpen, onClose }) {
                 <h3 className="font-headline-sm text-headline-sm text-on-surface">
                   Cómo funciona la lista
                 </h3>
-                <p className="font-body-md text-body-md text-on-surface-variant mt-xs">
-                  Tres claves para sacar el máximo partido a tu lista de la compra.
-                </p>
               </div>
             </div>
             <button
