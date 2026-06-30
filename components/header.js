@@ -20,7 +20,7 @@ export default function Header({ activeTab, previousTabRef }) {
               className="material-symbols-outlined"
               style={{ fontVariationSettings: "'FILL' 0" }}
             >
-              settings
+              tune
             </span>
             :
             <span
