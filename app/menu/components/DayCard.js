@@ -7,11 +7,11 @@ export default function DayCard({ dayName, date, meals, training, onRegenerateMe
   const activeMeals = MEAL_TYPES.filter((type) => meals[type] !== undefined);
 
   return (
-    <div className="bg-surface-container-lowest rounded-xl shadow-[0_16px_32px_-12px_rgba(211,97,53,0.08)] overflow-hidden border border-surface-variant">
-      <div className="bg-surface-container px-md py-sm border-b border-surface-variant">
+    <div className="bg-white rounded-2xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] overflow-hidden border border-neutral-100">
+      <div className="bg-neutral-50 px-md py-sm border-b border-neutral-100">
         <div className="flex justify-between items-center">
-          <h3 className="font-headline-sm text-headline-sm text-on-surface">{dayName}</h3>
-          <span className="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-2 py-1 rounded-md">
+          <h3 className="font-headline-sm text-headline-sm text-neutral-900">{dayName}</h3>
+          <span className="font-label-sm text-label-sm text-neutral-500 bg-neutral-100 px-2 py-1 rounded-lg">
             {date}
           </span>
         </div>
@@ -21,10 +21,7 @@ export default function DayCard({ dayName, date, meals, training, onRegenerateMe
         {activeMeals.map((mealType, index) => (
           <div key={mealType}>
             {meals[mealType] === null ? (
-              <EmptyMealSlot
-                mealType={mealType}
-                onRegenerate={onRegenerateMeal}
-              />
+              <EmptyMealSlot mealType={mealType} onRegenerate={onRegenerateMeal} />
             ) : (
               <SwipeableMealItem
                 mealType={mealType}
@@ -36,7 +33,7 @@ export default function DayCard({ dayName, date, meals, training, onRegenerateMe
               />
             )}
             {index < activeMeals.length - 1 && (
-              <hr className="border-surface-variant mt-md" />
+              <hr className="border-neutral-100 mt-md" />
             )}
           </div>
         ))}

@@ -10,15 +10,15 @@ export default function MealTypeFilter({ selectedType, onTypeChange }) {
 
   return (
     <section className="mb-lg w-full max-w-full">
-      <div className="flex gap-sm pb-2 overflow-x-auto hide-scrollbar w-full">
+      <div className="flex gap-2 pb-2 overflow-x-auto hide-scrollbar w-full">
         {mealTypes.map((type) => (
           <button
             key={type.id}
             onClick={() => onTypeChange(type.field)}
-            className={`px-md py-2 rounded-full font-label-md text-label-md transition-all active:scale-95 border shrink-0 whitespace-nowrap ${
+            className={`px-5 py-2 rounded-full font-label-md text-label-md transition-all duration-200 active:scale-95 border shrink-0 whitespace-nowrap ${
               selectedType === type.field
-                ? "bg-primary-container text-on-primary-container border-transparent"
-                : "bg-surface-container-low text-on-surface-variant border-outline-variant"
+                ? "bg-primary text-white border-primary shadow-[0_2px_8px_rgba(34,197,94,0.25)]"
+                : "bg-white text-neutral-500 border-neutral-200"
             }`}
           >
             {type.label}

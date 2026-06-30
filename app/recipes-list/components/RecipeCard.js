@@ -4,10 +4,10 @@ export default function RecipeCard({ recipe, onToggleFavorite, onRecipeClick, on
   const ingredients = recipe.ingredients || recipe.ingredientes || [];
 
   return (
-    <div className="bg-surface-container-lowest p-sm rounded-xl shadow-[0_16px_32px_rgba(211,97,53,0.04)] border border-surface-container min-w-0 overflow-hidden">
+    <div className="bg-white p-sm rounded-2xl shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-neutral-100 min-w-0 overflow-hidden active:scale-[0.98] transition-transform duration-200">
       <div className="flex items-center gap-4 min-w-0">
         <div
-          className="w-16 h-16 rounded-full overflow-hidden shrink-0"
+          className="w-16 h-16 rounded-full overflow-hidden shrink-0 ring-2 ring-neutral-100"
           onClick={() => onImageClick?.(recipe.img, recipe.name)}
         >
           <img
@@ -20,7 +20,7 @@ export default function RecipeCard({ recipe, onToggleFavorite, onRecipeClick, on
         </div>
         <div className="flex-1 min-w-0">
           <h3
-            className="font-label-md text-label-md text-on-surface truncate"
+            className="font-label-md text-label-md text-neutral-900 truncate"
             onClick={() => onRecipeClick?.(recipe)}
           >
             {recipe.name}
@@ -32,10 +32,10 @@ export default function RecipeCard({ recipe, onToggleFavorite, onRecipeClick, on
             e.stopPropagation();
             onToggleFavorite(recipe.id);
           }}
-          className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
+          className={`w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 active:scale-90 ${
             recipe.fav
-              ? "text-error"
-              : "text-outline"
+              ? "text-red-500 bg-red-50"
+              : "text-neutral-300"
           }`}
         >
           <span

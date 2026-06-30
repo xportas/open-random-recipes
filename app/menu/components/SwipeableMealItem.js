@@ -63,29 +63,33 @@ export default function SwipeableMealItem({ mealType, meal, onRegenerate, onRemo
     closeSwipe();
   }, [onRemove, mealType, closeSwipe]);
 
+  const handleOverlayClick = useCallback(() => {
+    if (isOpen) closeSwipe();
+  }, [isOpen, closeSwipe]);
+
   return (
-    <div className="relative overflow-hidden rounded-lg">
-      <div className="absolute inset-y-0 right-0 flex w-[120px]">
+    <div className="relative overflow-hidden rounded-xl">
+      <div className="absolute inset-y-0 right-0 flex w-[120px] rounded-r-xl overflow-hidden z-0">
         <button
           onClick={handleRegenerate}
-          className="flex-1 flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container active:opacity-80"
+          className="flex-1 flex flex-col items-center justify-center bg-neutral-800 text-white active:opacity-80 transition-opacity"
         >
           <span className="material-symbols-outlined text-[20px]">refresh</span>
           <span className="font-label-sm text-label-sm mt-0.5">Otra</span>
         </button>
         <button
           onClick={handleRemove}
-          className="flex-1 flex flex-col items-center justify-center bg-error-container text-on-error-container active:opacity-80"
+          className="flex-1 flex flex-col items-center justify-center bg-neutral-900 text-white active:opacity-80 transition-opacity"
         >
           <span className="material-symbols-outlined text-[20px]">delete</span>
           <span className="font-label-sm text-label-sm mt-0.5">Quitar</span>
         </button>
       </div>
       <div
-        className="relative z-10 bg-surface-container-lowest touch-pan-y"
+        className="relative z-10 bg-white rounded-xl touch-pan-y"
         style={{
           transform: `translateX(${offsetX}px)`,
-          transition: dragging ? "none" : "transform 0.2s ease-out",
+          transition: dragging ? "none" : "transform 0.3s cubic-bezier(0.32, 0.72, 0, 1)",
         }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
@@ -98,6 +102,12 @@ export default function SwipeableMealItem({ mealType, meal, onRegenerate, onRemo
           onRecipeClick={onRecipeClick}
           onImageClick={onImageClick}
         />
+        {isOpen && (
+          <div
+            className="absolute inset-0 z-20"
+            onClick={handleOverlayClick}
+          />
+        )}
       </div>
     </div>
   );

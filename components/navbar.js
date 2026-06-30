@@ -1,51 +1,81 @@
+"use client";
+
+import { useRef, useState, useEffect, useCallback } from "react";
+
+const TABS = [
+  { id: "home", icon: "home", label: "Inicio" },
+  { id: "recipes", icon: "restaurant_menu", label: "Recetas" },
+  { id: "menu", icon: "calendar_month", label: "Menu" },
+  { id: "shopping-list", icon: "shopping_basket", label: "Compra" },
+];
+
 export default function Navbar({ activeTab }) {
+  const navRef = useRef(null);
+  const [indicator, setIndicator] = useState({ left: 0, width: 0 });
+  const [measured, setMeasured] = useState(false);
+
+  const measure = useCallback(() => {
+    const nav = navRef.current;
+    if (!nav) return;
+    const navRect = nav.getBoundingClientRect();
+    const activeBtn = nav.querySelector(`[data-tab="${activeTab.activeTab}"]`);
+    if (activeBtn) {
+      const btnRect = activeBtn.getBoundingClientRect();
+      setIndicator({
+        left: btnRect.left - navRect.left,
+        width: btnRect.width,
+      });
+      if (!measured) setMeasured(true);
+    }
+  }, [activeTab.activeTab, measured]);
+
+  useEffect(() => {
+    measure();
+  }, [measure]);
+
+  useEffect(() => {
+    const handleResize = () => measure();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [measure]);
+
   return (
-    <nav className="fixed bottom-0 left-margin-mobile w-11/12 z-50 flex justify-around items-center px-4 py-0.5 mb-1.5 border border-[#4A4A48] rounded-full backdrop-blur-xs">
-      {/* flex justify-between items-center w-11/12 px-margin-mobile py-sm sticky top-2 z-40 border border-[#4A4A48] rounded-full mt-2 mx-auto backdrop-blur-xs */}
+    <nav
+      ref={navRef}
+      className="fixed bottom-0 left-margin-mobile w-11/12 z-50 flex justify-around items-center px-1 py-1 mb-3 border border-neutral-200 rounded-full bg-white/90 backdrop-blur-md shadow-[0_4px_24px_rgba(0,0,0,0.06)]"
+    >
+      <div
+        className="absolute top-1 bottom-1 bg-primary rounded-full z-0"
+        style={{
+          left: `${indicator.left}px`,
+          width: `${indicator.width}px`,
+          transition: measured
+            ? "left 0.35s cubic-bezier(0.32, 0.72, 0, 1), width 0.35s cubic-bezier(0.32, 0.72, 0, 1)"
+            : "none",
+        }}
+      />
 
-      {/* Inicio */}
-      <button className={`flex flex-col items-center justify-center px-4 py-1 active:scale-90 transition-all duration-300 ease-out ${activeTab.activeTab == "home" ? "bg-primary-container text-on-primary-container rounded-full" : "text-on-surface-variant"}`} onClick={() => activeTab.setActiveTab("home")}>
-        <span
-          className="material-symbols-outlined"
-          style={{ fontVariationSettings: `'FILL' ${activeTab.activeTab == "home" ? 1 : 0}` }}
-        >
-          home
-        </span>
-        <span className="font-label-sm text-label-sm mt-1">Inicio</span>
-      </button>
-
-      {/* Recetas */}
-      <button className={`flex flex-col items-center justify-center px-4 py-1 active:scale-90 transition-all duration-300 ease-out ${activeTab.activeTab == "recipes" ? "bg-primary-container text-on-primary-container rounded-full" : "text-on-surface-variant"}`} onClick={() => activeTab.setActiveTab("recipes")}>
-        <span
-          className="material-symbols-outlined"
-          style={{ fontVariationSettings: `'FILL' ${activeTab.activeTab == "recipes" ? 1 : 0}` }}
-        >
-          restaurant_menu
-        </span>
-        <span className="font-label-sm text-label-sm mt-1">Recetas</span>
-      </button>
-
-      {/* Menú */}
-      <button className={`flex flex-col items-center justify-center px-4 py-1 active:scale-90 transition-all duration-300 ease-out ${activeTab.activeTab == "menu" ? "bg-primary-container text-on-primary-container rounded-full" : "text-on-surface-variant"}`} onClick={() => activeTab.setActiveTab("menu")}>
-        <span
-          className="material-symbols-outlined"
-          style={{ fontVariationSettings: `'FILL' ${activeTab.activeTab == "menu" ? 1 : 0}` }}
-        >
-          calendar_month
-        </span>
-        <span className="font-label-sm text-label-sm mt-1">Menú</span>
-      </button>
-
-      {/* Lista de la compra */}
-      <button className={`flex flex-col items-center justify-center px-4 py-1 active:scale-90 transition-all duration-300 ease-out ${activeTab.activeTab == "shopping-list" ? "bg-primary-container text-on-primary-container rounded-full" : "text-on-surface-variant"}`} onClick={() => activeTab.setActiveTab("shopping-list")}>
-        <span
-          className="material-symbols-outlined"
-          style={{ fontVariationSettings: `'FILL' ${activeTab.activeTab == "shopping-list" ? 1 : 0}` }}
-        >
-          shopping_basket
-        </span>
-        <span className="font-label-sm text-label-sm mt-1">Compra</span>
-      </button>
+      {TABS.map((tab) => {
+        const isActive = activeTab.activeTab === tab.id;
+        return (
+          <button
+            key={tab.id}
+            data-tab={tab.id}
+            className={`relative z-10 flex flex-col items-center justify-center px-3 py-1.5 active:scale-90 transition-transform duration-200 ${
+              isActive ? "text-white" : "text-neutral-400"
+            }`}
+            onClick={() => activeTab.setActiveTab(tab.id)}
+          >
+            <span
+              className="material-symbols-outlined text-[24px]"
+              style={{ fontVariationSettings: `'FILL' ${isActive ? 1 : 0}` }}
+            >
+              {tab.icon}
+            </span>
+            <span className="font-label-sm text-label-sm mt-0.5">{tab.label}</span>
+          </button>
+        );
+      })}
     </nav>
   );
 }

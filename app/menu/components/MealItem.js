@@ -5,20 +5,16 @@ export default function MealItem({ mealType, meal, onRegenerate, onRecipeClick, 
   const label = MEAL_LABELS[mealType];
 
   return (
-    <div className="flex gap-sm group relative">
+    <div className="flex gap-sm group relative px-3 py-2">
       <div
-        className="w-16 h-16 rounded-lg overflow-hidden shrink-0"
+        className="w-16 h-16 rounded-xl overflow-hidden shrink-0"
         onClick={() => onImageClick?.(meal.img, meal.name)}
       >
         {meal.img ? (
-          <img
-            alt={meal.name}
-            className="w-full h-full object-cover"
-            src={meal.img}
-          />
+          <img alt={meal.name} className="w-full h-full object-cover" src={meal.img} />
         ) : (
-          <div className="w-full h-full bg-surface-container-high flex items-center justify-center">
-            <span className="material-symbols-outlined text-outline">restaurant</span>
+          <div className="w-full h-full bg-neutral-100 flex items-center justify-center">
+            <span className="material-symbols-outlined text-neutral-300">restaurant</span>
           </div>
         )}
       </div>
@@ -27,22 +23,13 @@ export default function MealItem({ mealType, meal, onRegenerate, onRecipeClick, 
           {label}
         </span>
         <h4
-          className="font-label-md text-label-md text-on-surface leading-tight"
+          className="font-label-md text-label-md text-neutral-900 leading-tight"
           onClick={() => onRecipeClick?.(meal.recipeId)}
         >
           {meal.name}
         </h4>
         <IngredientList ingredients={meal.ingredients} />
       </div>
-      {onRegenerate && (
-        <button
-          onClick={() => onRegenerate(mealType)}
-          className="absolute top-0 right-0 p-1 text-secondary rounded-full"
-          title="Regenerar"
-        >
-          <span className="material-symbols-outlined text-[20px]">refresh</span>
-        </button>
-      )}
     </div>
   );
 }

@@ -51,14 +51,14 @@ export default function IngredientsPanel({ ingredients, servings }) {
   };
 
   return (
-    <div className="bg-surface-container-lowest rounded-2xl p-md shadow-[0_16px_32px_-12px_rgba(211,97,53,0.08)] border border-surface-container-low">
+    <div className="bg-white rounded-2xl p-md shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-neutral-100">
       <div className="flex items-center justify-between mb-md">
-        <h2 className="font-headline-sm text-headline-sm text-on-surface flex items-center gap-sm">
+        <h2 className="font-headline-sm text-headline-sm text-neutral-900 flex items-center gap-sm">
           <span className="material-symbols-outlined text-primary">nutrition</span>
           Ingredientes
         </h2>
-        <span className="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-1 rounded-md">
-          {servings} {servings === 1 ? "Porción" : "Porciones"}
+        <span className="font-label-sm text-label-sm text-neutral-500 bg-neutral-100 px-2.5 py-1 rounded-lg">
+          {servings} {servings === 1 ? "Porcion" : "Porciones"}
         </span>
       </div>
       <div className="space-y-sm">
@@ -82,12 +82,12 @@ export default function IngredientsPanel({ ingredients, servings }) {
       </div>
       <button
         onClick={handleAddToList}
-        className="w-full mt-md py-3 px-4 bg-surface border border-outline-variant text-primary font-label-md text-label-md rounded-xl flex items-center justify-center gap-xs active:scale-[0.98] transition-transform"
+        className="w-full mt-md py-3.5 px-4 bg-primary text-white font-label-md text-label-md rounded-xl flex items-center justify-center gap-xs active:scale-[0.98] transition-transform shadow-[0_4px_16px_rgba(34,197,94,0.2)]"
       >
         <span className="material-symbols-outlined">
           {added ? "check" : "add_shopping_cart"}
         </span>
-        {added ? "Añadido a la lista" : "Añadir a la lista"}
+        {added ? "Anadido a la lista" : "Anadir a la lista"}
       </button>
     </div>
   );

@@ -5,8 +5,8 @@ export default function EmptyMealSlot({ mealType, onRegenerate }) {
 
   return (
     <div className="flex gap-sm items-center">
-      <div className="w-16 h-16 rounded-lg shrink-0 bg-surface-container-high flex items-center justify-center">
-        <span className="material-symbols-outlined text-outline-variant text-[28px]">
+      <div className="w-16 h-16 rounded-xl shrink-0 bg-neutral-100 flex items-center justify-center">
+        <span className="material-symbols-outlined text-neutral-300 text-[28px]">
           restaurant
         </span>
       </div>
@@ -14,14 +14,14 @@ export default function EmptyMealSlot({ mealType, onRegenerate }) {
         <span className="font-label-sm text-label-sm text-primary uppercase tracking-wider mb-xs">
           {label}
         </span>
-        <span className="font-label-md text-label-md text-on-surface-variant italic">
+        <span className="font-label-md text-label-md text-neutral-400 italic">
           Receta eliminada
         </span>
       </div>
       {onRegenerate && (
         <button
           onClick={() => onRegenerate(mealType)}
-          className="p-2 text-secondary bg-secondary-container/20 rounded-full active:scale-95 transition-transform"
+          className="p-2.5 text-primary bg-primary/10 rounded-full active:scale-95 transition-transform"
           title="Regenerar"
         >
           <span className="material-symbols-outlined text-[20px]">refresh</span>

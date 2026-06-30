@@ -1,126 +1,115 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 
 const RULES = [
   {
     icon: "eco",
-    title: "Días de descanso",
+    title: "Dias de descanso",
     description:
-      "Los días sin entrenamiento deben incluir una guarnición de verduras que acompañe al plato principal, favoreciendo una digestión ligera y una buena hidratación.",
+      "Los dias sin entrenamiento deben incluir una guarnicion de verduras que acompane al plato principal, favoreciendo una digestion ligera y una buena hidratacion.",
   },
   {
     icon: "fitness_center",
-    title: "Días de gimnasio",
+    title: "Dias de gimnasio",
     description:
-      "En las sesiones de gimnasio las comidas principales incorporarán carbohidratos densos (arroz, pasta integral, patata, legumbres) para sostener la demanda energética. La merienda será alta en proteínas para favorecer la recuperación muscular.",
+      "En las sesiones de gimnasio las comidas principales incorporaran carbohidratos densos (arroz, pasta integral, patata, legumbres) para sostener la demanda energetica. La merienda sera alta en proteinas para favorecer la recuperacion muscular.",
   },
   {
     icon: "sports_basketball",
-    title: "Días de baloncesto",
+    title: "Dias de baloncesto",
     description:
-      "En los días de baloncesto la cena contendrá carbohidratos ligeros (verduras, arroz blanco, pescado o tortilla) para no sobrecargar la digestión antes de dormir. La merienda se basará en azúcares naturales a partir de fruta fresca de temporada.",
+      "En los dias de baloncesto la cena contendra carbohidratos ligeros (verduras, arroz blanco, pescado o tortilla) para no sobrecargar la digestion antes de dormir. La merienda se basara en azucares naturales a partir de fruta fresca de temporada.",
   },
 ];
 
 export default function NutritionRulesModal({ isOpen, onClose }) {
-  const dialogRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+  const [closing, setClosing] = useState(false);
+
+  const handleClose = useCallback(() => {
+    setClosing(true);
+    setTimeout(() => {
+      setVisible(false);
+      setClosing(false);
+      onClose();
+    }, 300);
+  }, [onClose]);
 
   useEffect(() => {
-    const dialog = dialogRef.current;
-    if (!dialog) return;
-
-    if (isOpen && !dialog.open) {
-      dialog.showModal();
+    if (isOpen) {
+      setVisible(true);
       document.body.style.overflow = "hidden";
-    } else if (!isOpen && dialog.open) {
-      dialog.close();
-      document.body.style.overflow = "";
     }
-
     return () => {
-      if (dialog.open) dialog.close();
       document.body.style.overflow = "";
     };
   }, [isOpen]);
 
-  useEffect(() => {
-    const dialog = dialogRef.current;
-    if (!dialog) return;
-
-    const handleClose = () => onClose();
-    dialog.addEventListener("close", handleClose);
-    return () => dialog.removeEventListener("close", handleClose);
-  }, [onClose]);
+  if (!visible) return null;
 
   return (
-    <dialog
-      ref={dialogRef}
-      onClick={(e) => {
-        if (e.target === dialogRef.current) onClose();
-      }}
-      className="bg-transparent p-0 m-0 max-w-none max-h-none w-full h-full backdrop:bg-black/60 backdrop:backdrop-blur-sm"
-    >
-      <div className="min-h-full flex items-center justify-center p-md">
-        <div
-          onClick={(e) => e.stopPropagation()}
-          className="w-full max-w-2xl bg-surface-container-lowest rounded-2xl shadow-2xl border border-surface-variant overflow-hidden"
-        >
-          <div className="flex items-start justify-between gap-md p-lg border-b border-surface-variant">
-            <div className="flex items-start gap-sm">
-              <span className="material-symbols-outlined text-primary text-[28px] mt-1">
-                nutrition
+    <div className="fixed inset-0 z-50">
+      <div
+        className={`absolute inset-0 bg-black/40 backdrop-blur-sm ${
+          closing ? "drawer-backdrop-exit" : "drawer-backdrop-enter"
+        }`}
+        onClick={handleClose}
+      />
+      <div
+        className={`absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl max-h-[85vh] flex flex-col ${
+          closing ? "drawer-exit" : "drawer-enter"
+        }`}
+      >
+        <div className="flex justify-center pt-3 pb-2">
+          <div className="w-10 h-1 rounded-full bg-neutral-300" />
+        </div>
+
+        <div className="flex items-start justify-between gap-md px-6 pb-4 border-b border-neutral-100">
+          <div className="flex items-start gap-3">
+            <span className="material-symbols-outlined text-primary text-[28px] mt-0.5">
+              nutrition
+            </span>
+            <div>
+              <h3 className="font-headline-sm text-headline-sm text-neutral-900">
+                Normas de generacion
+              </h3>
+              <p className="font-body-md text-body-md text-neutral-500 mt-1">
+                Criterios de nuestro nutricionista que guian la creacion
+                aleatoria del menu semanal.
+              </p>
+            </div>
+          </div>
+          <button
+            onClick={handleClose}
+            aria-label="Cerrar"
+            className="w-10 h-10 rounded-full flex items-center justify-center text-neutral-400 hover:bg-neutral-100 transition-colors shrink-0"
+          >
+            <span className="material-symbols-outlined text-[24px]">close</span>
+          </button>
+        </div>
+
+        <ul className="px-6 py-5 pb-24 space-y-3 overflow-y-auto flex-1">
+          {RULES.map((rule) => (
+            <li
+              key={rule.title}
+              className="flex gap-4 p-4 rounded-2xl bg-neutral-50 border border-neutral-100"
+            >
+              <span className="material-symbols-outlined text-primary text-[24px] shrink-0">
+                {rule.icon}
               </span>
               <div>
-                <h3 className="font-headline-sm text-headline-sm text-on-surface">
-                  Normas de generación
-                </h3>
-                <p className="font-body-md text-body-md text-on-surface-variant mt-xs">
-                  Criterios de nuestro nutricionista que guían la creación
-                  aleatoria del menú semanal.
+                <h4 className="font-label-md text-label-md text-neutral-900">
+                  {rule.title}
+                </h4>
+                <p className="font-body-md text-body-md text-neutral-500 mt-1 leading-relaxed">
+                  {rule.description}
                 </p>
               </div>
-            </div>
-            <button
-              onClick={onClose}
-              aria-label="Cerrar"
-              className="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors"
-            >
-              <span className="material-symbols-outlined text-[24px]">close</span>
-            </button>
-          </div>
-
-          <ul className="p-lg space-y-md max-h-[60vh] overflow-y-auto">
-            {RULES.map((rule) => (
-              <li
-                key={rule.title}
-                className="flex gap-md p-md rounded-xl bg-surface-container border border-surface-variant"
-              >
-                <span className="material-symbols-outlined text-primary text-[24px] shrink-0">
-                  {rule.icon}
-                </span>
-                <div>
-                  <h4 className="font-title-sm text-title-sm text-on-surface">
-                    {rule.title}
-                  </h4>
-                  <p className="font-body-md text-body-md text-on-surface-variant mt-xs leading-relaxed">
-                    {rule.description}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ul>
-
-          <div className="p-lg pt-0 flex justify-end">
-            <button
-              onClick={onClose}
-              className="bg-primary text-on-primary font-label-md text-label-md px-lg py-sm rounded-full active:scale-95 transition-transform"
-            >
-              Entendido
-            </button>
-          </div>
-        </div>
+            </li>
+          ))}
+        </ul>
       </div>
-    </dialog>
+    </div>
   );
 }

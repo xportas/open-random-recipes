@@ -2,7 +2,7 @@
 
 export default function IngredientItem({ item, onToggle }) {
   return (
-    <label className="ingredient-item flex items-center gap-md p-sm rounded-lg">
+    <label className="ingredient-item flex items-center gap-md p-sm rounded-xl active:bg-neutral-50 transition-colors">
       <div className="custom-checkbox relative">
         <input
           className="opacity-0 absolute w-full h-full z-10"
@@ -11,15 +11,15 @@ export default function IngredientItem({ item, onToggle }) {
           onChange={() => onToggle(item.id)}
         />
         <div
-          className={`w-full h-full rounded-full border-2 transition-colors flex items-center justify-center ${
+          className={`w-6 h-6 rounded-full border-2 transition-all duration-200 flex items-center justify-center ${
             item.checked
-              ? "border-primary bg-primary"
-              : "border-outline-variant bg-surface"
+              ? "border-primary bg-primary scale-100"
+              : "border-neutral-300 bg-white"
           }`}
         >
           <svg
-            className={`w-3.5 h-3.5 text-on-primary transition-opacity ${
-              item.checked ? "opacity-100" : "opacity-0"
+            className={`w-3.5 h-3.5 text-white transition-all duration-200 ${
+              item.checked ? "opacity-100 scale-100" : "opacity-0 scale-50"
             }`}
             fill="none"
             stroke="currentColor"
@@ -31,13 +31,13 @@ export default function IngredientItem({ item, onToggle }) {
         </div>
       </div>
       <span
-        className={`font-body-lg text-body-lg grow transition-colors ${
-          item.checked ? "text-on-surface-variant line-through" : "text-on-surface"
+        className={`font-body-lg text-body-lg grow transition-all duration-200 ${
+          item.checked ? "text-neutral-400 line-through" : "text-neutral-900"
         }`}
       >
         {item.name}
         {item.quantity ? (
-          <span className="text-on-surface-variant">
+          <span className="text-neutral-400">
             {" "}({item.quantity}{item.unit_of_measure ? ` ${item.unit_of_measure}` : ""})
           </span>
         ) : null}
