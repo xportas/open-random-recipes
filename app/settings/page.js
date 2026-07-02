@@ -57,7 +57,7 @@ export default function SettingsPage() {
   return (
     <main className="min-h-screen bg-background text-on-background pb-24">
       {/* Header de la página */}
-      <div className="border-b border-outline-variant">
+      <div>
         <div className="flex items-center gap-3 px-margin-mobile py-4">
           <h1 className="font-headline-sm text-headline-sm text-on-surface">
             Ajustes
@@ -72,15 +72,16 @@ export default function SettingsPage() {
             <span className="material-symbols-outlined text-primary" >
               fitness_center
             </span>
-            <h2 className="font-title-md text-title-md text-on-surface">
+            <h2 className="font-title-md text-title-md text-on-surface font-bold">
               Entrenamiento
             </h2>
+            <div className="border-b border-outline-variant w-full" />
           </div>
 
           <div className="flex flex-col gap-3">
             <div className="flex flex-col gap-2 px-1">
               <span className="font-body-md text-body-md text-on-surface-variant">
-                Xabier (X)
+                Xabier
               </span>
               <DaySelector
                 label="Gimnasio"
@@ -108,7 +109,7 @@ export default function SettingsPage() {
 
             <div className="flex flex-col gap-2 px-1">
               <span className="font-body-md text-body-md text-on-surface-variant">
-                Maider (M)
+                Maider
               </span>
               <DaySelector
                 label="Gimnasio"
@@ -133,9 +134,10 @@ export default function SettingsPage() {
             >
               palette
             </span>
-            <h2 className="font-title-md text-title-md text-on-surface">
+            <h2 className="font-title-md text-title-md text-on-surface font-bold">
               Apariencia
             </h2>
+            <div className="border-b border-outline-variant w-full" />
           </div>
 
           <div className="bg-surface-container-low rounded-2xl p-2 flex flex-col gap-1">
@@ -179,9 +181,10 @@ export default function SettingsPage() {
             >
               translate
             </span>
-            <h2 className="font-title-md text-title-md text-on-surface">
+            <h2 className="font-title-md text-title-md text-on-surface font-bold">
               Idioma
             </h2>
+            <div className="border-b border-outline-variant w-full" />
           </div>
 
           <div className="bg-surface-container-low rounded-2xl p-2 flex flex-col gap-1">
