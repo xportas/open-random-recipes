@@ -3,10 +3,10 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 
 const TABS = [
-  { id: "home", icon: "home", label: "Inicio" },
-  { id: "recipes", icon: "restaurant_menu", label: "Recetas" },
-  { id: "menu", icon: "calendar_month", label: "Menu" },
-  { id: "shopping-list", icon: "shopping_basket", label: "Compra" },
+  { id: "home", icon: "home" },
+  { id: "recipes", icon: "restaurant_menu" },
+  { id: "menu", icon: "calendar_month" },
+  { id: "shopping-list", icon: "shopping_basket" },
 ];
 
 export default function Navbar({ activeTab }) {
@@ -45,10 +45,10 @@ export default function Navbar({ activeTab }) {
   return (
     <nav
       ref={navRef}
-      className="fixed bottom-0 left-margin-mobile w-11/12 z-50 flex justify-around items-center px-1 py-1 mb-3 border border-neutral-200 rounded-full bg-white/30 backdrop-blur-xs shadow-[0_4px_24px_rgba(0,0,0,0.06)]"
+      className="fixed bottom-0 left-1/2 -translate-x-1/2 w-8/12 z-40 flex justify-around items-center px-1.5 py-2 mb-3 border border-neutral-200 rounded-3xl bg-white/30 backdrop-blur-xs shadow-[0_4px_24px_rgba(0,0,0,0.06)]"
     >
       <div
-        className="absolute top-1 bottom-1 bg-primary/70 rounded-full backdrop-blur-xs z-0"
+        className="absolute top-1 bottom-1 bg-primary/70 rounded-2xl backdrop-blur-xs z-0"
         style={{
           left: `${indicator.left}px`,
           width: `${indicator.width}px`,
@@ -77,7 +77,7 @@ export default function Navbar({ activeTab }) {
             >
               {tab.icon}
             </span>
-            <span className="font-label-sm text-label-sm mt-0.5">{tab.label}</span>
+            {/* <span className="font-label-sm text-label-sm mt-0.5">{tab.label}</span> */}
           </button>
         );
       })}
