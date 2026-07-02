@@ -18,7 +18,10 @@ export default function Navbar({ activeTab }) {
     const nav = navRef.current;
     if (!nav) return;
     const navRect = nav.getBoundingClientRect();
-    const activeBtn = nav.querySelector(`[data-tab="${activeTab.activeTab}"]`);
+    const activeId = activeTab.activeTab;
+    const fallbackId = activeTab.previousTab || "home";
+    const targetId = nav.querySelector(`[data-tab="${activeId}"]`) ? activeId : fallbackId;
+    const activeBtn = nav.querySelector(`[data-tab="${targetId}"]`);
     if (activeBtn) {
       const btnRect = activeBtn.getBoundingClientRect();
       setIndicator({
@@ -27,7 +30,7 @@ export default function Navbar({ activeTab }) {
       });
       if (!measured) setMeasured(true);
     }
-  }, [activeTab.activeTab, measured]);
+  }, [activeTab.activeTab, activeTab.previousTab, measured]);
 
   useEffect(() => {
     measure();
@@ -56,7 +59,9 @@ export default function Navbar({ activeTab }) {
       />
 
       {TABS.map((tab) => {
-        const isActive = activeTab.activeTab === tab.id;
+        const isActive =
+          activeTab.activeTab === tab.id ||
+          (activeTab.activeTab === "settings" && activeTab.previousTab === tab.id);
         return (
           <button
             key={tab.id}

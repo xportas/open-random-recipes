@@ -34,7 +34,7 @@ export default function Home() {
       {activeTab === "shopping-list" && <ShoppingListPage />}
       {activeTab === "settings" && <SettingsPage />}
 
-      <Navbar activeTab={{ activeTab, setActiveTab: handleTabChange }} />
+      <Navbar activeTab={{ activeTab, previousTab: previousTabRef.current, setActiveTab: handleTabChange }} />
     </>
   );
 }
