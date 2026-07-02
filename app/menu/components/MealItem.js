@@ -8,7 +8,7 @@ export default function MealItem({ mealType, meal, onRegenerate, onRecipeClick, 
     <div className="flex gap-sm group relative px-3 py-2">
       <div
         className="w-16 h-16 rounded-xl overflow-hidden shrink-0"
-        onClick={() => onImageClick?.(meal.img, meal.name)}
+        onClick={(e) => onImageClick?.(meal.img, meal.name, e)}
       >
         {meal.img ? (
           <img alt={meal.name} className="w-full h-full object-cover" src={meal.img} />

@@ -4,12 +4,11 @@ export default function HomePage({ onNavigate }) {
   return (
     <main className="flex-1 px-margin-mobile pb-[100px] md:px-margin-desktop md:max-w-5xl md:mx-auto md:w-full">
       <section className="mt-md mb-lg">
-        <h2 className="font-headline-lg-mobile text-headline-lg-mobile text-neutral-900">
-          !Hola, Chef!
+        {/* TODO: meter algún mensaje profesional o greeting divertido */}
+        {/* <h2 className="font-headline-lg-mobile text-headline-lg-mobile text-neutral-900">
         </h2>
         <p className="font-body-lg text-body-lg text-neutral-500 mt-xs">
-          Que ingredientes frescos usaremos hoy?
-        </p>
+        </p> */}
       </section>
 
       <section className="flex flex-col gap-md md:grid md:grid-cols-2 md:gap-lg">

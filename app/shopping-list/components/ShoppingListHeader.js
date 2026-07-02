@@ -4,9 +4,6 @@ export default function ShoppingListHeader({ onShowInfo }) {
       <h1 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-neutral-900">
         Lista de la Compra
       </h1>
-      <p className="text-neutral-500">
-        Revisa los ingredientes para tus proximas recetas.
-      </p>
       {onShowInfo && (
         <button
           onClick={onShowInfo}

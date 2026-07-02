@@ -56,7 +56,16 @@ export default function MenuPage() {
                   onRegenerateMeal={(mealType) => regenerateMeal(dayIndex, mealType)}
                   onRemoveMeal={(mealType) => removeMeal(dayIndex, mealType)}
                   onRecipeClick={handleRecipeClick}
-                  onImageClick={(src, alt) => setImageModal({ src, alt })}
+                  onImageClick={(src, alt, e) => {
+                    const img = e?.currentTarget?.querySelector("img");
+                    if (img && document.startViewTransition) {
+                      img.style.viewTransitionName = "modal-image";
+                    }
+                    const cleanup = () => {
+                      if (img) img.style.viewTransitionName = "";
+                    };
+                    setImageModal({ src, alt, cleanup });
+                  }}
                 />
               );
             }
@@ -81,7 +90,10 @@ export default function MenuPage() {
         <ImageModal
           src={imageModal.src}
           alt={imageModal.alt}
-          onClose={() => setImageModal(null)}
+          onClose={() => {
+            imageModal.cleanup?.();
+            setImageModal(null);
+          }}
         />
       )}
       <NutritionRulesModal

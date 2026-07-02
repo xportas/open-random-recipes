@@ -8,7 +8,7 @@ export default function RecipeCard({ recipe, onToggleFavorite, onRecipeClick, on
       <div className="flex items-center gap-4 min-w-0">
         <div
           className="w-16 h-16 rounded-full overflow-hidden shrink-0 ring-2 ring-neutral-100"
-          onClick={() => onImageClick?.(recipe.img, recipe.name)}
+          onClick={(e) => onImageClick?.(recipe.img, recipe.name, e)}
         >
           <img
             alt={recipe.name}

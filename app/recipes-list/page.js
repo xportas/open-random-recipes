@@ -113,7 +113,16 @@ export default function RecipesListPage() {
                 recipes={recipesInGroup}
                 onToggleFavorite={handleToggleFavorite}
                 onRecipeClick={setSelectedRecipe}
-                onImageClick={(src, alt) => setImageModal({ src, alt })}
+                onImageClick={(src, alt, e) => {
+                  const img = e?.currentTarget?.querySelector("img");
+                  if (img && document.startViewTransition) {
+                    img.style.viewTransitionName = "modal-image";
+                  }
+                  const cleanup = () => {
+                    if (img) img.style.viewTransitionName = "";
+                  };
+                  setImageModal({ src, alt, cleanup });
+                }}
                 onImageLoad={markImageLoaded}
               />
             ))
@@ -124,7 +133,10 @@ export default function RecipesListPage() {
         <ImageModal
           src={imageModal.src}
           alt={imageModal.alt}
-          onClose={() => setImageModal(null)}
+          onClose={() => {
+            imageModal.cleanup?.();
+            setImageModal(null);
+          }}
         />
       )}
     </>
