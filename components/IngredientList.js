@@ -8,13 +8,13 @@ export default function IngredientList({ ingredients }) {
           key={index}
           className={`inline-flex items-center font-label-sm text-label-sm px-2 py-0.5 rounded-full ${
             ingredient.required
-              ? "bg-surface-container text-on-surface"
-              : "bg-surface-container-high text-on-surface-variant italic"
+              ? "bg-neutral-100 text-neutral-900"
+              : "bg-neutral-100 text-neutral-500 italic"
           }`}
         >
           {ingredient.name}
           {!ingredient.required && (
-            <span className="ml-1 text-on-surface-variant/70">(opcional)</span>
+            <span className="ml-1 text-neutral-500/70">(opcional)</span>
           )}
         </span>
       ))}
