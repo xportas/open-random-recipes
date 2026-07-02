@@ -21,7 +21,7 @@ export default function RecipeMeta({ recipe }) {
   return (
     <div className="grid grid-cols-2 gap-sm md:gap-md">
       <div className="bg-surface-container-low/50 backdrop-blur-sm p-md rounded-2xl border border-surface-container flex flex-col justify-center items-center text-center">
-        <span className="material-symbols-outlined text-secondary mb-2">restaurant</span>
+        <span className="material-symbols-outlined text-primary mb-2">restaurant</span>
         <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">
           Momento
         </span>
@@ -30,17 +30,17 @@ export default function RecipeMeta({ recipe }) {
         </span>
       </div>
       {restrictions.length > 0 ? (
-        <div className="bg-secondary-container/20 backdrop-blur-sm p-md rounded-2xl border border-secondary-container/30 flex flex-col justify-center items-center text-center">
-          <span className="material-symbols-outlined text-secondary mb-2">event_busy</span>
-          <span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-1">
+        <div className="bg-error-container/30 backdrop-blur-sm p-md rounded-2xl border border-error-container/50 flex flex-col justify-center items-center text-center">
+          <span className="material-symbols-outlined text-on-error-container mb-2">event_busy</span>
+          <span className="font-label-sm text-label-sm text-on-error-container uppercase tracking-wider mb-1">
             Restricción
           </span>
-          <span className="font-label-md text-label-md text-on-secondary-container">
+          <span className="font-label-md text-label-md text-on-error-container">
             {restrictions.map((r) => RESTRICTION_LABELS[r] || r).join(", ")}
           </span>
         </div>
       ) : (
-        <div className="bg-primary-container/20 backdrop-blur-sm p-md rounded-2xl border border-primary-container/30 flex flex-col justify-center items-center text-center">
+        <div className="bg-primary-container/40 backdrop-blur-sm p-md rounded-2xl border border-primary/30 flex flex-col justify-center items-center text-center">
           <span className="material-symbols-outlined text-primary mb-2">check_circle</span>
           <span className="font-label-sm text-label-sm text-primary uppercase tracking-wider mb-1">
             Disponible

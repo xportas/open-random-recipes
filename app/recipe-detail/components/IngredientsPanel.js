@@ -82,7 +82,7 @@ export default function IngredientsPanel({ ingredients, servings }) {
       </div>
       <button
         onClick={handleAddToList}
-        className="w-full mt-md py-3.5 px-4 bg-primary text-white font-label-md text-label-md rounded-xl flex items-center justify-center gap-xs active:scale-[0.98] transition-transform shadow-[0_4px_16px_rgba(34,197,94,0.2)]"
+        className="w-full mt-md py-3.5 px-4 bg-primary text-white font-label-md text-label-md rounded-xl flex items-center justify-center gap-xs active:scale-[0.98] transition-transform shadow-[0_4px_16px_rgba(125,164,102,0.2)]"
       >
         <span className="material-symbols-outlined">
           {added ? "check" : "add_shopping_cart"}

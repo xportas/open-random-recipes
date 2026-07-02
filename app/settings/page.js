@@ -36,10 +36,8 @@ function DaySelector({ label, icon, selectedDays, onToggle }) {
                 w-10 h-10 rounded-full flex items-center justify-center
                 font-label-md text-label-md
                 transition-all duration-200
-                ${isSelected
-                  ? "bg-primary text-on-primary"
-                  : "bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest"
-                }
+                
+                ${isSelected && "bg-primary text-on-primary border-primary"}
               `}
             >
               {day}
@@ -166,20 +164,6 @@ export default function SettingsPage() {
                   <span className="flex-1 text-left font-body-lg text-body-lg">
                     {theme.label}
                   </span>
-                  <div
-                    className={`
-                      w-5 h-5 rounded-full border-2 flex items-center justify-center
-                      transition-colors duration-200
-                      ${isSelected
-                        ? "border-on-primary-container"
-                        : "border-outline"
-                      }
-                    `}
-                  >
-                    {isSelected && (
-                      <div className="w-2.5 h-2.5 rounded-full bg-on-primary-container" />
-                    )}
-                  </div>
                 </button>
               );
             })}
@@ -221,20 +205,6 @@ export default function SettingsPage() {
                   <span className="flex-1 text-left font-body-lg text-body-lg">
                     {lang.label}
                   </span>
-                  <div
-                    className={`
-                      w-5 h-5 rounded-full border-2 flex items-center justify-center
-                      transition-colors duration-200
-                      ${isSelected
-                        ? "border-on-primary-container"
-                        : "border-outline"
-                      }
-                    `}
-                  >
-                    {isSelected && (
-                      <div className="w-2.5 h-2.5 rounded-full bg-on-primary-container" />
-                    )}
-                  </div>
                 </button>
               );
             })}

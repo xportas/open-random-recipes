@@ -27,12 +27,12 @@ export default function LoginPage() {
             alt="Culinary Fresh Open Random Recipes Logo"
             width={300}
             height={100}
-            className="w-full max-w-[300px] h-auto object-contain drop-shadow-[0_8px_24px_rgba(211,97,53,0.05)]"
+            className="w-full max-w-[300px] h-auto object-contain drop-shadow-[0_8px_24px_rgba(125,164,102,0.08)]"
             priority
           />
         </div>
 
-        <div className="bg-surface-container-lowest rounded-xl shadow-[0_16px_32px_-12px_rgba(60,105,43,0.08)] p-md w-full max-w-[384px] flex flex-col items-center border border-surface-variant/50">
+        <div className="bg-surface-container-lowest rounded-xl shadow-[0_16px_32px_-12px_rgba(63,87,52,0.08)] p-md w-full max-w-[384px] flex flex-col items-center border border-surface-variant/50">
           <h1 className="font-headline-sm text-headline-sm text-center text-on-surface mb-2">
             Bienvenido de nuevo
           </h1>
@@ -83,7 +83,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={pending}
-              className="mt-sm w-full bg-primary text-on-primary font-label-md text-label-md py-sm px-md rounded-full shadow-[0_4px_12px_rgba(60,105,43,0.2)] transition-all active:scale-[0.98] flex items-center justify-center gap-xs disabled:opacity-50 disabled:active:scale-100"
+              className="mt-sm w-full bg-primary text-on-primary font-label-md text-label-md py-sm px-md rounded-full shadow-[0_4px_12px_rgba(63,87,52,0.2)] transition-all active:scale-[0.98] flex items-center justify-center gap-xs disabled:opacity-50 disabled:active:scale-100"
             >
               <span>{pending ? "Verificando..." : "Entrar"}</span>
               {!pending && (

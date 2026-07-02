@@ -21,7 +21,7 @@ export default function MenuHeader({ onGenerate, onClear, hasMenu, onShowRules }
       <div className="flex gap-sm">
         <button
           onClick={onGenerate}
-          className="bg-primary text-white font-label-md text-label-md px-md py-sm rounded-full flex items-center gap-xs shadow-[0_4px_16px_rgba(34,197,94,0.25)] active:scale-95 transition-transform duration-200"
+          className="bg-primary text-white font-label-md text-label-md px-md py-sm rounded-full flex items-center gap-xs shadow-[0_4px_16px_rgba(125,164,102,0.25)] active:scale-95 transition-transform duration-200"
         >
           <span className="material-symbols-outlined text-[20px]">list_alt</span>
           {hasMenu ? "Regenerar Menu" : "Generar Menu Semanal"}

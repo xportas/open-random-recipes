@@ -15,7 +15,7 @@ export default function ShoppingListActions({ onCopy, onClear }) {
     <div className="mt-md flex flex-col sm:flex-row justify-center gap-sm">
       <button
         onClick={handleCopy}
-        className="bg-primary text-white font-label-md text-label-md py-sm px-xl rounded-full shadow-[0_4px_16px_rgba(34,197,94,0.25)] active:scale-95 transition-all duration-200 flex items-center justify-center gap-xs"
+        className="bg-primary text-white font-label-md text-label-md py-sm px-xl rounded-full shadow-[0_4px_16px_rgba(125,164,102,0.25)] active:scale-95 transition-all duration-200 flex items-center justify-center gap-xs"
       >
         <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 0" }}>
           {copied ? "check" : "content_copy"}

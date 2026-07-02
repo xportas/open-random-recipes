@@ -52,7 +52,7 @@ export default function RecipeSteps({ steps }) {
               <div
                 className={`w-10 h-10 rounded-full flex items-center justify-center font-headline-sm text-headline-sm shrink-0 transition-colors duration-200 ${
                   index === 0
-                    ? "bg-primary text-white shadow-[0_2px_8px_rgba(34,197,94,0.3)]"
+                    ? "bg-primary text-white shadow-[0_2px_8px_rgba(125,164,102,0.3)]"
                     : "bg-neutral-100 text-neutral-500 border border-neutral-200"
                 }`}
               >
