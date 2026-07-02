@@ -113,7 +113,7 @@ export default function SettingsPage() {
               <DaySelector
                 label="Gimnasio"
                 icon={
-                  <span className="material-symbols-outlined text-primary">
+                  <span className="material-symbols-outlined text-on-error-container">
                     exercise
                   </span>
                 }

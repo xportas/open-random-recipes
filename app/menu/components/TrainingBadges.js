@@ -3,17 +3,22 @@ export default function TrainingBadges({ training }) {
 
   return (
     <div className="flex items-center gap-1 min-w-0 overflow-hidden">
-      {training.map((activity, index) => (
-        <span
-          key={index}
-          className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-white border border-neutral-100 shrink-0"
-          title={`${activity.type === "gym" ? "Gimnasio" : "Baloncesto"} - ${activity.person === "X" ? "Hombre" : "Mujer"}`}
-        >
-          <span className="material-symbols-outlined text-primary text-[14px] leading-none">
-            {activity.type === "gym" ? "exercise" : "sports_basketball"}
+      {training.map((activity, index) => {
+        const isWoman = activity.person === "M";
+        return (
+          <span
+            key={index}
+            className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-white border border-neutral-100 shrink-0"
+            title={`${activity.type === "gym" ? "Gimnasio" : "Baloncesto"} - ${activity.person === "X" ? "Xabier" : "Maider"}`}
+          >
+            <span
+              className={`material-symbols-outlined text-[14px] leading-none ${isWoman ? "text-on-error-container" : "text-primary"}`}
+            >
+              {activity.type === "gym" ? "exercise" : "sports_basketball"}
+            </span>
           </span>
-        </span>
-      ))}
+        );
+      })}
     </div>
   );
 }
