@@ -1947,5 +1947,34 @@
       }
     ],
     "img": "/recipes/pizza-masa-de-huevo.png"
+  },
+  {
+    "id": 34,
+    "name": "Hamburguesas de tofu",
+    "steps": "1. Cocinar a la plancha o en air fryer las hamburguesas. 2. Hacer los huevos fritos/duros al gusto (opcional).",
+    "restrictions": null,
+    "servings": 2,
+    "type": "other",
+    "breakfast": false,
+    "lunch": false,
+    "snack": false,
+    "dinner": true,
+    "ingredients": [
+      {
+        "name": "Hamburguesas de tofu",
+        "quantity": 4,
+        "unit_of_measure": "ud",
+        "required": true,
+        "grocery_section": "Lácteos y Vegetales"
+      },
+      {
+        "name": "Huevos",
+        "quantity": 3,
+        "unit_of_measure": "ud",
+        "required": false,
+        "grocery_section": "Huevos"
+      }
+    ],
+    "img": "/recipes/hamburguesas-tofu.png"
   }
 ]
