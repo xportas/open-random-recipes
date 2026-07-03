@@ -72,14 +72,14 @@ export default function SwipeableMealItem({ mealType, meal, onRegenerate, onRemo
       <div className="absolute inset-y-0 right-0 flex w-[120px] rounded-r-xl overflow-hidden z-0">
         <button
           onClick={handleRegenerate}
-          className="flex-1 flex flex-col items-center justify-center bg-primary text-white active:opacity-80 transition-opacity"
+          className="flex-1 flex flex-col items-center justify-center bg-neutral-900/5 text-neutral-500 active:bg-neutral-900/10 transition-colors"
         >
-          <span className="material-symbols-outlined text-[20px]">refresh</span>
+          <span className="material-symbols-outlined text-[20px] text-neutral-700">refresh</span>
           <span className="font-label-sm text-label-sm mt-0.5">Otra</span>
         </button>
         <button
           onClick={handleRemove}
-          className="flex-1 flex flex-col items-center justify-center bg-error text-on-error active:opacity-80 transition-opacity"
+          className="flex-1 flex flex-col items-center justify-center bg-[#f50b0b]/80 text-white active:opacity-80 transition-opacity"
         >
           <span className="material-symbols-outlined text-[20px]">delete</span>
           <span className="font-label-sm text-label-sm mt-0.5">Quitar</span>
