@@ -37,7 +37,7 @@ export default function MenuPage() {
 
   return (
     <>
-      <main className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-lg pb-32 space-y-xl">
+      <main className="max-w-7xl px-margin-mobile md:px-margin-desktop py-lg pb-32 space-y-xl">
         <MenuHeader onGenerate={generate} onClear={clear} hasMenu={!isEmpty} onShowRules={() => setIsRulesOpen(true)} />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-md md:gap-lg">
           {weekDates.map(({ dayName, date }, dayIndex) => {

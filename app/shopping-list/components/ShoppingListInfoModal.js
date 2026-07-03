@@ -13,7 +13,7 @@ const TIPS = [
     icon: "content_copy",
     title: "Al copiar, solo lo pendiente",
     description:
-      "Cuando pulses \"Copiar Lista\", el portapapeles solo incluira los ingredientes que no hayas tachado, para llevarte al super unicamente lo que falta.",
+      "Cuando pulses \"Copiar Lista\", el portapapeles solo incluirá los ingredientes que no hayas tachado, para llevarte al súper únicamente lo que falta.",
   }
 ];
 
@@ -66,7 +66,7 @@ export default function ShoppingListInfoModal({ isOpen, onClose }) {
             </span>
             <div>
               <h3 className="font-headline-sm text-headline-sm text-neutral-900">
-                Como funciona la lista
+                Cómo funciona la lista
               </h3>
             </div>
           </div>

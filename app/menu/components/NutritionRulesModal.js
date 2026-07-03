@@ -1,25 +1,25 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const RULES = [
   {
     icon: "eco",
-    title: "Dias de descanso",
+    title: "Días de descanso",
     description:
-      "Los dias sin entrenamiento deben incluir una guarnicion de verduras que acompane al plato principal, favoreciendo una digestion ligera y una buena hidratacion.",
+      "Los días sin entrenamiento deben incluir una guarnición de verduras que acompañe al plato principal, favoreciendo una digestión ligera y una buena hidratación.",
   },
   {
     icon: "fitness_center",
-    title: "Dias de gimnasio",
+    title: "Días de gimnasio",
     description:
-      "En las sesiones de gimnasio las comidas principales incorporaran carbohidratos densos (arroz, pasta integral, patata, legumbres) para sostener la demanda energetica. La merienda sera alta en proteinas para favorecer la recuperacion muscular.",
+      "En los días de gimnasio, las comidas principales incorporarán carbohidratos densos (arroz, pasta integral, patata, legumbres) para sostener la demanda energética. La merienda será alta en proteínas para favorecer la recuperación muscular.",
   },
   {
     icon: "sports_basketball",
-    title: "Dias de baloncesto",
+    title: "Días de baloncesto",
     description:
-      "En los dias de baloncesto la cena contendra carbohidratos ligeros (verduras, arroz blanco, pescado o tortilla) para no sobrecargar la digestion antes de dormir. La merienda se basara en azucares naturales a partir de fruta fresca de temporada.",
+      "En los días de baloncesto, la cena contendrá carbohidratos ligeros (verduras, arroz blanco, pescado o fajitas) para no sobrecargar la digestión antes de dormir. La merienda se basará en azúcares naturales a partir de fruta fresca de temporada.",
   },
 ];
 
@@ -72,11 +72,10 @@ export default function NutritionRulesModal({ isOpen, onClose }) {
             </span>
             <div>
               <h3 className="font-headline-sm text-headline-sm text-neutral-900">
-                Normas de generacion
+                Normas de generación
               </h3>
               <p className="font-body-md text-body-md text-neutral-500 mt-1">
-                Criterios de nuestro nutricionista que guian la creacion
-                aleatoria del menu semanal.
+                Criterios de nutricionista que guían la creación aleatoria del menú semanal.
               </p>
             </div>
           </div>
