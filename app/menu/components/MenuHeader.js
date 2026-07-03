@@ -1,6 +1,6 @@
 export default function MenuHeader({ onGenerate, onClear, hasMenu, onShowRules }) {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-md">
+    <div className="flex flex-col justify-between items-start gap-md">
       <div>
         <h1 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-neutral-900">
         Menú semanal
