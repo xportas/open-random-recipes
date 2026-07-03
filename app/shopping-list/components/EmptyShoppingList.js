@@ -14,7 +14,7 @@ export default function EmptyShoppingList({ onNavigate }) {
           priority
         />
       </div>
-      <div className="flex flex-col gap-xs max-w-sm">
+      <div className="flex flex-col gap-xs mx-auto px-sm">
         <p className="font-headline-sm text-headline-sm text-neutral-900">
           Tu lista está vacía
         </p>
@@ -22,7 +22,7 @@ export default function EmptyShoppingList({ onNavigate }) {
           Genera un menú semanal o explora recetas para empezar a añadir productos.
         </p>
       </div>
-      <div className="flex flex-col sm:flex-row gap-sm w-full max-w-sm">
+      <div className="flex flex-col sm:flex-row gap-sm w-full mx-auto">
         <button
           onClick={() => onNavigate?.("menu")}
           className="flex-1 bg-primary text-white font-label-md text-label-md px-md py-sm rounded-full flex items-center justify-center gap-xs shadow-[0_4px_16px_rgba(125,164,102,0.25)] active:scale-[0.97] transition-transform duration-200"

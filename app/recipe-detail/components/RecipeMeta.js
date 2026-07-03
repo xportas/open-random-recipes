@@ -21,7 +21,7 @@ export default function RecipeMeta({ recipe }) {
   return (
     <div className="grid grid-cols-2 gap-sm md:gap-md">
       <div className="bg-surface-container-low/50 backdrop-blur-sm p-md rounded-2xl border border-surface-container flex flex-col justify-center items-center text-center">
-        <span className="material-symbols-outlined text-primary mb-2">restaurant</span>
+        <span className="material-symbols-outlined text-neutral-400 mb-2">restaurant</span>
         <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">
           Momento
         </span>
