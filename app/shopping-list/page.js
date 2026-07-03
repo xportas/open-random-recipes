@@ -8,7 +8,7 @@ import ShoppingListHeader from "./components/ShoppingListHeader";
 import ShoppingListInfoModal from "./components/ShoppingListInfoModal";
 import EmptyShoppingList from "./components/EmptyShoppingList";
 
-export default function ShoppingListPage() {
+export default function ShoppingListPage({ onNavigate }) {
   const { groupedItems, hydrated, isEmpty, toggleItem, clear, copyToClipboard } =
     useShoppingList();
   const [isInfoOpen, setIsInfoOpen] = useState(false);
@@ -20,7 +20,7 @@ export default function ShoppingListPage() {
       <ShoppingListHeader onShowInfo={() => setIsInfoOpen(true)} />
 
       {isEmpty ? (
-        <EmptyShoppingList />
+        <EmptyShoppingList onNavigate={onNavigate} />
       ) : (
         <>
           <div className="flex flex-col gap-sm">

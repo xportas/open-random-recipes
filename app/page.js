@@ -31,7 +31,7 @@ export default function Home() {
       {activeTab === "home" && <HomePage onNavigate={handleTabChange} />}
       {activeTab === "recipes" && <RecipesListPage />}
       {activeTab === "menu" && <MenuPage />}
-      {activeTab === "shopping-list" && <ShoppingListPage />}
+      {activeTab === "shopping-list" && <ShoppingListPage onNavigate={handleTabChange} />}
       {activeTab === "settings" && <SettingsPage />}
 
       <Navbar activeTab={{ activeTab, previousTab: previousTabRef.current, setActiveTab: handleTabChange }} />

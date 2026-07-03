@@ -10,6 +10,16 @@ import RecipeMeta from "./components/RecipeMeta";
 export default function RecipeDetailPage({ recipe, onBack }) {
   const [imageModal, setImageModal] = useState(null);
 
+  if (!recipe) {
+    return (
+      <main className="w-full max-w-5xl mx-auto pt-7 pb-xl">
+        <p className="text-center text-on-surface-variant py-lg">
+          Selecciona una receta para ver los detalles.
+        </p>
+      </main>
+    );
+  }
+
   const ingredients = recipe.ingredients || recipe.ingredientes || [];
 
   const handleImageClick = (src, alt) => {
