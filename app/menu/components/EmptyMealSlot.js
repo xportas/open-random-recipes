@@ -21,7 +21,7 @@ export default function EmptyMealSlot({ mealType, onRegenerate }) {
       {onRegenerate && (
         <button
           onClick={() => onRegenerate(mealType)}
-          className="p-2.5 text-primary bg-primary/10 rounded-full active:scale-95 transition-transform"
+          className="w-10 h-10 shrink-0 aspect-square flex items-center justify-center text-primary bg-primary/10 rounded-full active:scale-95 transition-transform"
           title="Regenerar"
         >
           <span className="material-symbols-outlined text-[20px]">refresh</span>

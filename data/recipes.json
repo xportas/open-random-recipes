@@ -10,6 +10,7 @@
     "lunch": false,
     "snack": false,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Huevos",
@@ -45,6 +46,7 @@
     "lunch": false,
     "snack": false,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Yogurt natural",
@@ -76,6 +78,7 @@
     "lunch": false,
     "snack": false,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Yogurt natural",
@@ -135,6 +138,7 @@
     "lunch": false,
     "snack": false,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Yogurt natural",
@@ -194,6 +198,7 @@
     "lunch": false,
     "snack": false,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Yogurt natural",
@@ -239,6 +244,7 @@
     "lunch": false,
     "snack": false,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Pan integral",
@@ -277,6 +283,7 @@
     "lunch": false,
     "snack": false,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Pan integral",
@@ -322,6 +329,7 @@
     "lunch": false,
     "snack": false,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Plátano",
@@ -365,6 +373,7 @@
     "lunch": true,
     "snack": false,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Carne roja",
@@ -472,6 +481,7 @@
     "lunch": true,
     "snack": false,
     "dinner": true,
+    "gym": false,
     "ingredients": [
       {
         "name": "Carne blanca",
@@ -580,6 +590,7 @@
     "lunch": true,
     "snack": false,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Salmón",
@@ -687,6 +698,7 @@
     "lunch": true,
     "snack": false,
     "dinner": true,
+    "gym": false,
     "ingredients": [
       {
         "name": "Pescado blanco",
@@ -795,6 +807,7 @@
     "lunch": true,
     "snack": false,
     "dinner": true,
+    "gym": false,
     "ingredients": [
       {
         "name": "Pescado azul",
@@ -875,6 +888,7 @@
     "lunch": true,
     "snack": false,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Pimiento amarillo",
@@ -939,6 +953,7 @@
     "lunch": true,
     "snack": false,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Lentejas",
@@ -996,6 +1011,7 @@
     "lunch": true,
     "snack": false,
     "dinner": true,
+    "gym": false,
     "ingredients": [
       {
         "name": "Tofu",
@@ -1067,6 +1083,7 @@
     "lunch": true,
     "snack": false,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Brócoli",
@@ -1143,6 +1160,7 @@
     "lunch": true,
     "snack": false,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Calabaza",
@@ -1212,6 +1230,7 @@
     "lunch": true,
     "snack": false,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Brócoli",
@@ -1267,6 +1286,7 @@
     "lunch": true,
     "snack": false,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Guisantes",
@@ -1322,6 +1342,7 @@
     "lunch": false,
     "snack": true,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Kéfir",
@@ -1399,6 +1420,7 @@
     "lunch": false,
     "snack": true,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Leche",
@@ -1486,6 +1508,7 @@
     "lunch": false,
     "snack": true,
     "dinner": false,
+    "gym": false,
     "ingredients": [
       {
         "name": "Crackers integrales",
@@ -1515,6 +1538,7 @@
     "lunch": false,
     "snack": false,
     "dinner": true,
+    "gym": false,
     "ingredients": [
       {
         "name": "Calabacín",
@@ -1586,6 +1610,7 @@
     "lunch": false,
     "snack": false,
     "dinner": true,
+    "gym": false,
     "ingredients": [
       {
         "name": "Quinoa",
@@ -1629,6 +1654,7 @@
     "lunch": false,
     "snack": false,
     "dinner": true,
+    "gym": false,
     "ingredients": [
       {
         "name": "Huevos",
@@ -1672,6 +1698,7 @@
     "lunch": false,
     "snack": false,
     "dinner": true,
+    "gym": false,
     "ingredients": [
       {
         "name": "Pescado",
@@ -1763,6 +1790,7 @@
     "lunch": false,
     "snack": false,
     "dinner": true,
+    "gym": false,
     "ingredients": [
       {
         "name": "Pechuga de pollo",
@@ -1806,6 +1834,7 @@
     "lunch": false,
     "snack": false,
     "dinner": true,
+    "gym": false,
     "ingredients": [
       {
         "name": "Pechuga de pollo",
@@ -1863,6 +1892,7 @@
     "lunch": false,
     "snack": false,
     "dinner": true,
+    "gym": false,
     "ingredients": [
       {
         "name": "Pechuga de pollo",
@@ -1878,7 +1908,6 @@
         "required": true,
         "grocery_section": "Frutas y Verduras"
       },
-      
       {
         "name": "Tomate",
         "quantity": null,
@@ -1923,6 +1952,7 @@
     "lunch": false,
     "snack": false,
     "dinner": true,
+    "gym": false,
     "ingredients": [
       {
         "name": "Huevos",
@@ -1959,6 +1989,7 @@
     "lunch": false,
     "snack": false,
     "dinner": true,
+    "gym": false,
     "ingredients": [
       {
         "name": "Hamburguesas de tofu",
