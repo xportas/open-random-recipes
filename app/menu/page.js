@@ -10,6 +10,7 @@ import MenuHeader from "./components/MenuHeader";
 import DayCard from "./components/DayCard";
 import EmptyDayCard from "./components/EmptyDayCard";
 import GenerateShoppingListButton from "./components/GenerateShoppingListButton";
+import CopyMenuButton from "./components/CopyMenuButton";
 import NutritionRulesModal from "./components/NutritionRulesModal";
 import { useState } from "react";
 
@@ -83,6 +84,7 @@ export default function MenuPage() {
         {weeklyMenu && (
           <div className="flex flex-col sm:flex-row justify-center gap-sm">
             <GenerateShoppingListButton weeklyMenu={weeklyMenu} />
+            <CopyMenuButton weeklyMenu={weeklyMenu} />
           </div>
         )}
       </main>
