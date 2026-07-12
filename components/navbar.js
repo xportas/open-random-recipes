@@ -77,7 +77,6 @@ export default function Navbar({ activeTab }) {
             >
               {tab.icon}
             </span>
-            {/* <span className="font-label-sm text-label-sm mt-0.5">{tab.label}</span> */}
           </button>
         );
       })}

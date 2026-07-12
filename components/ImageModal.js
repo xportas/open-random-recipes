@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function ImageModal({ src, alt, onClose }) {
   const [open, setOpen] = useState(false);
+  const imgRef = useRef(null);
 
   useEffect(() => {
     const handleEscape = (e) => {
@@ -22,6 +23,9 @@ export default function ImageModal({ src, alt, onClose }) {
 
   const handleClose = () => {
     if (document.startViewTransition) {
+      if (imgRef.current) {
+        imgRef.current.style.viewTransitionName = "none";
+      }
       const transition = document.startViewTransition(() => {
         setOpen(false);
       });
@@ -37,14 +41,8 @@ export default function ImageModal({ src, alt, onClose }) {
       data-state={open ? "open" : "closed"}
       onClick={handleClose}
     >
-      <button
-        onClick={handleClose}
-        aria-label="Cerrar"
-        className="absolute top-md right-md w-10 h-10 rounded-full bg-surface/20 text-white flex items-center justify-center z-10"
-      >
-        <span className="material-symbols-outlined text-[24px]">close</span>
-      </button>
       <img
+        ref={imgRef}
         src={src}
         alt={alt}
         className="modal-image"

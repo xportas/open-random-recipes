@@ -66,9 +66,10 @@ export default function useWeeklyMenu(recipesData) {
   }, [recipesData]);
 
   const regenerateMealInMenu = useCallback((dayIndex, mealType) => {
-    if (!weeklyMenu) return;
-    const updated = regenerateMeal(recipesData, weeklyMenu, dayIndex, mealType);
-    setMenu(updated);
+    if (!weeklyMenu) return false;
+    const { menu: updated, success } = regenerateMeal(recipesData, weeklyMenu, dayIndex, mealType);
+    if (success) setMenu(updated);
+    return success;
   }, [recipesData]);
 
   const removeMealFromMenu = useCallback((dayIndex, mealType) => {

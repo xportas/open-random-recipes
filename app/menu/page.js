@@ -1,8 +1,9 @@
 "use client";
 
 import recipesData from "@/data/recipes.json";
-import { getWeekDates } from "@/lib/menuGenerator";
+import { getWeekDates, MEAL_LABELS } from "@/lib/menuGenerator";
 import ImageModal from "@/components/ImageModal";
+import Toast from "@/components/Toast";
 import RecipeDetailPage from "@/app/recipe-detail/page";
 import useWeeklyMenu from "@/hooks/useWeeklyMenu";
 import useTrainingSchedule from "@/hooks/useTrainingSchedule";
@@ -12,7 +13,7 @@ import EmptyDayCard from "./components/EmptyDayCard";
 import GenerateShoppingListButton from "./components/GenerateShoppingListButton";
 import CopyMenuButton from "./components/CopyMenuButton";
 import NutritionRulesModal from "./components/NutritionRulesModal";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 
 export default function MenuPage() {
   const { weeklyMenu, generate, regenerateMeal, removeMeal, clear, isEmpty } = useWeeklyMenu(recipesData);
@@ -20,12 +21,20 @@ export default function MenuPage() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [imageModal, setImageModal] = useState(null);
   const [isRulesOpen, setIsRulesOpen] = useState(false);
+  const [toast, setToast] = useState(null);
   const weekDates = getWeekDates();
 
   const handleRecipeClick = (recipeId) => {
     const recipe = recipesData.find((r) => r.id === recipeId);
     if (recipe) setSelectedRecipe(recipe);
   };
+
+  const handleRegenerateMeal = useCallback((dayIndex, mealType) => {
+    const success = regenerateMeal(dayIndex, mealType);
+    if (!success) {
+      setToast(`No hay recetas disponibles que cumplan las restricciones`);
+    }
+  }, [regenerateMeal]);
 
   if (selectedRecipe) {
     return (
@@ -54,7 +63,7 @@ export default function MenuPage() {
                   date={date}
                   meals={dayData.meals}
                   training={trainingActivities}
-                  onRegenerateMeal={(mealType) => regenerateMeal(dayIndex, mealType)}
+                  onRegenerateMeal={(mealType) => handleRegenerateMeal(dayIndex, mealType)}
                   onRemoveMeal={(mealType) => removeMeal(dayIndex, mealType)}
                   onRecipeClick={handleRecipeClick}
                   onImageClick={(src, alt, e) => {
@@ -102,6 +111,9 @@ export default function MenuPage() {
         isOpen={isRulesOpen}
         onClose={() => setIsRulesOpen(false)}
       />
+      {toast && (
+        <Toast message={toast} onDismiss={() => setToast(null)} />
+      )}
     </>
   );
 }

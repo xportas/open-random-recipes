@@ -170,6 +170,36 @@ body {
   to { opacity: 0; }
 }
 
+@keyframes toastFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(0) translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes toastFadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(0) translateY(-100%);
+  }
+}
+
+.toast-enter {
+  animation: toastFadeIn 0.3s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+}
+
+.toast-exit {
+  animation: toastFadeOut 0.25s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+}
+
 .drawer-enter {
   animation: slideUp 0.35s cubic-bezier(0.32, 0.72, 0, 1) forwards;
 }
