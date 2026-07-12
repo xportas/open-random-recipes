@@ -1,5 +1,6 @@
-import { useSyncExternalStore, useCallback } from "react";
+import { useSyncExternalStore, useCallback, useMemo } from "react";
 import { generateWeeklyMenu, regenerateMeal, removeMeal } from "@/lib/menuGenerator";
+import useTrainingSchedule from "@/hooks/useTrainingSchedule";
 
 const STORAGE_KEY = "weekly-menu";
 
@@ -59,18 +60,20 @@ function setMenu(newMenu) {
 
 export default function useWeeklyMenu(recipesData) {
   const store = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const { schedule } = useTrainingSchedule();
+  const gymDays = useMemo(() => schedule?.manGym || [], [schedule]);
 
   const generate = useCallback(() => {
-    const newMenu = generateWeeklyMenu(recipesData);
+    const newMenu = generateWeeklyMenu(recipesData, gymDays);
     setMenu(newMenu);
-  }, [recipesData]);
+  }, [recipesData, gymDays]);
 
   const regenerateMealInMenu = useCallback((dayIndex, mealType) => {
     if (!weeklyMenu) return false;
-    const { menu: updated, success } = regenerateMeal(recipesData, weeklyMenu, dayIndex, mealType);
+    const { menu: updated, success } = regenerateMeal(recipesData, weeklyMenu, dayIndex, mealType, gymDays);
     if (success) setMenu(updated);
     return success;
-  }, [recipesData]);
+  }, [recipesData, gymDays]);
 
   const removeMealFromMenu = useCallback((dayIndex, mealType) => {
     if (!weeklyMenu) return;
