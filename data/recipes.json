@@ -472,7 +472,7 @@
     "lunch": true,
     "snack": false,
     "dinner": true,
-    "ingredientes": [
+    "ingredients": [
       {
         "name": "Carne blanca",
         "quantity": null,
