@@ -2007,5 +2007,114 @@
       }
     ],
     "img": "/recipes/hamburguesas-tofu.png"
+  },
+  {
+    "id": 34,
+    "name": "Hamburguesas de potro",
+    "steps": "Cocinar al gusto según los ingredientes elegidos.",
+    "restrictions": null,
+    "servings": 1,
+    "type": "meet",
+    "breakfast": false,
+    "lunch": true,
+    "snack": false,
+    "dinner": false,
+    "gym": false,
+    "ingredients": [
+      {
+        "name": "Hamburguesas de potro",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Lubina",
+          "Trucha",
+          "Dorada",
+          "Gambas"
+        ],
+        "grocery_section": "Pescadería"
+      },
+      {
+        "name": "Carbohidrato",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Patata",
+          "Batata",
+          "Quinoa"
+        ],
+        "grocery_section": "Cereales y Granos"
+      },
+      {
+        "name": "Vegetal 1",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Brócoli",
+          "Pimiento rojo",
+          "Espinacas"
+        ],
+        "grocery_section": "Frutas y Verduras"
+      },
+      {
+        "name": "Vegetal 1 (bis)",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false,
+        "options": [
+          "Espárragos",
+          "Guisantes"
+        ],
+        "grocery_section": "Frutas y Verduras"
+      },
+      {
+        "name": "Vegetal 2",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Calabaza",
+          "Zanahoria",
+          "Aguacate",
+          "Pimiento verde"
+        ],
+        "grocery_section": "Frutas y Verduras"
+      },
+      {
+        "name": "Vegetal 2 (bis)",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false,
+        "options": [
+          "Tomate"
+        ],
+        "grocery_section": "Frutas y Verduras"
+      },
+      {
+        "name": "Vegetal 3",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "options": [
+          "Puerro",
+          "Calabacín",
+          "Berenjena"
+        ],
+        "grocery_section": "Frutas y Verduras"
+      },
+      {
+        "name": "Vegetal 3 (bis)",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false,
+        "options": [
+          "Setas"
+        ],
+        "grocery_section": "Frutas y Verduras"
+      }
+    ],
+    "img": "/recipes/hamburguesas-potro.png"
   }
 ]
