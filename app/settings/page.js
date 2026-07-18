@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import useTheme from "@/hooks/useTheme";
 import useTrainingSchedule from "@/hooks/useTrainingSchedule";
 
 const themes = [
@@ -50,7 +51,7 @@ function DaySelector({ label, icon, selectedDays, onToggle }) {
 }
 
 export default function SettingsPage() {
-  const [selectedTheme, setSelectedTheme] = useState("light");
+  const { theme: selectedTheme, setTheme: setSelectedTheme } = useTheme();
   const [selectedLanguage, setSelectedLanguage] = useState("es");
   const { schedule, toggleDay } = useTrainingSchedule();
 

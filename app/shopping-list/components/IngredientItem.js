@@ -14,11 +14,11 @@ export default function IngredientItem({ item, onToggle }) {
           className={`w-6 h-6 rounded-full border-2 transition-all duration-200 flex items-center justify-center ${
             item.checked
               ? "border-primary bg-primary scale-100"
-              : "border-neutral-300 bg-white"
+              : "border-neutral-300 bg-surface-container-lowest"
           }`}
         >
           <svg
-            className={`w-3.5 h-3.5 text-white transition-all duration-200 ${
+            className={`w-3.5 h-3.5 text-on-primary transition-all duration-200 ${
               item.checked ? "opacity-100 scale-100" : "opacity-0 scale-50"
             }`}
             fill="none"

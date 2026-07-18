@@ -86,7 +86,7 @@ export default function SwipeableMealItem({ mealType, meal, onRegenerate, onRemo
         </button>
       </div>
       <div
-        className="relative z-10 bg-white rounded-xl touch-pan-y"
+        className="relative z-10 bg-surface-container-lowest rounded-xl touch-pan-y"
         style={{
           transform: `translateX(${offsetX}px)`,
           transition: dragging ? "none" : "transform 0.3s cubic-bezier(0.32, 0.72, 0, 1)",

@@ -25,14 +25,14 @@ export default function EmptyShoppingList({ onNavigate }) {
       <div className="flex flex-col sm:flex-row gap-sm w-full mx-auto">
         <button
           onClick={() => onNavigate?.("menu")}
-          className="flex-1 bg-primary text-white font-label-md text-label-md px-md py-sm rounded-full flex items-center justify-center gap-xs shadow-[0_4px_16px_rgba(125,164,102,0.25)] active:scale-[0.97] transition-transform duration-200"
+          className="flex-1 bg-primary text-on-primary font-label-md text-label-md px-md py-sm rounded-full flex items-center justify-center gap-xs shadow-[0_4px_16px_rgba(125,164,102,0.25)] active:scale-[0.97] transition-transform duration-200"
         >
           <span className="material-symbols-outlined text-[20px]">calendar_add_on</span>
           <span>Generar menú</span>
         </button>
         <button
           onClick={() => onNavigate?.("recipes")}
-          className="flex-1 bg-white text-neutral-700 font-label-md text-label-md px-md py-sm rounded-full flex items-center justify-center gap-xs border border-neutral-200 active:scale-[0.97] transition-transform duration-200"
+          className="flex-1 bg-surface-container-lowest text-neutral-700 font-label-md text-label-md px-md py-sm rounded-full flex items-center justify-center gap-xs border border-neutral-200 active:scale-[0.97] transition-transform duration-200"
         >
           <span className="material-symbols-outlined text-[20px]">restaurant_menu</span>
           <span>Ver recetas</span>

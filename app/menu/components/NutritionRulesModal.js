@@ -57,7 +57,7 @@ export default function NutritionRulesModal({ isOpen, onClose }) {
         onClick={handleClose}
       />
       <div
-        className={`absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl max-h-[85vh] flex flex-col ${
+        className={`absolute bottom-0 left-0 right-0 bg-surface-container-lowest rounded-t-3xl max-h-[85vh] flex flex-col ${
           closing ? "drawer-exit" : "drawer-enter"
         }`}
       >

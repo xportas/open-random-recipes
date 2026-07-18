@@ -11,7 +11,7 @@ export default function RecipeSteps({ steps }) {
 
   if (!steps) {
     return (
-      <div className="bg-white rounded-2xl p-md md:p-lg shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-neutral-100">
+      <div className="bg-surface-container-lowest rounded-2xl p-md md:p-lg shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-neutral-100">
         <h2 className="font-headline-md text-headline-md text-neutral-900 mb-lg flex items-center gap-sm">
           <span className="material-symbols-outlined text-primary">menu_book</span>
           Preparacion
@@ -25,7 +25,7 @@ export default function RecipeSteps({ steps }) {
 
   if (parsedSteps.length <= 1) {
     return (
-      <div className="bg-white rounded-2xl p-md md:p-lg shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-neutral-100 relative overflow-hidden">
+      <div className="bg-surface-container-lowest rounded-2xl p-md md:p-lg shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-neutral-100 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-bl-full pointer-events-none" />
         <h2 className="font-headline-md text-headline-md text-neutral-900 mb-lg flex items-center gap-sm relative z-10">
           <span className="material-symbols-outlined text-primary">menu_book</span>
@@ -39,7 +39,7 @@ export default function RecipeSteps({ steps }) {
   }
 
   return (
-    <div className="bg-white rounded-2xl p-md md:p-lg shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-neutral-100 relative overflow-hidden">
+    <div className="bg-surface-container-lowest rounded-2xl p-md md:p-lg shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-neutral-100 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-bl-full pointer-events-none" />
       <h2 className="font-headline-md text-headline-md text-neutral-900 mb-lg flex items-center gap-sm relative z-10">
         <span className="material-symbols-outlined text-primary">menu_book</span>
@@ -52,7 +52,7 @@ export default function RecipeSteps({ steps }) {
               <div
                 className={`w-10 h-10 rounded-full flex items-center justify-center font-headline-sm text-headline-sm shrink-0 transition-colors duration-200 ${
                   index === 0
-                    ? "bg-primary text-white shadow-[0_2px_8px_rgba(125,164,102,0.3)]"
+                    ? "bg-primary text-on-primary shadow-[0_2px_8px_rgba(125,164,102,0.3)]"
                     : "bg-neutral-100 text-neutral-500 border border-neutral-200"
                 }`}
               >

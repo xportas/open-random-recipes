@@ -17,8 +17,8 @@ export default function MealTypeFilter({ selectedType, onTypeChange }) {
             onClick={() => onTypeChange(type.field)}
             className={`px-5 py-2 rounded-full font-label-md text-label-md transition-all duration-200 active:scale-95 border shrink-0 whitespace-nowrap ${
               selectedType === type.field
-                ? "bg-primary text-white border-primary shadow-[0_2px_8px_rgba(34,197,94,0.25)]"
-                : "bg-white text-neutral-500 border-neutral-200"
+                ? "bg-primary text-on-primary border-primary shadow-[0_2px_8px_rgba(34,197,94,0.25)]"
+                : "bg-surface-container-lowest text-neutral-500 border-neutral-200"
             }`}
           >
             {type.label}

@@ -32,7 +32,7 @@ export default function HomePage({ onNavigate }) {
                   Organiza tu semana, come mejor.
                 </p>
               </div>
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shadow-lg">
+              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-lg">
                 <span className="material-symbols-outlined">calendar_add_on</span>
               </div>
             </div>
@@ -58,7 +58,7 @@ export default function HomePage({ onNavigate }) {
                   Descubre nuevos sabores de temporada.
                 </p>
               </div>
-              <div className="w-12 h-12 shrink-0 aspect-square rounded-full bg-primary flex items-center justify-center text-white shadow-lg">
+              <div className="w-12 h-12 shrink-0 aspect-square rounded-full bg-primary flex items-center justify-center text-on-primary shadow-lg">
                 <span className="material-symbols-outlined">search</span>
               </div>
             </div>

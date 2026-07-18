@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --font-body-md: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-body-lg: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -59,77 +61,225 @@
   --radius-xl: 0.75rem;
   --radius-full: 9999px;
 
-  --color-verde-50: #f2f6ef;
-  --color-verde-100: #e2ebdc;
-  --color-verde-200: #c8dabc;
-  --color-verde-300: #a6c294;
-  --color-verde-400: #7da466;
-  --color-verde-500: #688f53;
-  --color-verde-600: #507040;
-  --color-verde-700: #3f5734;
-  --color-verde-800: #35472d;
-  --color-verde-900: #2f3e29;
-  --color-verde-950: #162013;
+  --color-verde-50: var(--verde-50);
+  --color-verde-100: var(--verde-100);
+  --color-verde-200: var(--verde-200);
+  --color-verde-300: var(--verde-300);
+  --color-verde-400: var(--verde-400);
+  --color-verde-500: var(--verde-500);
+  --color-verde-600: var(--verde-600);
+  --color-verde-700: var(--verde-700);
+  --color-verde-800: var(--verde-800);
+  --color-verde-900: var(--verde-900);
+  --color-verde-950: var(--verde-950);
 
-  --color-primary: var(--color-verde-400);
-  --color-on-primary: #ffffff;
-  --color-primary-container: var(--color-verde-100);
-  --color-on-primary-container: var(--color-verde-900);
-  --color-primary-fixed: var(--color-verde-200);
-  --color-primary-fixed-dim: var(--color-verde-300);
-  --color-on-primary-fixed: var(--color-verde-950);
-  --color-on-primary-fixed-variant: var(--color-verde-800);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-primary-fixed: var(--primary-fixed);
+  --color-primary-fixed-dim: var(--primary-fixed-dim);
+  --color-on-primary-fixed: var(--on-primary-fixed);
+  --color-on-primary-fixed-variant: var(--on-primary-fixed-variant);
 
-  --color-secondary: var(--color-verde-700);
-  --color-on-secondary: #ffffff;
-  --color-secondary-container: var(--color-verde-100);
-  --color-on-secondary-container: var(--color-verde-900);
-  --color-secondary-fixed: var(--color-verde-100);
-  --color-secondary-fixed-dim: #d4d4d4;
-  --color-on-secondary-fixed: var(--color-verde-900);
-  --color-on-secondary-fixed-variant: var(--color-verde-700);
+  --color-secondary: var(--secondary);
+  --color-on-secondary: var(--on-secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-secondary-fixed: var(--secondary-fixed);
+  --color-secondary-fixed-dim: var(--secondary-fixed-dim);
+  --color-on-secondary-fixed: var(--on-secondary-fixed);
+  --color-on-secondary-fixed-variant: var(--on-secondary-fixed-variant);
 
-  --color-tertiary: var(--color-verde-500);
-  --color-on-tertiary: #ffffff;
-  --color-tertiary-container: var(--color-verde-50);
-  --color-on-tertiary-container: var(--color-verde-800);
-  --color-tertiary-fixed: var(--color-verde-50);
-  --color-tertiary-fixed-dim: var(--color-verde-100);
-  --color-on-tertiary-fixed: var(--color-verde-950);
-  --color-on-tertiary-fixed-variant: var(--color-verde-700);
+  --color-tertiary: var(--tertiary);
+  --color-on-tertiary: var(--on-tertiary);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+  --color-tertiary-fixed: var(--tertiary-fixed);
+  --color-tertiary-fixed-dim: var(--tertiary-fixed-dim);
+  --color-on-tertiary-fixed: var(--on-tertiary-fixed);
+  --color-on-tertiary-fixed-variant: var(--on-tertiary-fixed-variant);
 
-  --color-error: #ef4444;
-  --color-on-error: #ffffff;
-  --color-error-container: #fee2e2;
-  --color-on-error-container: #dc2626;
+  --color-error: var(--error);
+  --color-on-error: var(--on-error);
+  --color-error-container: var(--error-container);
+  --color-on-error-container: var(--on-error-container);
 
-  --color-background: #ffffff;
-  --color-on-background: #162013;
+  --color-background: var(--background);
+  --color-on-background: var(--on-background);
 
-  --color-surface: #ffffff;
-  --color-on-surface: #162013;
-  --color-surface-variant: var(--color-verde-50);
-  --color-on-surface-variant: var(--color-verde-800);
-  --color-surface-dim: var(--color-verde-50);
-  --color-surface-bright: #ffffff;
-  --color-surface-container: var(--color-verde-50);
-  --color-surface-container-low: #fafaf7;
-  --color-surface-container-high: var(--color-verde-100);
-  --color-surface-container-highest: var(--color-verde-200);
-  --color-surface-container-lowest: #ffffff;
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+  --color-surface-variant: var(--surface-variant);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-surface-dim: var(--surface-dim);
+  --color-surface-bright: var(--surface-bright);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-surface-container-lowest: var(--surface-container-lowest);
 
-  --color-inverse-surface: var(--color-verde-900);
-  --color-inverse-on-surface: var(--color-verde-50);
-  --color-inverse-primary: var(--color-verde-300);
+  --color-inverse-surface: var(--inverse-surface);
+  --color-inverse-on-surface: var(--inverse-on-surface);
+  --color-inverse-primary: var(--inverse-primary);
 
-  --color-outline: var(--color-verde-300);
-  --color-outline-variant: var(--color-verde-100);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
 
-  --color-surface-tint: var(--color-verde-500);
+  --color-surface-tint: var(--surface-tint);
+}
+
+/* ===== Tema claro (por defecto) ===== */
+:root {
+  color-scheme: light;
+
+  --verde-50: #f2f6ef;
+  --verde-100: #e2ebdc;
+  --verde-200: #c8dabc;
+  --verde-300: #a6c294;
+  --verde-400: #7da466;
+  --verde-500: #688f53;
+  --verde-600: #507040;
+  --verde-700: #3f5734;
+  --verde-800: #35472d;
+  --verde-900: #2f3e29;
+  --verde-950: #162013;
+
+  --primary: var(--verde-400);
+  --on-primary: #ffffff;
+  --primary-container: var(--verde-100);
+  --on-primary-container: var(--verde-900);
+  --primary-fixed: var(--verde-200);
+  --primary-fixed-dim: var(--verde-300);
+  --on-primary-fixed: var(--verde-950);
+  --on-primary-fixed-variant: var(--verde-800);
+
+  --secondary: var(--verde-700);
+  --on-secondary: #ffffff;
+  --secondary-container: var(--verde-100);
+  --on-secondary-container: var(--verde-900);
+  --secondary-fixed: var(--verde-100);
+  --secondary-fixed-dim: #d4d4d4;
+  --on-secondary-fixed: var(--verde-900);
+  --on-secondary-fixed-variant: var(--verde-700);
+
+  --tertiary: var(--verde-500);
+  --on-tertiary: #ffffff;
+  --tertiary-container: var(--verde-50);
+  --on-tertiary-container: var(--verde-800);
+  --tertiary-fixed: var(--verde-50);
+  --tertiary-fixed-dim: var(--verde-100);
+  --on-tertiary-fixed: var(--verde-950);
+  --on-tertiary-fixed-variant: var(--verde-700);
+
+  --error: #ef4444;
+  --on-error: #ffffff;
+  --error-container: #fee2e2;
+  --on-error-container: #dc2626;
+
+  --background: #ffffff;
+  --on-background: var(--verde-950);
+
+  --surface: #ffffff;
+  --on-surface: var(--verde-950);
+  --surface-variant: var(--verde-50);
+  --on-surface-variant: var(--verde-800);
+  --surface-dim: var(--verde-50);
+  --surface-bright: #ffffff;
+  --surface-container: var(--verde-50);
+  --surface-container-low: #fafaf7;
+  --surface-container-high: var(--verde-100);
+  --surface-container-highest: var(--verde-200);
+  --surface-container-lowest: #ffffff;
+
+  --inverse-surface: var(--verde-900);
+  --inverse-on-surface: var(--verde-50);
+  --inverse-primary: var(--verde-300);
+
+  --outline: var(--verde-300);
+  --outline-variant: var(--verde-100);
+
+  --surface-tint: var(--verde-500);
+}
+
+/* ===== Tema oscuro (negro puro) ===== */
+.dark {
+  color-scheme: dark;
+
+  --primary: var(--verde-400);
+  --on-primary: var(--verde-950);
+  --primary-container: var(--verde-800);
+  --on-primary-container: var(--verde-100);
+  --primary-fixed: var(--verde-800);
+  --primary-fixed-dim: var(--verde-700);
+  --on-primary-fixed: var(--verde-100);
+  --on-primary-fixed-variant: var(--verde-200);
+
+  --secondary: var(--verde-300);
+  --on-secondary: var(--verde-950);
+  --secondary-container: var(--verde-800);
+  --on-secondary-container: var(--verde-100);
+  --secondary-fixed: var(--verde-800);
+  --secondary-fixed-dim: var(--verde-700);
+  --on-secondary-fixed: var(--verde-100);
+  --on-secondary-fixed-variant: var(--verde-200);
+
+  --tertiary: var(--verde-300);
+  --on-tertiary: var(--verde-950);
+  --tertiary-container: var(--verde-900);
+  --on-tertiary-container: var(--verde-100);
+  --tertiary-fixed: var(--verde-900);
+  --tertiary-fixed-dim: var(--verde-800);
+  --on-tertiary-fixed: var(--verde-100);
+  --on-tertiary-fixed-variant: var(--verde-200);
+
+  --error: #f87171;
+  --on-error: #450a0a;
+  --error-container: #7f1d1d;
+  --on-error-container: #fecaca;
+
+  --background: #000000;
+  --on-background: var(--verde-50);
+
+  --surface: #000000;
+  --on-surface: var(--verde-50);
+  --surface-variant: var(--verde-950);
+  --on-surface-variant: var(--verde-200);
+  --surface-dim: #000000;
+  --surface-bright: var(--verde-900);
+  --surface-container: #1a1f16;
+  --surface-container-low: #131711;
+  --surface-container-high: var(--verde-900);
+  --surface-container-highest: var(--verde-800);
+  --surface-container-lowest: #0c0f0a;
+
+  --inverse-surface: var(--verde-50);
+  --inverse-on-surface: var(--verde-900);
+  --inverse-primary: var(--verde-600);
+
+  --outline: var(--verde-700);
+  --outline-variant: var(--verde-800);
+
+  --surface-tint: var(--verde-400);
+
+  /* Escala neutral invertida (espejo de la clara) */
+  --color-neutral-50: #0a0a0a;
+  --color-neutral-100: #171717;
+  --color-neutral-200: #262626;
+  --color-neutral-300: #404040;
+  --color-neutral-400: #525252;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #a3a3a3;
+  --color-neutral-700: #d4d4d4;
+  --color-neutral-800: #e5e5e5;
+  --color-neutral-900: #f5f5f5;
+  --color-neutral-950: #fafafa;
 }
 
 body {
   -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .hide-scrollbar::-webkit-scrollbar {

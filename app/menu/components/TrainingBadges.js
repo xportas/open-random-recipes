@@ -8,7 +8,7 @@ export default function TrainingBadges({ training }) {
         return (
           <span
             key={index}
-            className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-white border border-neutral-100 shrink-0"
+            className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-lowest border border-neutral-100 shrink-0"
             title={`${activity.type === "gym" ? "Gimnasio" : "Baloncesto"} - ${activity.person === "X" ? "Xabier" : "Maider"}`}
           >
             <span

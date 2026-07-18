@@ -4,7 +4,7 @@ export default function RecipeCard({ recipe, onToggleFavorite, onRecipeClick, on
   const ingredients = recipe.ingredients || recipe.ingredientes || [];
 
   return (
-    <div className="bg-white p-sm rounded-2xl shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-neutral-100 min-w-0 overflow-hidden active:scale-[0.98] transition-transform duration-200">
+    <div className="bg-surface-container-lowest p-sm rounded-2xl shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-neutral-100 min-w-0 overflow-hidden active:scale-[0.98] transition-transform duration-200">
       <div className="flex items-center gap-4 min-w-0">
         <div
           className="w-16 h-16 rounded-full overflow-hidden shrink-0 ring-2 ring-neutral-100"
@@ -34,7 +34,7 @@ export default function RecipeCard({ recipe, onToggleFavorite, onRecipeClick, on
           }}
           className={`w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 active:scale-90 ${
             recipe.fav
-              ? "text-red-500 bg-red-50"
+              ? "text-error bg-error-container"
               : "text-neutral-300"
           }`}
         >

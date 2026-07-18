@@ -45,7 +45,7 @@ export default function Navbar({ activeTab }) {
   return (
     <nav
       ref={navRef}
-      className="fixed bottom-0 left-1/2 -translate-x-1/2 w-8/12 z-40 flex justify-around items-center px-1.5 py-2 mb-3 border border-neutral-200 rounded-3xl bg-white/30 backdrop-blur-xs shadow-[0_4px_24px_rgba(0,0,0,0.06)]"
+      className="fixed bottom-0 left-1/2 -translate-x-1/2 w-8/12 z-40 flex justify-around items-center px-1.5 py-2 mb-3 border border-neutral-200 rounded-3xl bg-white/30 dark:bg-black/30 backdrop-blur-xs shadow-[0_4px_24px_rgba(0,0,0,0.06)]"
     >
       <div
         className="absolute top-1 bottom-1 bg-primary/70 rounded-2xl backdrop-blur-xs z-0"
@@ -67,7 +67,7 @@ export default function Navbar({ activeTab }) {
             key={tab.id}
             data-tab={tab.id}
             className={`relative z-10 flex flex-col items-center justify-center px-3 py-1.5 active:scale-90 transition-transform duration-200 ${
-              isActive ? "text-white" : "text-neutral-500"
+              isActive ? "text-on-primary" : "text-neutral-500"
             }`}
             onClick={() => activeTab.setActiveTab(tab.id)}
           >

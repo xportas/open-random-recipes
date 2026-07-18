@@ -17,7 +17,7 @@ export default function GenerateShoppingListButton({ weeklyMenu }) {
     <div className="flex justify-center">
       <button
         onClick={handleGenerate}
-        className="bg-primary text-white font-label-md text-label-md px-md py-sm rounded-full flex items-center justify-center gap-xs shadow-[0_4px_16px_rgba(125,164,102,0.25)] active:scale-[0.98] transition-transform duration-200"
+        className="bg-primary text-on-primary font-label-md text-label-md px-md py-sm rounded-full flex items-center justify-center gap-xs shadow-[0_4px_16px_rgba(125,164,102,0.25)] active:scale-[0.98] transition-transform duration-200"
       >
         <span
           className="material-symbols-outlined text-[20px]"
