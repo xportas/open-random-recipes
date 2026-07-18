@@ -2009,11 +2009,11 @@
     "img": "/recipes/hamburguesas-tofu.png"
   },
   {
-    "id": 34,
+    "id": 35,
     "name": "Hamburguesas de potro",
     "steps": "Cocinar al gusto según los ingredientes elegidos.",
     "restrictions": null,
-    "servings": 1,
+    "servings": 2,
     "type": "meet",
     "breakfast": false,
     "lunch": true,
@@ -2023,16 +2023,10 @@
     "ingredients": [
       {
         "name": "Hamburguesas de potro",
-        "quantity": null,
-        "unit_of_measure": null,
+        "quantity": 4,
+        "unit_of_measure": "ud",
         "required": true,
-        "options": [
-          "Lubina",
-          "Trucha",
-          "Dorada",
-          "Gambas"
-        ],
-        "grocery_section": "Pescadería"
+        "grocery_section": "Carnicería"
       },
       {
         "name": "Carbohidrato",

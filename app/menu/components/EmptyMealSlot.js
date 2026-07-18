@@ -1,6 +1,6 @@
 import { MEAL_LABELS } from "@/lib/menuGenerator";
 
-export default function EmptyMealSlot({ mealType, onRegenerate }) {
+export default function EmptyMealSlot({ mealType, onRegenerate, onSelect }) {
   const label = MEAL_LABELS[mealType];
 
   return (
@@ -18,6 +18,15 @@ export default function EmptyMealSlot({ mealType, onRegenerate }) {
           Receta eliminada
         </span>
       </div>
+      {onSelect && (
+        <button
+          onClick={() => onSelect(mealType)}
+          className="w-10 h-10 shrink-0 aspect-square flex items-center justify-center text-primary bg-primary/10 rounded-full active:scale-95 transition-transform"
+          title="Elegir receta"
+        >
+          <span className="material-symbols-outlined text-[20px]">format_list_bulleted</span>
+        </button>
+      )}
       {onRegenerate && (
         <button
           onClick={() => onRegenerate(mealType)}

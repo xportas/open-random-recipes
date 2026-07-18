@@ -3,7 +3,7 @@ import SwipeableMealItem from "./SwipeableMealItem";
 import EmptyMealSlot from "./EmptyMealSlot";
 import TrainingBadges from "./TrainingBadges";
 
-export default function DayCard({ dayName, date, meals, training, onRegenerateMeal, onRemoveMeal, onRecipeClick, onImageClick }) {
+export default function DayCard({ dayName, date, meals, training, onRegenerateMeal, onRemoveMeal, onSelectMeal, onRecipeClick, onImageClick }) {
   const activeMeals = MEAL_TYPES.filter((type) => meals[type] !== undefined);
 
   return (
@@ -21,13 +21,14 @@ export default function DayCard({ dayName, date, meals, training, onRegenerateMe
         {activeMeals.map((mealType, index) => (
           <div key={mealType}>
             {meals[mealType] === null ? (
-              <EmptyMealSlot mealType={mealType} onRegenerate={onRegenerateMeal} />
+              <EmptyMealSlot mealType={mealType} onRegenerate={onRegenerateMeal} onSelect={onSelectMeal} />
             ) : (
               <SwipeableMealItem
                 mealType={mealType}
                 meal={meals[mealType]}
                 onRegenerate={onRegenerateMeal}
                 onRemove={onRemoveMeal}
+                onSelect={onSelectMeal}
                 onRecipeClick={onRecipeClick}
                 onImageClick={onImageClick}
               />

@@ -13,14 +13,16 @@ import EmptyDayCard from "./components/EmptyDayCard";
 import GenerateShoppingListButton from "./components/GenerateShoppingListButton";
 import CopyMenuButton from "./components/CopyMenuButton";
 import NutritionRulesModal from "./components/NutritionRulesModal";
+import RecipePickerModal from "./components/RecipePickerModal";
 import { useState, useCallback } from "react";
 
 export default function MenuPage() {
-  const { weeklyMenu, generate, regenerateMeal, removeMeal, clear, isEmpty } = useWeeklyMenu(recipesData);
+  const { weeklyMenu, generate, regenerateMeal, removeMeal, setMeal, clear, isEmpty } = useWeeklyMenu(recipesData);
   const { getTrainingForDay } = useTrainingSchedule();
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [imageModal, setImageModal] = useState(null);
   const [isRulesOpen, setIsRulesOpen] = useState(false);
+  const [picker, setPicker] = useState(null);
   const [toast, setToast] = useState(null);
   const weekDates = getWeekDates();
 
@@ -35,6 +37,12 @@ export default function MenuPage() {
       setToast(`No hay recetas disponibles que cumplan las restricciones`);
     }
   }, [regenerateMeal]);
+
+  const handlePickerSelect = useCallback((recipe, choices) => {
+    if (!picker) return;
+    setMeal(picker.dayIndex, picker.mealType, recipe, choices);
+    setPicker(null);
+  }, [picker, setMeal]);
 
   if (selectedRecipe) {
     return (
@@ -65,6 +73,7 @@ export default function MenuPage() {
                   training={trainingActivities}
                   onRegenerateMeal={(mealType) => handleRegenerateMeal(dayIndex, mealType)}
                   onRemoveMeal={(mealType) => removeMeal(dayIndex, mealType)}
+                  onSelectMeal={(mealType) => setPicker({ dayIndex, mealType, dayName })}
                   onRecipeClick={handleRecipeClick}
                   onImageClick={(src, alt, e) => {
                     const img = e?.currentTarget?.querySelector("img");
@@ -111,6 +120,15 @@ export default function MenuPage() {
         isOpen={isRulesOpen}
         onClose={() => setIsRulesOpen(false)}
       />
+      {picker && (
+        <RecipePickerModal
+          dayIndex={picker.dayIndex}
+          mealType={picker.mealType}
+          dayName={picker.dayName}
+          onSelect={handlePickerSelect}
+          onClose={() => setPicker(null)}
+        />
+      )}
       {toast && (
         <Toast message={toast} onDismiss={() => setToast(null)} />
       )}

@@ -4,9 +4,9 @@ import { useState, useRef, useCallback } from "react";
 import MealItem from "./MealItem";
 
 const SWIPE_THRESHOLD = 60;
-const ACTIONS_WIDTH = 120;
+const ACTIONS_WIDTH = 180;
 
-export default function SwipeableMealItem({ mealType, meal, onRegenerate, onRemove, onRecipeClick, onImageClick }) {
+export default function SwipeableMealItem({ mealType, meal, onRegenerate, onRemove, onSelect, onRecipeClick, onImageClick }) {
   const [offsetX, setOffsetX] = useState(0);
   const [dragging, setDragging] = useState(false);
   const touchStartX = useRef(0);
@@ -58,6 +58,11 @@ export default function SwipeableMealItem({ mealType, meal, onRegenerate, onRemo
     closeSwipe();
   }, [onRegenerate, mealType, closeSwipe]);
 
+  const handleSelect = useCallback(() => {
+    onSelect?.(mealType);
+    closeSwipe();
+  }, [onSelect, mealType, closeSwipe]);
+
   const handleRemove = useCallback(() => {
     onRemove?.(mealType);
     closeSwipe();
@@ -69,7 +74,14 @@ export default function SwipeableMealItem({ mealType, meal, onRegenerate, onRemo
 
   return (
     <div className="relative overflow-hidden rounded-xl">
-      <div className="absolute inset-y-0 right-0 flex w-[120px] rounded-r-xl overflow-hidden z-0">
+      <div className="absolute inset-y-0 right-0 flex w-[180px] rounded-r-xl overflow-hidden z-0">
+        <button
+          onClick={handleSelect}
+          className="flex-1 flex flex-col items-center justify-center bg-primary/10 text-primary active:bg-primary/20 transition-colors"
+        >
+          <span className="material-symbols-outlined text-[20px]">format_list_bulleted</span>
+          <span className="font-label-sm text-label-sm mt-0.5">Elegir</span>
+        </button>
         <button
           onClick={handleRegenerate}
           className="flex-1 flex flex-col items-center justify-center bg-neutral-900/5 text-neutral-500 active:bg-neutral-900/10 transition-colors"
