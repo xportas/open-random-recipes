@@ -125,8 +125,70 @@ export default function RecipePickerModal({ dayIndex, mealType, dayName, onSelec
             <div className="px-6 py-4 overflow-y-auto flex-1 flex flex-col gap-sm">
               {selectedRecipe.ingredients.map((ingredient, index) => {
                 const quantityStr = formatQuantity(ingredient.quantity, ingredient.unit_of_measure);
+                const hasOptions = ingredient.options && ingredient.options.length > 0;
+                const hasMultipleOptions = hasOptions && ingredient.options.length > 1;
 
-                if (ingredient.options && ingredient.options.length > 0) {
+                if (ingredient.required === false) {
+                  const isIncluded = included[index] !== false;
+                  const checkboxRow = (
+                    <label className={`flex items-center gap-sm cursor-pointer ${hasMultipleOptions ? "" : "p-sm rounded-xl hover:bg-surface-container-low transition-colors"}`}>
+                      <input
+                        type="checkbox"
+                        className="sr-only"
+                        checked={isIncluded}
+                        onChange={() => setIncluded((prev) => ({ ...prev, [index]: !isIncluded }))}
+                      />
+                      <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center shrink-0 transition-colors ${isIncluded ? "bg-primary border-primary" : "border-outline-variant"}`}>
+                        <span className={`material-symbols-outlined text-on-primary text-[16px] transition-all duration-200 ${isIncluded ? "opacity-100 scale-100" : "opacity-0 scale-50"}`}>check</span>
+                      </div>
+                      <span className="flex-1 font-body-md text-body-md text-on-surface">
+                        {quantityStr ? `${quantityStr} de ` : ""}{hasOptions && !hasMultipleOptions ? ingredient.options[0] : ingredient.name}
+                      </span>
+                      <span className="font-label-sm text-label-sm bg-tertiary-container/30 text-on-tertiary-container px-2 py-0.5 rounded text-[10px] shrink-0">
+                        Opcional
+                      </span>
+                    </label>
+                  );
+
+                  if (!hasMultipleOptions) {
+                    return <div key={index}>{checkboxRow}</div>;
+                  }
+
+                  return (
+                    <div key={index} className="p-sm rounded-xl border border-surface-container-high">
+                      {checkboxRow}
+                      {isIncluded && (
+                        <div className="space-y-xs mt-sm pt-sm border-t border-surface-container-high">
+                          {ingredient.options.map((option) => {
+                            const isSelected = selections[index] === option;
+                            return (
+                              <label
+                                key={option}
+                                className="flex items-center gap-sm p-xs rounded-lg cursor-pointer hover:bg-surface-container-low transition-colors"
+                              >
+                                <input
+                                  type="radio"
+                                  name={`picker-option-${index}`}
+                                  className="sr-only"
+                                  checked={isSelected}
+                                  onChange={() => setSelections((prev) => ({ ...prev, [index]: option }))}
+                                />
+                                <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 transition-colors ${isSelected ? "border-primary" : "border-outline-variant"}`}>
+                                  <div className={`w-2.5 h-2.5 rounded-full bg-primary transition-transform ${isSelected ? "scale-100" : "scale-0"}`} />
+                                </div>
+                                <span className={`font-body-md text-body-md transition-colors ${isSelected ? "text-primary" : "text-on-surface"}`}>
+                                  {option}
+                                </span>
+                              </label>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+
+                if (hasOptions) {
                   return (
                     <div key={index} className="p-sm rounded-xl border border-surface-container-high">
                       <div className="flex items-center justify-between mb-sm">
@@ -160,32 +222,6 @@ export default function RecipePickerModal({ dayIndex, mealType, dayName, onSelec
                         })}
                       </div>
                     </div>
-                  );
-                }
-
-                if (ingredient.required === false) {
-                  const isIncluded = included[index] !== false;
-                  return (
-                    <label
-                      key={index}
-                      className="flex items-center gap-sm p-sm rounded-xl cursor-pointer hover:bg-surface-container-low transition-colors"
-                    >
-                      <input
-                        type="checkbox"
-                        className="sr-only"
-                        checked={isIncluded}
-                        onChange={() => setIncluded((prev) => ({ ...prev, [index]: !isIncluded }))}
-                      />
-                      <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center shrink-0 transition-colors ${isIncluded ? "bg-primary border-primary" : "border-outline-variant"}`}>
-                        <span className={`material-symbols-outlined text-on-primary text-[16px] transition-all duration-200 ${isIncluded ? "opacity-100 scale-100" : "opacity-0 scale-50"}`}>check</span>
-                      </div>
-                      <span className="flex-1 font-body-md text-body-md text-on-surface">
-                        {quantityStr ? `${quantityStr} de ` : ""}{ingredient.name}
-                      </span>
-                      <span className="font-label-sm text-label-sm bg-tertiary-container/30 text-on-tertiary-container px-2 py-0.5 rounded text-[10px] shrink-0">
-                        Opcional
-                      </span>
-                    </label>
                   );
                 }
 
