@@ -2110,5 +2110,56 @@
       }
     ],
     "img": "/recipes/hamburguesa-potro.png"
+  },
+  {
+    "id": 36,
+    "name": "Wrap de aguacate y huevo",
+    "steps": "1. Cocer 3 huevos. 2. Machacar los huevos cocidos y revolverlos con aguacate y queso cottage. 3. Colocar la mezcla y una loncha de queso dentro de la fajita. 4. Untar las fajitas por fuera con huevos batidos. 5. Dorar al gusto en el horno.",
+    "restrictions": null,
+    "servings": 2,
+    "type": "other",
+    "breakfast": false,
+    "lunch": false,
+    "snack": false,
+    "dinner": true,
+    "gym": false,
+    "ingredients": [
+      {
+        "name": "Fajitas",
+        "quantity": 5,
+        "unit_of_measure": "ud",
+        "required": true,
+        "grocery_section": "Panadería"
+      },
+      {
+        "name": "Aguacates",
+        "quantity": 2,
+        "unit_of_measure": ud,
+        "required": true,
+        "grocery_section": "Frutas y Verduras"
+      },
+      {
+        "name": "Huevos",
+        "quantity": 4,
+        "unit_of_measure": ud,
+        "required": true,
+        "grocery_section": "Huevos"
+      },
+      {
+        "name": "Queso cottage",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "grocery_section": "Lácteos"
+      },
+      {
+        "name": "Queso en lonchas",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": true,
+        "grocery_section": "Lácteos"
+      }
+    ],
+    "img": "/recipes/wrap-aguacate-huevo.png"
   }
 ]
