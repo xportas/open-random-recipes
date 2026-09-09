@@ -6,7 +6,7 @@
 
 **Web application for recipe management and random weekly menu generation and the shopping list.**
 
-_Simple. Private. Open Source. Not-for-profit._
+_Simple. Private. Open Source. Not for profit._
 
 ![React](https://readmebadge.vercel.app/badges/react.svg)
 ![Next.js](https://readmebadge.vercel.app/badges/nextjs.svg)
