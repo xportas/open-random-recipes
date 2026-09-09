@@ -7,7 +7,7 @@ export default function EmptyShoppingList({ onNavigate }) {
     <div className="flex flex-col items-center text-center gap-md">
       <div className="rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.06)] overflow-hidden">
         <Image
-          src="/empty-shop-list.png"
+          src="/empty-shop-list.webp"
           alt="Robot chef con una cesta de la compra vacía"
           width={240}
           height={240}

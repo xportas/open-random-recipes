@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/opr-banner.png" width="170" height="170" alt="OPR logo" />
+<img src="public/opr-banner.webp" width="170" height="170" alt="OPR logo" />
 
 # Open Random Recipes 🍽️
 
@@ -88,32 +88,32 @@ Below are the main features of the application.
 This is the main view when entering the application. It allows you to navigate to different sections.
 
 <p align="center">
-  <img src="docs/screenshots/home_screen.png" alt="Home" />
+  <img src="docs/screenshots/home_screen.webp" alt="Home" />
 </p>
 
 #### 2. Recipes List 📋
 In this screen, you can view all the available recipes in the system, along with their images, names, and general information.
 
 <p align="center">
-  <img src="docs/screenshots/recipes_list_screen.png" alt="Recipes List" />
+  <img src="docs/screenshots/recipes_list_screen.webp" alt="Recipes List" />
 </p>
 
 #### 3. Menu Generator 🍲
 This is the core functionality. It allows you to generate a weekly menu randomly, taking into account restrictions and meal types (breakfast, lunch, dinner).
 
 <p align="center">
-  <img src="docs/screenshots/menu_empty_screen.png" alt="Menu Generator" />
+  <img src="docs/screenshots/menu_empty_screen.webp" alt="Menu Generator" />
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="docs/screenshots/menu_screen.png" alt="Menu Generator 2" />
+  <img src="docs/screenshots/menu_screen.webp" alt="Menu Generator 2" />
 </p>
 
 #### 4. Shopping List 🛒
 Based on the generated menu, this screen groups all the necessary ingredients categorized by their grocery section (produce, meat, dairy, etc.).
 
 <p align="center">
-  <img src="docs/screenshots/shopping_list_empty_screen.png" alt="Shopping List" />
+  <img src="docs/screenshots/shopping_list_empty_screen.webp" alt="Shopping List" />
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="docs/screenshots/shopping_list_screen.png" alt="Shopping List 2" />
+  <img src="docs/screenshots/shopping_list_screen.webp" alt="Shopping List 2" />
 </p>
 
 #### 5. Settings ⚙️
@@ -123,7 +123,7 @@ In this screen, you can customize the application behavior:
 - **Training Days**: Set which days of the week you train to generate specific meals according to your active days.
 
 <p align="center">
-  <img src="docs/screenshots/settings_screen.png" alt="Settings" />
+  <img src="docs/screenshots/settings_screen.webp" alt="Settings" />
 </p>
 
 <h3 id="recipe-customization-datarecipesjson">Recipe Customization (`data/recipes.json`) 📂</h3>

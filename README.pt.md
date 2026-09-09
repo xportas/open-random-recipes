@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/opr-banner.png" width="170" height="170" alt="OPR logo" />
+<img src="public/opr-banner.webp" width="170" height="170" alt="OPR logo" />
 
 # Open Random Recipes 🍽️
 
@@ -89,32 +89,32 @@ Abaixo estão explicadas as principais funcionalidades do aplicativo.
 Aqui é mostrada a visualização principal ao entrar no aplicativo. Permite navegar para diferentes seções.
 
 <p align="center">
-  <img src="docs/screenshots/home_screen.png" alt="Tela Inicial" />
+  <img src="docs/screenshots/home_screen.webp" alt="Tela Inicial" />
 </p>
 
 #### 2. Lista de Receitas 📋
 Nesta tela você pode visualizar todas as receitas disponíveis no sistema, com suas imagens, nomes e informações gerais.
 
 <p align="center">
-  <img src="docs/screenshots/recipes_list_screen.png" alt="Lista de Receitas" />
+  <img src="docs/screenshots/recipes_list_screen.webp" alt="Lista de Receitas" />
 </p>
 
 #### 3. Gerador de Menu 🍲
 Esta é a funcionalidade principal. Permite gerar um menu semanal aleatoriamente, levando em consideração as restrições e tipos de refeição (café da manhã, almoço, jantar).
 
 <p align="center">
-  <img src="docs/screenshots/menu_empty_screen.png" alt="Gerador de Menu" />
+  <img src="docs/screenshots/menu_empty_screen.webp" alt="Gerador de Menu" />
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="docs/screenshots/menu_screen.png" alt="Gerador de Menu 2" />
+  <img src="docs/screenshots/menu_screen.webp" alt="Gerador de Menu 2" />
 </p>
 
 #### 4. Lista de Compras 🛒
 Com base no menu gerado, esta tela agrupa todos os ingredientes necessários classificados pela sua seção do supermercado (hortifrúti, açougue, laticínios, etc.).
 
 <p align="center">
-  <img src="docs/screenshots/shopping_list_empty_screen.png" alt="Lista de Compras" />
+  <img src="docs/screenshots/shopping_list_empty_screen.webp" alt="Lista de Compras" />
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="docs/screenshots/shopping_list_screen.png" alt="Lista de Compras 2" />
+  <img src="docs/screenshots/shopping_list_screen.webp" alt="Lista de Compras 2" />
 </p>
 
 #### 5. Configurações ⚙️
@@ -124,7 +124,7 @@ Nesta tela, você pode personalizar o comportamento do aplicativo:
 - **Dias de Treino**: Configure quais dias da semana você treina para que o gerador considere seus dias ativos ao sugerir refeições.
 
 <p align="center">
-  <img src="docs/screenshots/settings_screen.png" alt="Configurações" />
+  <img src="docs/screenshots/settings_screen.webp" alt="Configurações" />
 </p>
 
 <h3 id="personalização-de-receitas-datarecipesjson">Personalização de Receitas (`data/recipes.json`) 📂</h3>

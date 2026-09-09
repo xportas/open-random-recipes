@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/opr-banner.png" width="170" height="170" alt="OPR logo" />
+<img src="public/opr-banner.webp" width="170" height="170" alt="OPR logo" />
 
 # Open Random Recipes 🍽️
 
@@ -88,7 +88,7 @@ A continuación se explican las principales funcionalidades de la aplicación.
 Aquí se muestra la vista principal al entrar en la aplicación. Permite navegar a las diferentes secciones.
 
 <p align="center">
-  <img src="docs/screenshots/home_screen.png" alt="Home" />
+  <img src="docs/screenshots/home_screen.webp" alt="Home" />
 </p>
 
 
@@ -96,7 +96,7 @@ Aquí se muestra la vista principal al entrar en la aplicación. Permite navegar
 En esta pantalla se pueden visualizar todas las recetas disponibles en el sistema, con sus imágenes, nombres e información general.
 
 <p align="center">
-  <img src="docs/screenshots/recipes_list_screen.png" alt="Lista de Recetas" />
+  <img src="docs/screenshots/recipes_list_screen.webp" alt="Lista de Recetas" />
 </p>
 
 
@@ -104,9 +104,9 @@ En esta pantalla se pueden visualizar todas las recetas disponibles en el sistem
 Esta es la funcionalidad core. Te permite generar un menú semanal de forma aleatoria, teniendo en cuenta las restricciones y tipos de comida (desayuno, comida, cena).
 
 <p align="center">
-  <img src="docs/screenshots/menu_empty_screen.png" alt="Generador de Menú" />
+  <img src="docs/screenshots/menu_empty_screen.webp" alt="Generador de Menú" />
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="docs/screenshots/menu_screen.png" alt="Generador de Menú 2" />
+  <img src="docs/screenshots/menu_screen.webp" alt="Generador de Menú 2" />
 </p>
 
 
@@ -114,9 +114,9 @@ Esta es la funcionalidad core. Te permite generar un menú semanal de forma alea
 A partir del menú generado, esta pantalla agrupa todos los ingredientes necesarios clasificados por su sección de supermercado (frutería, carnicería, lácteos, etc.).
 
 <p align="center">
-  <img src="docs/screenshots/shopping_list_empty_screen.png" alt="Lista de la Compra" />
+  <img src="docs/screenshots/shopping_list_empty_screen.webp" alt="Lista de la Compra" />
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="docs/screenshots/shopping_list_screen.png" alt="Lista de la Compra 2" />
+  <img src="docs/screenshots/shopping_list_screen.webp" alt="Lista de la Compra 2" />
 </p>
 
 
@@ -127,7 +127,7 @@ En esta pantalla puedes configurar el comportamiento de la aplicación:
 - **Días de entrenamiento**: Configura qué días de la semana entrenas para que el generador tenga en cuenta tus días activos al proponer ciertas comidas.
 
 <p align="center">
-  <img src="docs/screenshots/settings_screen.png" alt="Ajustes" />
+  <img src="docs/screenshots/settings_screen.webp" alt="Ajustes" />
 </p>
 
 

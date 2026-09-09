@@ -23,7 +23,7 @@ export default function LoginPage() {
       <div className="w-full max-w-[448px] px-margin-mobile z-10 flex flex-col items-center">
         <div className="w-full mb-lg flex justify-center">
           <Image
-            src="/opr-banner.png"
+            src="/opr-banner.webp"
             alt="Culinary Fresh Open Random Recipes Logo"
             width={300}
             height={100}

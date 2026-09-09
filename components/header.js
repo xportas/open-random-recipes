@@ -4,7 +4,7 @@ export default function Header({ activeTab, previousTabRef }) {
   return (
     <header className="flex justify-between items-center w-11/12 px-margin-mobile py-sm sticky top-2 z-40 border border-neutral-200 rounded-3xl mt-2 mx-auto bg-white/30 dark:bg-black/30 backdrop-blur-xs shadow-[0_2px_16px_rgba(0,0,0,0.04)]">
       <Image
-        src="/opr-horizontal-logo.png"
+        src="/opr-horizontal-logo.webp"
         alt="opr-logo"
         width={150}
         height={150}

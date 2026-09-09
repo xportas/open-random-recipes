@@ -17,7 +17,7 @@ export default function HomePage({ onNavigate }) {
           className="relative w-full h-[320px] rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.08)] active:scale-[0.98] transition-transform duration-300 ease-out"
           onClick={() => onNavigate("menu")}
         >
-          <img className="absolute inset-0 w-full h-full object-cover" src="/home-generate-menu.png" />
+          <img className="absolute inset-0 w-full h-full object-cover" src="/home-generate-menu.webp" />
           <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent" />
           <div className="absolute bottom-0 left-0 w-full p-md flex flex-col justify-end">
             <div className="flex justify-between items-end">
@@ -43,7 +43,7 @@ export default function HomePage({ onNavigate }) {
           className="relative w-full h-[320px] rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.08)] active:scale-[0.98] transition-transform duration-300 ease-out"
           onClick={() => onNavigate("recipes")}
         >
-          <img className="absolute inset-0 w-full h-full object-cover" src="/home-list-recipes.png" />
+          <img className="absolute inset-0 w-full h-full object-cover" src="/home-list-recipes.webp" />
           <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent" />
           <div className="absolute bottom-0 left-0 w-full p-md flex flex-col justify-end">
             <div className="flex justify-between items-end">
