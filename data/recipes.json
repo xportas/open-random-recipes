@@ -2161,5 +2161,49 @@
       }
     ],
     "img": "/recipes/wrap-aguacate-huevo.webp"
+  },
+  {
+    "id": 37,
+    "name": "Revuelto de espinacas",
+    "steps": "1. Cocinar las espinacas con aceite y sal. 2. Batir los huevos y verterlos sobre la mezcla. 3. Cocinar al gusto.",
+    "restrictions": null,
+    "servings": 2,
+    "type": "other",
+    "breakfast": false,
+    "lunch": false,
+    "snack": false,
+    "dinner": true,
+    "gym": false,
+    "ingredients": [
+      {
+        "name": "Espinacas",
+        "quantity": 1,
+        "unit_of_measure": "paquete",
+        "required": true,
+        "grocery_section": "Panadería"
+      },
+      {
+        "name": "Huevos",
+        "quantity": 6,
+        "unit_of_measure": "ud",
+        "required": true,
+        "grocery_section": "Huevos"
+      },
+      {
+        "name": "Queso gratinado",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false,
+        "grocery_section": "Lácteos"
+      },
+      {
+        "name": "Jamón",
+        "quantity": null,
+        "unit_of_measure": null,
+        "required": false,
+        "grocery_section": "Carnicería"
+      }
+    ],
+    "img": "/recipes/revuelto-espinacas.webp"
   }
 ]
