@@ -5,6 +5,7 @@ import TrainingBadges from "./TrainingBadges";
 
 export default function DayCard({ dayName, date, meals, training, onRegenerateMeal, onRemoveMeal, onSelectMeal, onRecipeClick, onImageClick }) {
   const activeMeals = MEAL_TYPES.filter((type) => meals[type] !== undefined);
+  const hasMeals = activeMeals.some((type) => meals[type] !== null);
 
   return (
     <div className="bg-surface-container-lowest rounded-2xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] overflow-hidden border border-neutral-100">
@@ -15,6 +16,25 @@ export default function DayCard({ dayName, date, meals, training, onRegenerateMe
           <span className="ml-auto font-label-sm text-label-sm text-neutral-500 bg-neutral-100 px-2 py-1 rounded-lg shrink-0">
             {date}
           </span>
+          {hasMeals ? (
+            <button
+              onClick={() => activeMeals.forEach((mealType) => meals[mealType] && onRemoveMeal?.(mealType))}
+              aria-label={`Eliminar comidas del ${dayName}`}
+              title="Eliminar comidas del día"
+              className="inline-flex items-center justify-center text-neutral-400 hover:text-neutral-700 active:scale-95 transition shrink-0"
+            >
+              <span className="material-symbols-outlined text-[20px]">delete</span>
+            </button>
+          ) : (
+            <button
+              onClick={() => activeMeals.forEach((mealType) => onRegenerateMeal?.(mealType))}
+              aria-label={`Regenerar comidas del ${dayName}`}
+              title="Regenerar comidas del día"
+              className="inline-flex items-center justify-center text-neutral-400 hover:text-neutral-700 active:scale-95 transition shrink-0"
+            >
+              <span className="material-symbols-outlined text-[20px]">refresh</span>
+            </button>
+          )}
         </div>
       </div>
       <div className="p-md space-y-md">
