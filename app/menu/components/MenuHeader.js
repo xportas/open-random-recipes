@@ -1,4 +1,6 @@
-export default function MenuHeader({ onGenerate, onClear, hasMenu, onShowRules }) {
+import AddWeekButton from "./AddWeekButton";
+
+export default function MenuHeader({ onGenerate, onAddWeek, onClear, hasMenu, onShowRules }) {
   return (
     <div className="flex flex-col justify-between items-start gap-md">
       <div>
@@ -15,27 +17,32 @@ export default function MenuHeader({ onGenerate, onClear, hasMenu, onShowRules }
           </button>
         )}
       </div>
-      <div className="relative flex items-center">
-        <button
-          onClick={onGenerate}
-          className="bg-primary text-on-primary font-label-md text-label-md px-md py-sm rounded-full flex items-center justify-center gap-xs shadow-[0_4px_16px_rgba(125,164,102,0.25)] active:scale-[0.98] transition-transform duration-200"
-        >
-          <span className="material-symbols-outlined text-[20px]">list_alt</span>
-          <span className="grid">
-            <span className={`col-start-1 row-start-1 ${hasMenu ? "invisible" : ""}`}>
-              Generar Menu Semanal
+      <div className="w-full flex items-center justify-between gap-md">
+        <div className="flex items-center gap-sm">
+          <button
+            onClick={onGenerate}
+            className="bg-primary text-on-primary font-label-md text-label-md px-md py-sm rounded-full flex items-center justify-center gap-xs shadow-[0_4px_16px_rgba(125,164,102,0.25)] active:scale-[0.98] transition-transform duration-200"
+          >
+            <span className="material-symbols-outlined text-[20px]">list_alt</span>
+            <span className="grid">
+              <span className={`col-start-1 row-start-1 ${hasMenu ? "invisible" : ""}`}>
+                Generar Menu Semanal
+              </span>
+              <span className={`col-start-1 row-start-1 ${hasMenu ? "" : "invisible"}`}>
+                Regenerar Menu
+              </span>
             </span>
-            <span className={`col-start-1 row-start-1 ${hasMenu ? "" : "invisible"}`}>
-              Regenerar Menu
-            </span>
-          </span>
-        </button>
+          </button>
+          {hasMenu && onAddWeek && (
+            <AddWeekButton onClick={onAddWeek} />
+          )}
+        </div>
         {hasMenu && onClear && (
           <button
             onClick={onClear}
             aria-label="Vaciar menu"
             title="Vaciar menu"
-            className="ml-3 w-11 h-11 inline-flex items-center justify-center bg-neutral-100 text-neutral-700 rounded-full active:scale-[0.95] transition-transform duration-200 border border-neutral-200"
+            className="w-11 h-11 inline-flex items-center justify-center bg-neutral-100 text-neutral-700 rounded-full active:scale-[0.95] transition-transform duration-200 border border-neutral-200 shrink-0"
           >
             <span className="material-symbols-outlined text-[20px]">delete</span>
           </button>

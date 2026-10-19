@@ -1,5 +1,5 @@
 import { useSyncExternalStore, useCallback, useMemo } from "react";
-import { generateWeeklyMenu, regenerateMeal, removeMeal, buildMealSlot } from "@/lib/menuGenerator";
+import { generateWeeklyMenu, generateAdditionalWeek, regenerateMeal, removeMeal, buildMealSlot } from "@/lib/menuGenerator";
 import useTrainingSchedule from "@/hooks/useTrainingSchedule";
 
 const STORAGE_KEY = "weekly-menu";
@@ -97,9 +97,20 @@ export default function useWeeklyMenu(recipesData) {
     emitChange();
   }, []);
 
+  const addWeek = useCallback(() => {
+    if (!weeklyMenu || weeklyMenu.length === 0) {
+      const newMenu = generateWeeklyMenu(recipesData, gymDays);
+      setMenu(newMenu);
+      return;
+    }
+    const newDays = generateAdditionalWeek(recipesData, weeklyMenu, gymDays);
+    setMenu([...weeklyMenu, ...newDays]);
+  }, [recipesData, gymDays]);
+
   return {
     weeklyMenu: store,
     generate,
+    addWeek,
     regenerateMeal: regenerateMealInMenu,
     removeMeal: removeMealFromMenu,
     setMeal,

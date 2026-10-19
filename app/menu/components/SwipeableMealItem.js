@@ -110,7 +110,6 @@ export default function SwipeableMealItem({ mealType, meal, onRegenerate, onRemo
         <MealItem
           mealType={mealType}
           meal={meal}
-          onRegenerate={null}
           onRecipeClick={onRecipeClick}
           onImageClick={onImageClick}
         />

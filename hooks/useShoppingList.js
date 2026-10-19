@@ -88,7 +88,6 @@ export default function useShoppingList() {
   return {
     items: store,
     groupedItems,
-    hydrated: true,
     isEmpty: store.length === 0,
     generateFromMenu,
     addItems,

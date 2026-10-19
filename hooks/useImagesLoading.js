@@ -5,7 +5,7 @@ export default function useImagesLoading(items, getSrc) {
     () => items.filter((item) => Boolean(getSrc(item))).length,
     [items, getSrc]
   );
-  const [loadedCount, setLoadedCount] = useState(0);
+  const [, setLoadedCount] = useState(0);
   const [isLoading, setIsLoading] = useState(total > 0);
 
   const markLoaded = useCallback(() => {

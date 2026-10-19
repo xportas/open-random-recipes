@@ -1,7 +1,7 @@
 import IngredientList from "@/components/IngredientList";
 
 export default function RecipeCard({ recipe, onToggleFavorite, onRecipeClick, onImageClick, onImageLoad }) {
-  const ingredients = recipe.ingredients || recipe.ingredientes || [];
+  const ingredients = recipe.ingredients || [];
 
   return (
     <div className="bg-surface-container-lowest p-sm rounded-2xl shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-neutral-100 min-w-0 overflow-hidden active:scale-[0.98] transition-transform duration-200">

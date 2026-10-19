@@ -11,16 +11,17 @@ const MEAL_EMOJIS = {
 };
 
 function formatMenu(weeklyMenu) {
-  const weekDates = getWeekDates();
-  const firstDate = weekDates[0]?.date || "";
-  const lastDate = weekDates[6]?.date || "";
+  const weekCount = Math.max(1, Math.ceil(weeklyMenu.length / 7));
+  const allDates = getWeekDates(weekCount);
+  const firstDate = allDates[0]?.date || "";
+  const lastDate = allDates[allDates.length - 1]?.date || "";
   const year = new Date().getFullYear();
 
-  let text = `🍽️ MENÚ SEMANAL — ${firstDate} al ${lastDate} ${year}\n`;
+  let text = `🍽️ MENÚ ${weekCount > 1 ? `${weekCount} SEMANAS` : "SEMANAL"} — ${firstDate} al ${lastDate} ${year}\n`;
 
   weeklyMenu.forEach((day, dayIndex) => {
     const { dayName } = day;
-    const dateStr = weekDates[dayIndex]?.date || "";
+    const dateStr = allDates[dayIndex]?.date || "";
 
     text += `\n${"━".repeat(20)}\n`;
     text += `📅 ${dayName.toUpperCase()} ${dateStr}\n`;
@@ -58,8 +59,8 @@ export default function CopyMenuButton({ weeklyMenu }) {
       await navigator.clipboard.writeText(text);
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
-    } catch (err) {
-      console.error("Error al copiar:", err);
+    } catch {
+      setCopied(false);
     }
   };
 

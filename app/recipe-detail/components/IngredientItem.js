@@ -1,7 +1,6 @@
 function formatQuantity(quantity, unit) {
   if (quantity == null) return "";
-  const display = Number.isInteger(quantity) ? quantity.toString() : quantity.toString();
-  return unit ? `${display} ${unit}` : display;
+  return unit ? `${quantity} ${unit}` : `${quantity}`;
 }
 
 export default function IngredientItem({ ingredient, checked, onToggle }) {

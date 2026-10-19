@@ -1,9 +1,4 @@
-const MEAL_LABELS = {
-  breakfast: "Desayuno",
-  lunch: "Comida",
-  snack: "Merienda",
-  dinner: "Cena",
-};
+import { MEAL_LABELS } from "@/lib/menuGenerator";
 
 const RESTRICTION_LABELS = {
   weekend: "Solo fin de semana",

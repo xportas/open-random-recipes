@@ -1,7 +1,7 @@
 import { MEAL_LABELS } from "@/lib/menuGenerator";
 import IngredientList from "@/components/IngredientList";
 
-export default function MealItem({ mealType, meal, onRegenerate, onRecipeClick, onImageClick }) {
+export default function MealItem({ mealType, meal, onRecipeClick, onImageClick }) {
   const label = MEAL_LABELS[mealType];
 
   return (

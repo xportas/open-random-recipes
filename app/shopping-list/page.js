@@ -9,11 +9,9 @@ import ShoppingListInfoModal from "./components/ShoppingListInfoModal";
 import EmptyShoppingList from "./components/EmptyShoppingList";
 
 export default function ShoppingListPage({ onNavigate }) {
-  const { groupedItems, hydrated, isEmpty, toggleItem, clear, copyToClipboard } =
+  const { groupedItems, isEmpty, toggleItem, clear, copyToClipboard } =
     useShoppingList();
   const [isInfoOpen, setIsInfoOpen] = useState(false);
-
-  if (!hydrated) return null;
 
   return (
     <main className="grow px-margin-mobile md:px-margin-desktop py-md md:py-lg pb-32 md:pb-lg max-w-3xl mx-auto w-full flex flex-col gap-lg">

@@ -20,7 +20,7 @@ export default function RecipeDetailPage({ recipe, onBack }) {
     );
   }
 
-  const ingredients = recipe.ingredients || recipe.ingredientes || [];
+  const ingredients = recipe.ingredients || [];
 
   const handleImageClick = (src, alt) => {
     setImageModal({ src, alt });

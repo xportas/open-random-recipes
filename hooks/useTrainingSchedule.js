@@ -67,21 +67,14 @@ export default function useTrainingSchedule() {
     setSchedule({ ...schedule, [category]: updated });
   }, []);
 
-  const isDayActive = useCallback(
-    (category, dayIndex) => {
-      if (!store) return false;
-      return (store[category] || []).includes(dayIndex);
-    },
-    [store]
-  );
-
   const getTrainingForDay = useCallback(
     (dayIndex) => {
       if (!store) return [];
+      const dayOfWeek = ((dayIndex % 7) + 7) % 7;
       const result = [];
-      if ((store.manGym || []).includes(dayIndex)) result.push({ type: "gym", person: "X" });
-      if ((store.manBasketball || []).includes(dayIndex)) result.push({ type: "basketball", person: "X" });
-      if ((store.womanGym || []).includes(dayIndex)) result.push({ type: "gym", person: "M" });
+      if ((store.manGym || []).includes(dayOfWeek)) result.push({ type: "gym", person: "X" });
+      if ((store.manBasketball || []).includes(dayOfWeek)) result.push({ type: "basketball", person: "X" });
+      if ((store.womanGym || []).includes(dayOfWeek)) result.push({ type: "gym", person: "M" });
       return result;
     },
     [store]
@@ -90,7 +83,6 @@ export default function useTrainingSchedule() {
   return {
     schedule: store,
     toggleDay,
-    isDayActive,
     getTrainingForDay,
   };
 }
