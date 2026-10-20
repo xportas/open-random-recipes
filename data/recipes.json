@@ -25,7 +25,7 @@
         "unit_of_measure": null,
         "required": true,
         "options": [
-          "Jamón Serrano",
+          "Jamón serrano",
           "Jamón cocido",
           "Queso",
           "Atún"
@@ -88,11 +88,12 @@
         "grocery_section": "Lácteos"
       },
       {
-        "name": "Copos de avena",
+        "name": "Avena",
         "quantity": null,
         "unit_of_measure": null,
         "required": true,
-        "grocery_section": "Cereales y Granos"
+        "grocery_section": "Cereales y Granos",
+        "preparation": "en copos"
       },
       {
         "name": "Crema de cacahuete",
@@ -176,7 +177,7 @@
         "grocery_section": "Salsas y Condimentos"
       },
       {
-        "name": "Frutas frescas de temporada",
+        "name": "Fruta de temporada",
         "quantity": null,
         "unit_of_measure": null,
         "required": true,
@@ -307,11 +308,12 @@
         "grocery_section": "Frutas y Verduras"
       },
       {
-        "name": "Huevo frito",
+        "name": "Huevos",
         "quantity": null,
         "unit_of_measure": null,
         "required": true,
-        "grocery_section": "Huevos"
+        "grocery_section": "Huevos",
+        "preparation": "frito"
       }
     ],
     "img": "/recipes/tostada-amanecer.webp"
@@ -436,13 +438,10 @@
         "grocery_section": "Frutas y Verduras"
       },
       {
-        "name": "Vegetal 2 (bis)",
+        "name": "Tomate",
         "quantity": null,
         "unit_of_measure": null,
         "required": false,
-        "options": [
-          "Tomate"
-        ],
         "grocery_section": "Frutas y Verduras"
       },
       {
@@ -458,13 +457,10 @@
         "grocery_section": "Frutas y Verduras"
       },
       {
-        "name": "Vegetal 3 (bis)",
+        "name": "Setas",
         "quantity": null,
         "unit_of_measure": null,
         "required": false,
-        "options": [
-          "Setas"
-        ],
         "grocery_section": "Frutas y Verduras"
       }
     ],
@@ -545,13 +541,10 @@
         "grocery_section": "Frutas y Verduras"
       },
       {
-        "name": "Vegetal 2 (bis)",
+        "name": "Tomate",
         "quantity": null,
         "unit_of_measure": null,
         "required": false,
-        "options": [
-          "Tomate"
-        ],
         "grocery_section": "Frutas y Verduras"
       },
       {
@@ -567,13 +560,10 @@
         "grocery_section": "Frutas y Verduras"
       },
       {
-        "name": "Vegetal 3 (bis)",
+        "name": "Setas",
         "quantity": null,
         "unit_of_measure": null,
         "required": false,
-        "options": [
-          "Setas"
-        ],
         "grocery_section": "Frutas y Verduras"
       }
     ],
@@ -597,9 +587,6 @@
         "quantity": null,
         "unit_of_measure": null,
         "required": true,
-        "options": [
-          "Salmón"
-        ],
         "grocery_section": "Pescadería"
       },
       {
@@ -609,7 +596,7 @@
         "required": true,
         "options": [
           "Arroz",
-          "Patata cocida"
+          "Patata (cocida)"
         ],
         "grocery_section": "Cereales y Granos"
       },
@@ -650,13 +637,10 @@
         "grocery_section": "Frutas y Verduras"
       },
       {
-        "name": "Vegetal 2 (bis)",
+        "name": "Tomate",
         "quantity": null,
         "unit_of_measure": null,
         "required": false,
-        "options": [
-          "Tomate"
-        ],
         "grocery_section": "Frutas y Verduras"
       },
       {
@@ -672,13 +656,10 @@
         "grocery_section": "Frutas y Verduras"
       },
       {
-        "name": "Vegetal 3 (bis)",
+        "name": "Setas",
         "quantity": null,
         "unit_of_measure": null,
         "required": false,
-        "options": [
-          "Setas"
-        ],
         "grocery_section": "Frutas y Verduras"
       }
     ],
@@ -720,7 +701,7 @@
         "required": true,
         "options": [
           "Arroz",
-          "Patata cocida",
+          "Patata (cocida)",
           "Quinoa"
         ],
         "grocery_section": "Cereales y Granos"
@@ -762,13 +743,10 @@
         "grocery_section": "Frutas y Verduras"
       },
       {
-        "name": "Vegetal 2 (bis)",
+        "name": "Tomate",
         "quantity": null,
         "unit_of_measure": null,
         "required": false,
-        "options": [
-          "Tomate"
-        ],
         "grocery_section": "Frutas y Verduras"
       },
       {
@@ -784,13 +762,10 @@
         "grocery_section": "Frutas y Verduras"
       },
       {
-        "name": "Vegetal 3 (bis)",
+        "name": "Setas",
         "quantity": null,
         "unit_of_measure": null,
         "required": false,
-        "options": [
-          "Setas"
-        ],
         "grocery_section": "Frutas y Verduras"
       }
     ],
@@ -836,11 +811,12 @@
         "grocery_section": "Frutas y Verduras"
       },
       {
-        "name": "Huevo cocido",
+        "name": "Huevos",
         "quantity": null,
         "unit_of_measure": null,
         "required": true,
-        "grocery_section": "Huevos"
+        "grocery_section": "Huevos",
+        "preparation": "cocido"
       },
       {
         "name": "Carbohidrato",
@@ -912,11 +888,12 @@
         "grocery_section": "Frutas y Verduras"
       },
       {
-        "name": "Tomate natural triturado",
+        "name": "Tomate",
         "quantity": 2,
         "unit_of_measure": "cucharada",
         "required": true,
-        "grocery_section": "Frutas y Verduras"
+        "grocery_section": "Frutas y Verduras",
+        "preparation": "natural triturado"
       },
       {
         "name": "Garbanzos",
@@ -1075,7 +1052,7 @@
   {
     "id": 17,
     "name": "Brócoli Vigués + 2º Plato",
-    "steps": "No description available",
+    "steps": "",
     "restrictions": null,
     "servings": 1,
     "type": "meet",
@@ -1296,11 +1273,12 @@
         "grocery_section": "Frutas y Verduras"
       },
       {
-        "name": "Jamón en tacos",
+        "name": "Jamón serrano",
         "quantity": null,
         "unit_of_measure": null,
         "required": true,
-        "grocery_section": "Charcutería"
+        "grocery_section": "Charcutería",
+        "preparation": "en tacos"
       },
       {
         "name": "Carne",
@@ -1620,11 +1598,12 @@
         "grocery_section": "Cereales y Granos"
       },
       {
-        "name": "Huevo cocido",
+        "name": "Huevos",
         "quantity": 1,
         "unit_of_measure": "ud",
         "required": true,
-        "grocery_section": "Huevos"
+        "grocery_section": "Huevos",
+        "preparation": "cocido"
       },
       {
         "name": "Zanahoria",
@@ -1758,11 +1737,12 @@
         "grocery_section": "Frutas y Verduras"
       },
       {
-        "name": "Huevo cocido",
+        "name": "Huevos",
         "quantity": null,
         "unit_of_measure": null,
         "required": true,
-        "grocery_section": "Huevos"
+        "grocery_section": "Huevos",
+        "preparation": "cocido"
       },
       {
         "name": "Carbohidrato",
@@ -1814,11 +1794,12 @@
         "grocery_section": "Frutas y Verduras"
       },
       {
-        "name": "Espinacas frescas",
+        "name": "Espinacas",
         "quantity": null,
         "unit_of_measure": null,
         "required": true,
-        "grocery_section": "Frutas y Verduras"
+        "grocery_section": "Frutas y Verduras",
+        "preparation": "frescas"
       }
     ],
     "img": "/recipes/ensalada-de-pollo-con-quinoa-y-aguacate.webp"
@@ -1973,7 +1954,8 @@
         "quantity": null,
         "unit_of_measure": null,
         "required": true,
-        "grocery_section": "Varios"
+        "grocery_section": "Varios",
+        "exclude_from_shopping_list": true
       }
     ],
     "img": "/recipes/pizza-masa-de-huevo.webp"
@@ -2077,13 +2059,10 @@
         "grocery_section": "Frutas y Verduras"
       },
       {
-        "name": "Vegetal 2 (bis)",
+        "name": "Tomate",
         "quantity": null,
         "unit_of_measure": null,
         "required": false,
-        "options": [
-          "Tomate"
-        ],
         "grocery_section": "Frutas y Verduras"
       },
       {
@@ -2099,13 +2078,10 @@
         "grocery_section": "Frutas y Verduras"
       },
       {
-        "name": "Vegetal 3 (bis)",
+        "name": "Setas",
         "quantity": null,
         "unit_of_measure": null,
         "required": false,
-        "options": [
-          "Setas"
-        ],
         "grocery_section": "Frutas y Verduras"
       }
     ],
@@ -2132,7 +2108,7 @@
         "grocery_section": "Panadería"
       },
       {
-        "name": "Aguacates",
+        "name": "Aguacate",
         "quantity": 2,
         "unit_of_measure": "ud",
         "required": true,
@@ -2180,7 +2156,7 @@
         "quantity": 1,
         "unit_of_measure": "paquete",
         "required": true,
-        "grocery_section": "Panadería"
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Huevos",
@@ -2201,7 +2177,7 @@
         "quantity": null,
         "unit_of_measure": null,
         "required": false,
-        "grocery_section": "Carnicería"
+        "grocery_section": "Charcutería"
       }
     ],
     "img": "/recipes/revuelto-espinacas.webp"
@@ -2224,7 +2200,7 @@
         "quantity": 1,
         "unit_of_measure": "paquete",
         "required": true,
-        "grocery_section": "Panadería"
+        "grocery_section": "Frutas y Verduras"
       },
       {
         "name": "Huevos",
@@ -2245,7 +2221,7 @@
         "quantity": null,
         "unit_of_measure": null,
         "required": false,
-        "grocery_section": "Carnicería"
+        "grocery_section": "Charcutería"
       },
       {
         "name": "Carne",

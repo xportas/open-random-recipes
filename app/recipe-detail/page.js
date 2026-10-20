@@ -7,7 +7,7 @@ import IngredientsPanel from "./components/IngredientsPanel";
 import RecipeSteps from "./components/RecipeSteps";
 import RecipeMeta from "./components/RecipeMeta";
 
-export default function RecipeDetailPage({ recipe, onBack }) {
+export default function RecipeDetailPage({ recipe, resolvedIngredients, onBack }) {
   const [imageModal, setImageModal] = useState(null);
 
   if (!recipe) {
@@ -41,7 +41,7 @@ export default function RecipeDetailPage({ recipe, onBack }) {
         <RecipeHero recipe={recipe} onImageClick={handleImageClick} />
         <div className="grid grid-cols-1 md:grid-cols-12 gap-lg px-margin-mobile md:px-0">
           <div className="md:col-span-4 space-y-md">
-            <IngredientsPanel ingredients={ingredients} servings={recipe.servings} />
+            <IngredientsPanel ingredients={ingredients} servings={recipe.servings} resolvedIngredients={resolvedIngredients} />
           </div>
           <div className="md:col-span-8 flex flex-col gap-lg">
             <RecipeSteps steps={recipe.steps} />

@@ -18,6 +18,13 @@ export default function IngredientSubgroup({ ingredient, selectedOption, onSelec
             <label
               key={option}
               className="flex items-center gap-sm p-xs rounded-lg cursor-pointer hover:bg-surface-container-low transition-colors"
+              onClick={(e) => {
+                // Permitir desmarcar ingredientes opcionales pulsando de nuevo
+                if (isSelected && !ingredient.required) {
+                  e.preventDefault();
+                  onSelect(option);
+                }
+              }}
             >
               <input
                 type="radio"

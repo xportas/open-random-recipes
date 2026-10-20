@@ -15,7 +15,7 @@ import GenerateShoppingListButton from "./components/GenerateShoppingListButton"
 import CopyMenuButton from "./components/CopyMenuButton";
 import NutritionRulesModal from "./components/NutritionRulesModal";
 import RecipePickerModal from "./components/RecipePickerModal";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 
 export default function MenuPage() {
   const { weeklyMenu, generate, addWeek, regenerateMeal, removeMeal, setMeal, clear, isEmpty } = useWeeklyMenu(recipesData);
@@ -27,12 +27,12 @@ export default function MenuPage() {
   const [toast, setToast] = useState(null);
   const totalDays = weeklyMenu?.length ?? 7;
   const weekCount = Math.max(1, Math.ceil(totalDays / 7));
-  const allDates = getWeekDates(weekCount);
+  const previewDates = useMemo(() => getWeekDates(weekCount), [weekCount]);
 
-  const handleRecipeClick = (recipeId) => {
+  const handleRecipeClick = useCallback((recipeId, resolvedIngredients) => {
     const recipe = recipesData.find((r) => r.id === recipeId);
-    if (recipe) setSelectedRecipe(recipe);
-  };
+    if (recipe) setSelectedRecipe({ recipe, resolvedIngredients: resolvedIngredients || null });
+  }, []);
 
   const handleRegenerateMeal = useCallback((dayIndex, mealType) => {
     const success = regenerateMeal(dayIndex, mealType);
@@ -50,7 +50,8 @@ export default function MenuPage() {
   if (selectedRecipe) {
     return (
       <RecipeDetailPage
-        recipe={selectedRecipe}
+        recipe={selectedRecipe.recipe}
+        resolvedIngredients={selectedRecipe.resolvedIngredients}
         onBack={() => setSelectedRecipe(null)}
       />
     );
@@ -62,7 +63,29 @@ export default function MenuPage() {
         <MenuHeader onGenerate={generate} onAddWeek={addWeek} onClear={clear} hasMenu={!isEmpty} onShowRules={() => setIsRulesOpen(true)} />
         {Array.from({ length: weekCount }).map((_, weekIndex) => {
           const weekStart = weekIndex * 7;
-          const weekDays = allDates.slice(weekStart, weekStart + 7);
+          const previewWeek = previewDates.slice(weekStart, weekStart + 7);
+          // Construir los 7 días de la semana usando las fechas guardadas en el menú si existen
+          const weekDays = Array.from({ length: 7 }, (_, offset) => {
+            const dayIndex = weekStart + offset;
+            const dayData = weeklyMenu?.[dayIndex];
+            if (dayData) {
+              return {
+                dayIndex,
+                dayName: dayData.dayName,
+                date: dayData.date,
+                dayOfWeek: dayData.dayOfWeek,
+                dayData,
+              };
+            }
+            const preview = previewWeek[offset];
+            return {
+              dayIndex,
+              dayName: preview?.dayName ?? ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"][offset],
+              date: preview?.date ?? "",
+              dayOfWeek: preview?.dayOfWeek ?? offset,
+              dayData: null,
+            };
+          });
           const rangeLabel = weekDays.length > 0 ? `${weekDays[0].date} – ${weekDays[weekDays.length - 1].date}` : "";
           return (
             <section key={`week-${weekIndex}`} className="space-y-md">
@@ -78,13 +101,11 @@ export default function MenuPage() {
                 </div>
               )}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-md md:gap-lg">
-                {weekDays.map(({ dayName, date }, offset) => {
-                  const dayIndex = weekStart + offset;
-                  const dayData = weeklyMenu?.[dayIndex];
-                  const hasMeals = dayData && Object.keys(dayData.meals).length > 0;
-                  const trainingActivities = getTrainingForDay(dayIndex);
+                {weekDays.map(({ dayIndex, dayName, date, dayOfWeek, dayData }) => {
+                  const hasMenu = Boolean(dayData?.meals);
+                  const trainingActivities = getTrainingForDay(dayOfWeek ?? dayIndex);
 
-                  if (hasMeals) {
+                  if (hasMenu) {
                     return (
                       <DayCard
                         key={dayIndex}

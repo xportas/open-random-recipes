@@ -1,20 +1,79 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useShoppingList from "@/hooks/useShoppingList";
+import { parseNameAndPreparation } from "@/lib/ingredients";
 import IngredientItem from "./IngredientItem";
 import IngredientSubgroup from "./IngredientSubgroup";
 
-export default function IngredientsPanel({ ingredients, servings }) {
+function buildInitialState(ingredients, resolvedIngredients) {
+  const checked = {};
+  const selected = {};
+  if (!resolvedIngredients || resolvedIngredients.length === 0) return { checked, selected };
+  const resolvedByKey = new Map();
+  (resolvedIngredients || []).forEach((r) => {
+    const n = (r.name || "").trim().toLowerCase();
+    const p = (r.preparation || "").trim().toLowerCase();
+    const key = `${n}::${p}`;
+    if (!resolvedByKey.has(key)) resolvedByKey.set(key, r);
+  });
+  const resolvedNames = new Set((resolvedIngredients || []).map((r) => (r.name || "").trim().toLowerCase()));
+
+  ingredients.forEach((ingredient, index) => {
+    if (ingredient.options && ingredient.options.length > 0) {
+      // Buscar la opción que corresponde al ingrediente resuelto
+      let matched = null;
+      for (const opt of ingredient.options) {
+        const parsed = parseNameAndPreparation(opt);
+        const key = `${parsed.name.trim().toLowerCase()}::${(parsed.preparation || "").trim().toLowerCase()}`;
+        if (resolvedByKey.has(key)) {
+          matched = opt;
+          break;
+        }
+      }
+      // Fallback: si solo hay coincidencia por nombre base (sin preparación)
+      if (!matched) {
+        for (const opt of ingredient.options) {
+          const parsed = parseNameAndPreparation(opt);
+          if (resolvedNames.has(parsed.name.trim().toLowerCase())) {
+            matched = opt;
+            break;
+          }
+        }
+      }
+      if (matched) selected[index] = matched;
+    } else {
+      const n = (ingredient.name || "").trim().toLowerCase();
+      if (resolvedNames.has(n)) checked[index] = true;
+    }
+  });
+  return { checked, selected };
+}
+
+export default function IngredientsPanel({ ingredients, servings, resolvedIngredients }) {
   const { addItems } = useShoppingList();
   const [checkedItems, setCheckedItems] = useState({});
   const [selectedOptions, setSelectedOptions] = useState({});
   const [added, setAdded] = useState(false);
+
+  useEffect(() => {
+    const init = buildInitialState(ingredients || [], resolvedIngredients);
+    setCheckedItems(init.checked);
+    setSelectedOptions(init.selected);
+  }, [ingredients, resolvedIngredients]);
 
   const toggleCheck = (index) => {
     setCheckedItems((prev) => ({ ...prev, [index]: !prev[index] }));
   };
 
   const selectOption = (index, option) => {
-    setSelectedOptions((prev) => ({ ...prev, [index]: option }));
+    setSelectedOptions((prev) => {
+      // Si es opcional y se pulsa la opción ya seleccionada, deseleccionar
+      if (!ingredients[index]?.required && prev[index] === option) {
+        const next = { ...prev };
+        delete next[index];
+        return next;
+      }
+      return { ...prev, [index]: option };
+    });
   };
 
   const handleAddToList = () => {
@@ -24,8 +83,10 @@ export default function IngredientsPanel({ ingredients, servings }) {
       if (ingredient.options && ingredient.options.length > 0) {
         const selected = selectedOptions[index];
         if (selected) {
+          const parsed = parseNameAndPreparation(selected);
           itemsToAdd.push({
-            name: selected,
+            name: parsed.name,
+            preparation: parsed.preparation,
             quantity: ingredient.quantity,
             unit_of_measure: ingredient.unit_of_measure,
             grocery_section: ingredient.grocery_section,
@@ -35,6 +96,7 @@ export default function IngredientsPanel({ ingredients, servings }) {
         if (checkedItems[index]) {
           itemsToAdd.push({
             name: ingredient.name,
+            preparation: ingredient.preparation,
             quantity: ingredient.quantity,
             unit_of_measure: ingredient.unit_of_measure,
             grocery_section: ingredient.grocery_section,

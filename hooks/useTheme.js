@@ -30,8 +30,14 @@ function applyTheme(value) {
 }
 
 if (typeof window !== "undefined") {
-  theme = localStorage.getItem(STORAGE_KEY) === "dark" ? "dark" : "light";
-  applyTheme(theme);
+  try {
+    theme = localStorage.getItem(STORAGE_KEY) === "dark" ? "dark" : "light";
+  } catch {
+    theme = "light";
+  }
+  try {
+    applyTheme(theme);
+  } catch { /* almacenamiento no disponible */ }
 }
 
 export default function useTheme() {
@@ -39,8 +45,12 @@ export default function useTheme() {
 
   const setTheme = useCallback((value) => {
     theme = value;
-    localStorage.setItem(STORAGE_KEY, value);
-    applyTheme(value);
+    try {
+      localStorage.setItem(STORAGE_KEY, value);
+    } catch { /* almacenamiento no disponible */ }
+    try {
+      applyTheme(value);
+    } catch { /* almacenamiento no disponible */ }
     emitChange();
   }, []);
 

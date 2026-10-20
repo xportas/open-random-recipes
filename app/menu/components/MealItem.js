@@ -23,8 +23,8 @@ export default function MealItem({ mealType, meal, onRecipeClick, onImageClick }
           {label}
         </span>
         <h4
-          className="font-label-md text-label-md text-neutral-900 leading-tight"
-          onClick={() => onRecipeClick?.(meal.recipeId)}
+          className="font-label-md text-label-md text-neutral-900 leading-tight cursor-pointer"
+          onClick={() => onRecipeClick?.(meal.recipeId, meal.ingredients)}
         >
           {meal.name}
         </h4>

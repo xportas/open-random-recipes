@@ -36,7 +36,11 @@ export default function IngredientItem({ item, onToggle }) {
         }`}
       >
         {item.name}
-        {item.quantity ? (
+        {item.quantityLabel ? (
+          <span className="text-neutral-400">
+            {" "}({item.quantityLabel})
+          </span>
+        ) : item.quantity ? (
           <span className="text-neutral-400">
             {" "}({item.quantity}{item.unit_of_measure ? ` ${item.unit_of_measure}` : ""})
           </span>

@@ -13,12 +13,23 @@ import RecipeGroup from "./components/RecipeGroup";
 const FAVORITES_KEY = "favorite-recipes";
 
 function loadFavorites() {
-  const data = localStorage.getItem(FAVORITES_KEY);
-  return data ? JSON.parse(data) : [];
+  try {
+    const data = localStorage.getItem(FAVORITES_KEY);
+    if (!data) return [];
+    const parsed = JSON.parse(data);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    try {
+      localStorage.removeItem(FAVORITES_KEY);
+    } catch { /* almacenamiento no disponible */ }
+    return [];
+  }
 }
 
 function saveFavorites(ids) {
-  localStorage.setItem(FAVORITES_KEY, JSON.stringify(ids));
+  try {
+    localStorage.setItem(FAVORITES_KEY, JSON.stringify(ids));
+  } catch { /* almacenamiento no disponible */ }
 }
 
 export default function RecipesListPage() {

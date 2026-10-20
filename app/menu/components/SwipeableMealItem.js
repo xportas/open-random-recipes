@@ -73,11 +73,13 @@ export default function SwipeableMealItem({ mealType, meal, onRegenerate, onRemo
   }, [isOpen, closeSwipe]);
 
   return (
-    <div className="relative overflow-hidden rounded-xl">
+    <div className="relative overflow-hidden rounded-xl group">
       <div className="absolute inset-y-0 right-0 flex w-[180px] rounded-r-xl overflow-hidden z-0">
         <button
           onClick={handleSelect}
           className="flex-1 flex flex-col items-center justify-center bg-primary/10 text-primary active:bg-primary/20 transition-colors"
+          title="Elegir receta"
+          aria-label="Elegir receta"
         >
           <span className="material-symbols-outlined text-[20px]">format_list_bulleted</span>
           <span className="font-label-sm text-label-sm mt-0.5">Elegir</span>
@@ -85,6 +87,8 @@ export default function SwipeableMealItem({ mealType, meal, onRegenerate, onRemo
         <button
           onClick={handleRegenerate}
           className="flex-1 flex flex-col items-center justify-center bg-neutral-900/5 text-neutral-500 active:bg-neutral-900/10 transition-colors"
+          title="Regenerar receta"
+          aria-label="Regenerar receta"
         >
           <span className="material-symbols-outlined text-[20px] text-neutral-700">refresh</span>
           <span className="font-label-sm text-label-sm mt-0.5">Otra</span>
@@ -92,6 +96,8 @@ export default function SwipeableMealItem({ mealType, meal, onRegenerate, onRemo
         <button
           onClick={handleRemove}
           className="flex-1 flex flex-col items-center justify-center bg-[#f50b0b]/80 text-white active:opacity-80 transition-opacity"
+          title="Quitar receta"
+          aria-label="Quitar receta"
         >
           <span className="material-symbols-outlined text-[20px]">delete</span>
           <span className="font-label-sm text-label-sm mt-0.5">Quitar</span>
@@ -119,6 +125,33 @@ export default function SwipeableMealItem({ mealType, meal, onRegenerate, onRemo
             onClick={handleOverlayClick}
           />
         )}
+      </div>
+      {/* Acciones rápidas para escritorio (hover / foco por teclado) */}
+      <div className="hidden md:flex absolute top-2 right-2 z-30 gap-1 opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity">
+        <button
+          onClick={handleSelect}
+          title="Elegir receta"
+          aria-label="Elegir receta"
+          className="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-lowest border border-neutral-200 text-primary shadow-sm hover:bg-primary/10 active:scale-95 transition"
+        >
+          <span className="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+        </button>
+        <button
+          onClick={handleRegenerate}
+          title="Regenerar receta"
+          aria-label="Regenerar receta"
+          className="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-lowest border border-neutral-200 text-neutral-600 shadow-sm hover:bg-neutral-100 active:scale-95 transition"
+        >
+          <span className="material-symbols-outlined text-[18px]">refresh</span>
+        </button>
+        <button
+          onClick={handleRemove}
+          title="Quitar receta"
+          aria-label="Quitar receta"
+          className="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-lowest border border-neutral-200 text-[#f50b0b] shadow-sm hover:bg-red-50 active:scale-95 transition"
+        >
+          <span className="material-symbols-outlined text-[18px]">delete</span>
+        </button>
       </div>
     </div>
   );

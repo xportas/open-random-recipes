@@ -27,16 +27,28 @@ function getServerSnapshot() {
 }
 
 function saveToStorage(menu) {
-  if (menu) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(menu));
-  } else {
-    localStorage.removeItem(STORAGE_KEY);
-  }
+  try {
+    if (menu) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(menu));
+    } else {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+  } catch { /* almacenamiento no disponible */ }
 }
 
 function loadFromStorage() {
-  const data = localStorage.getItem(STORAGE_KEY);
-  return data ? JSON.parse(data) : null;
+  try {
+    const data = localStorage.getItem(STORAGE_KEY);
+    if (!data) return null;
+    const parsed = JSON.parse(data);
+    if (!Array.isArray(parsed)) return null;
+    return parsed;
+  } catch {
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch { /* almacenamiento no disponible */ }
+    return null;
+  }
 }
 
 function initStore() {

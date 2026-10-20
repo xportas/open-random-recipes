@@ -1,3 +1,5 @@
+import { formatIngredientDisplayName } from "@/lib/ingredients";
+
 export default function IngredientList({ ingredients }) {
   if (!ingredients || ingredients.length === 0) return null;
 
@@ -12,7 +14,7 @@ export default function IngredientList({ ingredients }) {
               : "bg-neutral-100 text-neutral-500 italic"
           }`}
         >
-          {ingredient.name}
+          {formatIngredientDisplayName(ingredient)}
           {!ingredient.required && (
             <span className="ml-1 text-neutral-500/70">(opcional)</span>
           )}

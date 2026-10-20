@@ -15,7 +15,7 @@ export default function EmptyMealSlot({ mealType, onRegenerate, onSelect }) {
           {label}
         </span>
         <span className="font-label-md text-label-md text-neutral-400 italic">
-          Receta eliminada
+          Sin receta asignada
         </span>
       </div>
       {onSelect && (

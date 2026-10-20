@@ -1,3 +1,5 @@
+import { formatIngredientDisplayName } from "@/lib/ingredients";
+
 function formatQuantity(quantity, unit) {
   if (quantity == null) return "";
   return unit ? `${quantity} ${unit}` : `${quantity}`;
@@ -21,7 +23,7 @@ export default function IngredientItem({ ingredient, checked, onToggle }) {
         <div className="flex-1 flex justify-between items-start">
           <div>
             <p className="font-body-md text-body-md text-on-surface">
-              {quantityStr ? `${quantityStr} de ` : ""}{ingredient.name}
+              {quantityStr ? `${quantityStr} de ` : ""}{formatIngredientDisplayName(ingredient)}
             </p>
           </div>
           {!ingredient.required && (

@@ -1,15 +1,32 @@
 function parseSteps(stepsText) {
   if (!stepsText) return [];
-  return stepsText
-    .split(/(?:\d+\.\s*|(?<=[.!?])\s+)/)
+  const trimmed = String(stepsText).trim();
+  if (!trimmed || trimmed.toLowerCase() === "no description available") return [];
+  // Si el texto ya viene numerado (1. ... 2. ...), dividir solo por los números
+  // para no romper abreviaturas como "(ej. ...)" o "etc."
+  if (/\b\d+\.\s+/.test(trimmed)) {
+    return trimmed
+      .split(/\s*(?:^|\s)\d+\.\s+/)
+      .map((s) => s.trim().replace(/^\d+\.\s*/, ""))
+      .filter(Boolean);
+  }
+  // Sin numeración: dividir por fin de frase evitando abreviaturas comunes
+  return trimmed
+    .split(/(?<!\bej|\betc|\bvs|\bapprox)\.\s+(?=[A-ZÁÉÍÓÚÑ0-9])/i)
+    .flatMap((s) => s.split(/(?<=[!?])\s+/))
     .map((s) => s.trim())
     .filter(Boolean);
 }
 
 export default function RecipeSteps({ steps }) {
   const parsedSteps = parseSteps(steps);
+  const hasNoSteps =
+    !steps ||
+    String(steps).trim() === "" ||
+    String(steps).trim().toLowerCase() === "no description available" ||
+    parsedSteps.length === 0;
 
-  if (!steps) {
+  if (hasNoSteps) {
     return (
       <div className="bg-surface-container-lowest rounded-2xl p-md md:p-lg shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-neutral-100">
         <h2 className="font-headline-md text-headline-md text-neutral-900 mb-lg flex items-center gap-sm">

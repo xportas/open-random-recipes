@@ -31,12 +31,30 @@ function getServerSnapshot() {
 }
 
 function saveToStorage(data) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  } catch { /* almacenamiento no disponible */ }
 }
 
 function loadFromStorage() {
-  const data = localStorage.getItem(STORAGE_KEY);
-  return data ? JSON.parse(data) : { ...DEFAULT_SCHEDULE };
+  try {
+    const data = localStorage.getItem(STORAGE_KEY);
+    if (!data) return { ...DEFAULT_SCHEDULE };
+    const parsed = JSON.parse(data);
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+      return { ...DEFAULT_SCHEDULE };
+    }
+    return {
+      manGym: Array.isArray(parsed.manGym) ? parsed.manGym : [],
+      manBasketball: Array.isArray(parsed.manBasketball) ? parsed.manBasketball : [],
+      womanGym: Array.isArray(parsed.womanGym) ? parsed.womanGym : [],
+    };
+  } catch {
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch { /* almacenamiento no disponible */ }
+    return { ...DEFAULT_SCHEDULE };
+  }
 }
 
 function initStore() {

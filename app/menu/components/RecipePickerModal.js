@@ -8,6 +8,7 @@ import {
   getSlotRecipes,
   getFilteredRecipesForSlot,
 } from "@/lib/menuGenerator";
+import { formatIngredientDisplayName } from "@/lib/ingredients";
 
 function isConfigurable(recipe) {
   return (recipe.ingredients || []).some(
@@ -22,7 +23,7 @@ function formatQuantity(quantity, unit) {
 
 function ingredientSummary(recipe) {
   return (recipe.ingredients || [])
-    .map((ing) => ing.name)
+    .map((ing) => formatIngredientDisplayName(ing))
     .join(" · ");
 }
 
@@ -56,7 +57,12 @@ export default function RecipePickerModal({ dayIndex, mealType, dayName, onSelec
 
   const compliantList = useMemo(() => {
     if (!weeklyMenu) return [];
-    return getFilteredRecipesForSlot(recipesData, weeklyMenu, dayIndex, mealType, { gymDays })
+    const currentRecipeId = weeklyMenu[dayIndex]?.meals?.[mealType]?.recipeId;
+    return getFilteredRecipesForSlot(recipesData, weeklyMenu, dayIndex, mealType, {
+      gymDays,
+      strict: true,
+      excludeRecipeId: currentRecipeId,
+    })
       .slice()
       .sort((a, b) => a.name.localeCompare(b.name));
   }, [weeklyMenu, dayIndex, mealType, gymDays]);
@@ -142,7 +148,7 @@ export default function RecipePickerModal({ dayIndex, mealType, dayName, onSelec
                         <span className={`material-symbols-outlined text-on-primary text-[16px] transition-all duration-200 ${isIncluded ? "opacity-100 scale-100" : "opacity-0 scale-50"}`}>check</span>
                       </div>
                       <span className="flex-1 font-body-md text-body-md text-on-surface">
-                        {quantityStr ? `${quantityStr} de ` : ""}{hasOptions && !hasMultipleOptions ? ingredient.options[0] : ingredient.name}
+                        {quantityStr ? `${quantityStr} de ` : ""}{hasOptions && !hasMultipleOptions ? ingredient.options[0] : formatIngredientDisplayName(ingredient)}
                       </span>
                       <span className="font-label-sm text-label-sm bg-tertiary-container/30 text-on-tertiary-container px-2 py-0.5 rounded text-[10px] shrink-0">
                         Opcional
@@ -193,7 +199,7 @@ export default function RecipePickerModal({ dayIndex, mealType, dayName, onSelec
                     <div key={index} className="p-sm rounded-xl border border-surface-container-high">
                       <div className="flex items-center justify-between mb-sm">
                         <p className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">
-                          {quantityStr ? `${quantityStr} de ` : ""}{ingredient.name}
+                          {quantityStr ? `${quantityStr} de ` : ""}{formatIngredientDisplayName(ingredient)}
                         </p>
                       </div>
                       <div className="space-y-xs">
@@ -229,7 +235,7 @@ export default function RecipePickerModal({ dayIndex, mealType, dayName, onSelec
                   <div key={index} className="flex items-center gap-sm px-sm py-1.5">
                     <span className="material-symbols-outlined text-primary text-[16px] shrink-0">check</span>
                     <span className="font-body-md text-body-md text-neutral-500">
-                      {quantityStr ? `${quantityStr} de ` : ""}{ingredient.name}
+                      {quantityStr ? `${quantityStr} de ` : ""}{formatIngredientDisplayName(ingredient)}
                     </span>
                   </div>
                 );

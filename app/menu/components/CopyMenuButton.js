@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { MEAL_LABELS, getWeekDates } from "@/lib/menuGenerator";
+import { MEAL_LABELS } from "@/lib/menuGenerator";
+import { formatIngredientDisplayName } from "@/lib/ingredients";
 
 const MEAL_EMOJIS = {
   breakfast: "🌅",
@@ -10,18 +11,31 @@ const MEAL_EMOJIS = {
   dinner: "🌙",
 };
 
+function getYearForDay(day) {
+  try {
+    if (day?.isoDate) {
+      const d = new Date(day.isoDate);
+      if (!Number.isNaN(d.getTime())) return d.getFullYear();
+    }
+  } catch { /* almacenamiento no disponible */ }
+  return new Date().getFullYear();
+}
+
 function formatMenu(weeklyMenu) {
-  const weekCount = Math.max(1, Math.ceil(weeklyMenu.length / 7));
-  const allDates = getWeekDates(weekCount);
-  const firstDate = allDates[0]?.date || "";
-  const lastDate = allDates[allDates.length - 1]?.date || "";
-  const year = new Date().getFullYear();
+  const weekCount = Math.max(1, Math.ceil((weeklyMenu?.length || 0) / 7));
+  const firstDay = weeklyMenu?.[0];
+  const lastDay = weeklyMenu?.[weeklyMenu.length - 1];
+  const firstDate = firstDay?.date || "";
+  const lastDate = lastDay?.date || "";
+  const firstYear = getYearForDay(firstDay);
+  const lastYear = getYearForDay(lastDay);
+  const yearLabel = firstYear === lastYear ? `${firstYear}` : `${firstYear}–${lastYear}`;
 
-  let text = `🍽️ MENÚ ${weekCount > 1 ? `${weekCount} SEMANAS` : "SEMANAL"} — ${firstDate} al ${lastDate} ${year}\n`;
+  let text = `🍽️ MENÚ ${weekCount > 1 ? `${weekCount} SEMANAS` : "SEMANAL"} — ${firstDate} al ${lastDate} ${yearLabel}\n`;
 
-  weeklyMenu.forEach((day, dayIndex) => {
+  (weeklyMenu || []).forEach((day) => {
     const { dayName } = day;
-    const dateStr = allDates[dayIndex]?.date || "";
+    const dateStr = day?.date || "";
 
     text += `\n${"━".repeat(20)}\n`;
     text += `📅 ${dayName.toUpperCase()} ${dateStr}\n`;
@@ -41,7 +55,7 @@ function formatMenu(weeklyMenu) {
       if (meal.ingredients && meal.ingredients.length > 0) {
         meal.ingredients.forEach((ing) => {
           const optional = ing.required === false ? " 🟢 (opcional)" : "";
-          text += `  · ${ing.name}${optional}\n`;
+          text += `  · ${formatIngredientDisplayName(ing)}${optional}\n`;
         });
       }
     });
