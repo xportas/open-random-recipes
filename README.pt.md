@@ -138,10 +138,13 @@ Para adicionar suas próprias receitas e fazer com que o aplicativo as use ao ge
 - **`steps`** *(string)*: Instruções de preparação.
 - **`restrictions`** *(array de strings | null)*: Tags para restringir quando esta receita pode ser sugerida. Valores possíveis: `["weekend"]`, `["dinner"]`, etc. Se não houver restrições, use `null`.
 - **`servings`** *(número)*: Número de porções.
-- **`type`** *(string)*: Categoria principal de proteína da receita. É usada para evitar que, no mesmo dia, coincidam duas refeições principais (`lunch` e `dinner`) da mesma categoria. Valores permitidos:
-  - `"meet"` → receitas cujo ingrediente principal é carne (vermelha, branca, jamón, etc.).
-  - `"fish"` → receitas cujo ingrediente principal é peixe ou marisco.
+- **`type`** *(string)*: Categoria principal de proteína da receita. É usada para evitar repetir a mesma família de proteína no mesmo dia (`lunch`/`dinner`) e o mesmo subtipo em dias consecutivos. Valores permitidos:
+  - `"redMeat"` → carne vermelha (potro, porco, cordeiro, etc.).
+  - `"whiteMeat"` → carne branca (frango, peru, coelho).
+  - `"blueFish"` → peixe azul (salmão, atum, sardinhas).
+  - `"whiteFish"` → peixe branco e marisco (robalo, truta, dourada, gambas).
   - `"other"` → qualquer outra receita (vegetais, ovos, leguminosas, cafés da manhã, lanches, etc.).
+  Os valores antigos `"meet"`/`"fish"` continuam a ser aceites (mapeados para a sua família).
 - **`breakfast`, `lunch`, `snack`, `dinner`** *(boolean)*: Defina como `true` ou `false` para indicar em quais refeições do dia esta receita se encaixa.
 - **`ingredients`** *(array de objetos)*: Lista de ingredientes. Cada ingrediente possui:
   - `name` *(string)*: Nome do ingrediente ou categoria.
