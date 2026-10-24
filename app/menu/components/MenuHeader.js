@@ -1,6 +1,7 @@
 import AddWeekButton from "./AddWeekButton";
 
-export default function MenuHeader({ onGenerate, onAddWeek, onClear, hasMenu, onShowRules }) {
+export default function MenuHeader({ onGenerate, onAddWeek, onClear, hasMenu, isPartial, onShowRules }) {
+  const generateLabel = !hasMenu ? "Generar Menu Semanal" : isPartial ? "Completar semana" : "Regenerar Menu";
   return (
     <div className="flex flex-col justify-between items-start gap-md">
       <div>
@@ -24,7 +25,7 @@ export default function MenuHeader({ onGenerate, onAddWeek, onClear, hasMenu, on
             className="bg-primary text-on-primary font-label-md text-label-md px-md py-sm rounded-full flex items-center justify-center gap-xs shadow-[0_4px_16px_rgba(125,164,102,0.25)] active:scale-[0.98] transition-transform duration-200"
           >
             <span className="material-symbols-outlined text-[20px]">list_alt</span>
-            <span>{hasMenu ? "Regenerar Menu" : "Generar Menu Semanal"}</span>
+            <span>{generateLabel}</span>
           </button>
           {hasMenu && onAddWeek && (
             <AddWeekButton onClick={onAddWeek} />

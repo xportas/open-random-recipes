@@ -1,7 +1,7 @@
 "use client";
 
 import recipesData from "@/data/recipes.json";
-import { getWeekDates } from "@/lib/menuGenerator";
+import { getWeekDates, isDayGenerated } from "@/lib/menuGenerator";
 import ImageModal from "@/components/ImageModal";
 import Toast from "@/components/Toast";
 import RecipeDetailPage from "@/app/recipe-detail/page";
@@ -18,7 +18,7 @@ import RecipePickerModal from "./components/RecipePickerModal";
 import { useState, useCallback, useMemo } from "react";
 
 export default function MenuPage() {
-  const { weeklyMenu, generate, addWeek, regenerateMeal, removeMeal, setMeal, clear, isEmpty } = useWeeklyMenu(recipesData);
+  const { weeklyMenu, generate, generateDay, addWeek, regenerateMeal, removeMeal, setMeal, clear, isEmpty } = useWeeklyMenu(recipesData);
   const { getTrainingForDay } = useTrainingSchedule();
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [imageModal, setImageModal] = useState(null);
@@ -28,6 +28,11 @@ export default function MenuPage() {
   const totalDays = weeklyMenu?.length ?? 7;
   const weekCount = Math.max(1, Math.ceil(totalDays / 7));
   const previewDates = useMemo(() => getWeekDates(weekCount), [weekCount]);
+  const isPartial = useMemo(() => {
+    if (!weeklyMenu || weeklyMenu.length === 0) return false;
+    const generated = weeklyMenu.filter((day) => isDayGenerated(day)).length;
+    return generated > 0 && generated < weeklyMenu.length;
+  }, [weeklyMenu]);
 
   const handleRecipeClick = useCallback((recipeId, resolvedIngredients) => {
     const recipe = recipesData.find((r) => r.id === recipeId);
@@ -40,6 +45,13 @@ export default function MenuPage() {
       setToast(`No hay recetas disponibles que cumplan las restricciones`);
     }
   }, [regenerateMeal]);
+
+  const handleGenerateDay = useCallback((dayIndex) => {
+    const success = generateDay(dayIndex, previewDates);
+    if (!success) {
+      setToast(`No hay recetas disponibles que cumplan las restricciones`);
+    }
+  }, [generateDay, previewDates]);
 
   const handlePickerSelect = useCallback((recipe, choices) => {
     if (!picker) return;
@@ -60,7 +72,7 @@ export default function MenuPage() {
   return (
     <>
       <main className="max-w-7xl px-margin-mobile py-lg pb-32 space-y-xl">
-        <MenuHeader onGenerate={generate} onAddWeek={addWeek} onClear={clear} hasMenu={!isEmpty} onShowRules={() => setIsRulesOpen(true)} />
+        <MenuHeader onGenerate={generate} onAddWeek={addWeek} onClear={clear} hasMenu={!isEmpty} isPartial={isPartial} onShowRules={() => setIsRulesOpen(true)} />
         {Array.from({ length: weekCount }).map((_, weekIndex) => {
           const weekStart = weekIndex * 7;
           const previewWeek = previewDates.slice(weekStart, weekStart + 7);
@@ -137,6 +149,7 @@ export default function MenuPage() {
                       dayName={dayName}
                       date={date}
                       training={trainingActivities}
+                      onGenerateDay={() => handleGenerateDay(dayIndex)}
                     />
                   );
                 })}

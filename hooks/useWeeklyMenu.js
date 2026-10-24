@@ -1,5 +1,5 @@
 import { useSyncExternalStore, useCallback, useMemo } from "react";
-import { generateWeeklyMenu, generateAdditionalWeek, regenerateMeal, removeMeal, buildMealSlot } from "@/lib/menuGenerator";
+import { generateWeeklyMenu, generateWeeklyMenuPreserving, generateSingleDay, buildSkeletonFromDates, generateAdditionalWeek, regenerateMeal, removeMeal, buildMealSlot, isDayGenerated } from "@/lib/menuGenerator";
 import useTrainingSchedule from "@/hooks/useTrainingSchedule";
 
 const STORAGE_KEY = "weekly-menu";
@@ -76,8 +76,36 @@ export default function useWeeklyMenu(recipesData) {
   const gymDays = useMemo(() => schedule?.manGym || [], [schedule]);
 
   const generate = useCallback(() => {
-    const newMenu = generateWeeklyMenu(recipesData, gymDays);
-    setMenu(newMenu);
+    if (!weeklyMenu || weeklyMenu.length === 0) {
+      const newMenu = generateWeeklyMenu(recipesData, gymDays);
+      setMenu(newMenu);
+      return;
+    }
+    const allGenerated = weeklyMenu.every((day) => isDayGenerated(day));
+    if (allGenerated) {
+      const newMenu = generateWeeklyMenu(recipesData, gymDays);
+      setMenu(newMenu);
+      return;
+    }
+    const completed = generateWeeklyMenuPreserving(recipesData, weeklyMenu, gymDays);
+    setMenu(completed);
+  }, [recipesData, gymDays]);
+
+  const generateDay = useCallback((dayIndex, previewDates) => {
+    if (!Number.isInteger(dayIndex) || dayIndex < 0) return false;
+    let baseMenu = weeklyMenu;
+    if (!baseMenu || baseMenu.length === 0) {
+      baseMenu = buildSkeletonFromDates(previewDates);
+      if (baseMenu.length <= dayIndex) {
+        const full = generateWeeklyMenu(recipesData, gymDays);
+        baseMenu = buildSkeletonFromDates(
+          full.map((d) => ({ dayName: d.dayName, dayOfWeek: d.dayOfWeek, isoDate: d.isoDate, date: d.date }))
+        );
+      }
+    }
+    const { menu: updated, success } = generateSingleDay(recipesData, baseMenu, dayIndex, gymDays);
+    if (success) setMenu(updated);
+    return success;
   }, [recipesData, gymDays]);
 
   const regenerateMealInMenu = useCallback((dayIndex, mealType) => {
@@ -122,6 +150,7 @@ export default function useWeeklyMenu(recipesData) {
   return {
     weeklyMenu: store,
     generate,
+    generateDay,
     addWeek,
     regenerateMeal: regenerateMealInMenu,
     removeMeal: removeMealFromMenu,
