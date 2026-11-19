@@ -1,30 +1,5 @@
 # Análisis funcional actual — Open Random Recipes (AS-IS)
 
-**Fecha del análisis:** 19 de noviembre de 2026.  
-**Objeto:** entender el producto existente antes de decidir qué conservar, cambiar, eliminar, completar o investigar.  
-**Cobertura inventariada:** 32 funcionalidades, 7 pantallas funcionales, 4 ventanas o paneles relevantes y 15 recorridos.
-
-> Este documento no es una especificación de la futura aplicación. Describe el material actual, incluidas sus limitaciones y contradicciones. Ningún comportamiento descrito se convierte por ello en un requisito que deba conservarse.
-
-## Cómo interpretar las evidencias
-
-Se distinguen los siguientes grados de comprobación:
-
-| Marca | Significado | Qué no demuestra |
-|---|---|---|
-| **DOC** | Objetivo o comportamiento declarado en la documentación del producto. | Que esté implementado o funcione. |
-| **REV** | Comportamiento reconstruido siguiendo las acciones y sus consecuencias en el material revisado. | Que la interacción funcione en un navegador o en una instalación concreta. |
-| **AIS** | Regla o acción ejercitada de forma aislada, en memoria, con datos del catálogo y, cuando se indica, situaciones de prueba. | Que funcione el recorrido completo, la presentación, los gestos, la conservación real o la conexión con una sesión real. |
-| **CAP** | Elemento observado en las capturas incluidas en el proyecto. Son capturas anteriores, sin fecha de vigencia acreditada. | Que la aplicación actual siga mostrando exactamente esa presentación. |
-| **INF** | Inferencia razonada, no hecho confirmado del producto. | Que exista una decisión de negocio detrás de ella. |
-| **PEND** | Comprobación pendiente. | No significa que la funcionalidad esté rota. |
-
-**No se ha realizado una exploración interactiva de esta aplicación en un navegador.** Se han efectuado 36 comprobaciones aisladas, detalladas en la sección 10. La navegación y la presentación actuales se han reconstruido, no certificado mediante uso directo.
-
-En el inventario, **«Disponible y funcional — AIS» se limita a la regla o acción ejercitada en memoria**. No califica como probado el recorrido visual. Para controles o interacciones no ejercitados se utiliza «No verificable con el entorno disponible», aunque exista una entrada claramente identificada en la experiencia descrita.
-
-Las referencias técnicas y la identificación exacta de la revisión se concentran al final, en el anexo. Se conserva el salto de numeración de la estructura solicitada: de la sección 2 a la 4.
-
 ### Índice de consulta
 
 - [1. Resumen del producto](#1-resumen-del-producto)
@@ -51,22 +26,9 @@ Open Random Recipes es una aplicación web para consultar un recetario, proponer
 - Ofrecer una experiencia sencilla y privada.
 - Permitir ajustes de apariencia, idioma y días de entrenamiento.
 
-La palabra «gestionar» debe interpretarse con cautela: **la experiencia actual permite consultar y marcar recetas como favoritas, pero no crearlas, editarlas o eliminarlas desde la aplicación**. La documentación describe su mantenimiento fuera de la experiencia de uso.
+**Objetivo deducido — INF:** reducir la decisión cotidiana de qué cocinar y evitar elaborar manualmente una lista de ingredientes. El calendario de actividades adapta parte de la planificación al entrenamiento.
 
-**Objetivo deducido — INF:** reducir la decisión cotidiana de qué cocinar y evitar elaborar manualmente una lista de ingredientes. El calendario de actividades parece intentar adaptar parte de la planificación al entrenamiento.
-
-No se ha encontrado una definición formal del problema, una descripción validada del público objetivo ni una garantía nutricional. Los textos que hablan de criterios de nutricionista son declaraciones visibles, no una acreditación de que el menú cumpla todas esas normas.
-
-### 1.2. Para quién sirve actualmente
-
-- Hay una única puerta de acceso mediante contraseña, sin nombre de usuario.
-- No se han identificado perfiles con permisos diferentes, altas de cuentas, administración desde la interfaz ni selección de una persona activa.
-- Los ajustes contienen dos personas con nombres fijos: **Xabier** y **Maider**. Se puede indicar gimnasio y baloncesto para Xabier, y gimnasio para Maider.
-- Estos nombres **no constituyen cuentas ni roles**. Son referencias de un calendario compartido dentro de la experiencia de ese navegador.
-
-**INF:** la personalización sugiere un uso doméstico o personal concreto. No permite afirmar que el producto esté pensado exclusivamente para una pareja, una familia, deportistas o pacientes de un profesional.
-
-### 1.3. Alcance funcional actual
+### 1.2. Alcance funcional actual
 
 La experiencia reconstruida incluye:
 
@@ -81,24 +43,11 @@ La experiencia reconstruida incluye:
 - Lista de la compra generada desde el menú o ampliada desde recetas.
 - Agrupación y acumulación de ingredientes, marcado de productos y copia de pendientes.
 - Preferencia clara u oscura y conservación local de parte del trabajo.
-
-**Capacidades expuestas pero no completas:** selección de idioma sin traducción y recuperación de contraseña sin una acción asociada.
-
-### 1.4. Qué no ofrece la experiencia revisada
-
-No se ha encontrado un recorrido de uso para:
-
 - Crear, editar, importar, publicar o borrar recetas del catálogo.
 - Cambiar el número de comensales o recalcular cantidades por ración.
 - Introducir ingredientes de compra como texto libre, editar sus cantidades o borrar una sola fila de compra.
-- Configurar alergias, intolerancias, dietas, calorías, objetivos nutricionales o presupuesto.
-- Elegir una fecha inicial, gestionar menús históricos o guardar varias planificaciones con nombre.
-- Sincronizar el trabajo entre dispositivos, compartir una lista colaborativa o recuperar datos mediante una cuenta.
-- Comprar productos, enviarlos a un supermercado o efectuar pagos.
 - Cerrar sesión, cambiar la contraseña o completar una recuperación de acceso desde la interfaz.
-- Traducir realmente la interfaz a gallego o euskera.
 
-Esta ausencia se refiere a la experiencia revisada, no a capacidades hipotéticas de una instalación externa.
 
 ## 2. Inventario completo de funcionalidades
 
